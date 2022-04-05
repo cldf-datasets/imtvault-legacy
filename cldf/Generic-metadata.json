@@ -10,19 +10,25 @@
     "dc:license": "https://creativecommons.org/licenses/by/4.0/",
     "dc:source": "sources.bib",
     "dc:title": "IMT Vault",
-    "dcat:accessURL": "https://github.com/xrotwang/imtvault",
+    "dcat:accessURL": "https://github.com/cldf-datasets/imtvault",
     "prov:wasDerivedFrom": [
         {
             "rdf:type": "prov:Entity",
             "dc:title": "Repository",
-            "rdf:about": "https://github.com/xrotwang/imtvault",
-            "dc:created": "8616f64"
+            "rdf:about": "https://github.com/cldf-datasets/imtvault",
+            "dc:created": "fa8739a"
         },
         {
             "rdf:type": "prov:Entity",
             "dc:title": "Glottolog",
             "rdf:about": "https://github.com/glottolog/glottolog",
             "dc:created": "v4.5"
+        },
+        {
+            "rdf:type": "prov:Entity",
+            "dc:title": "Repository",
+            "rdf:about": "https://github.com/langsci/raw_texfiles",
+            "dc:created": "811ee6c"
         }
     ],
     "prov:wasGeneratedBy": [
@@ -43,7 +49,7 @@
     "tables": [
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#LanguageTable",
-            "dc:extent": 281,
+            "dc:extent": 283,
             "tableSchema": {
                 "columns": [
                     {
@@ -123,7 +129,7 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ExampleTable",
-            "dc:extent": 29982,
+            "dc:extent": 38820,
             "tableSchema": {
                 "columns": [
                     {
