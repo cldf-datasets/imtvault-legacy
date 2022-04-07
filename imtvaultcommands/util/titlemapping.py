@@ -124,7 +124,6 @@ titlemapping = {
                     245: u"A dictionary and grammatical sketch of Dagaare",
                     187: u"Can integrated titles improve the viewing experience?",
                     290: u"Multilingualism and third language acquisition",
-                    157: u"The Alor-Pantar languages²",
                     116: u"Sprachliche Imitation",
                     154: u"Dynamische Modellierung von Artikulation und prosodischer Struktur",
                     163: u"A lexicalist account of argument structure",

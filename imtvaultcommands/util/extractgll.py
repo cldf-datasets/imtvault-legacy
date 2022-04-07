@@ -1,34 +1,13 @@
-import glob
-import sys
-import re
-import sre_constants
-import pprint
-import json
-import operator
-import os
-import LaTexAccents
-import requests
 import hashlib
+import collections
 
-from bs4 import BeautifulSoup
-from collections import defaultdict
-from titlemapping import titlemapping
-from lgrlist import LGRLIST
+from clldutils import jsonlib
+from . import LaTexAccents
+from .titlemapping import titlemapping
 
-from imtvaultconstants import *
+from .imtvaultconstants import *
 
 converter = LaTexAccents.AccentConverter()
-
-try:
-    glottonames = json.loads(open("glottonames.json").read())
-except FileNotFoundError:
-    glottonames = {}
-
-try:
-    glotto_iso6393 = json.loads(open("glottoiso.json").read())
-except FileNotFoundError:
-    glotto_iso6393 = {}
-
 glottotmp = {}
 
 class gll:
@@ -43,10 +22,11 @@ class gll:
         booklanguage=None,
         book_metalanguage="eng",
         abbrkey=None,
+        gl_by_name=None,
     ):
-        basename = filename.split("/")[-1]
+        basename = filename.name
         self.license = "https://creativecommons.org/licenses/by/4.0"
-        self.book_ID = int(filename.split("/")[-2])
+        self.book_ID = int(filename.parent.name)
         self.book_URL = f"https://langsci-press.org/catalog/book/{self.book_ID}"
         self.book_title = titlemapping.get(self.book_ID)
         self.book_metalanguage = book_metalanguage
@@ -111,51 +91,12 @@ class gll:
         else:
             self.language_iso6393 = None
             self.language_name = None
-            if lg not in ("", None):
+            if (lg not in ("", None)) and lg:
                 self.language_name = lg
-                try:
-                    self.language_glottocode = glottonames[lg][0]
-                    glottonames[lg] = [self.language_glottocode, None]
-                    self.language_iso6393 = get_iso(self.language_glottocode)
-                except KeyError:
-                    if glottotmp.get(lg):
-                        self.language_glottocode = None
-                    else:
-                        request_url = f"https://glottolog.org/glottolog?name={lg}&namequerytype=part"
-                        print(lg, request_url)
-                        html = requests.get(request_url).text
-                        soup = BeautifulSoup(html, "html.parser")
-                        languoids = soup.find_all("a", class_="Language")
-                        if len(languoids) == 3:  # exactly one languoid
-                            self.language_glottocode = languoids[0][
-                                "title"
-                            ]
-                            self.language_family = languoids[2]["title"]
-                            self.language_name = lg
-                            print(" " + self.language_glottocode)
-                            glottonames[lg] = [self.language_glottocode, None]
-                        elif (
-                            len(languoids) == 0
-                        ):  # no languoids. We store this in persistent storage
-                            print(len(languoids))
-                            glottonames[lg] = [None, None]
-                        else:  # more than one languoid.  We check whether Glottolog has exactly one "language"
-                            print(len(languoids))
-                            languoids2 = soup.find_all("td", class_="level-language")
-                            print(len(languoids2))
-                            if len(languoids2) == 1:
-                                self.language_glottocode = (
-                                    languoids2[0]
-                                    .find("a", class_="Language")["href"]
-                                    .split("/")[-1]
-                                )
-                                self.language_name = lg
-                                glottonames[lg] = [self.language_glottocode, None]
-                                print(" " + self.language_glottocode)
-                                # self.language_family = FIXME
-                            else: #Glottolog has no clear indication of the language. We keep this information in temporary storage
-                                self.language_glottocode = None
-                                glottotmp[lg] = True
+                gl = gl_by_name.get(lg)
+                if gl:
+                    self.language_glottocode = gl.id
+                    self.language_iso6393 = gl.iso
         self.analyze()
 
     def strip_tex_comment(self, s):
@@ -206,19 +147,14 @@ class gll:
             return re.sub(TEXTEXT, "\\2", result)
 
     def tex2categories(self, s):
-        d = {}
+        d = set()
         smallcaps = re.findall("\\\\textsc\{([-=.:a-zA-Z0-9)(/\[\]]*?)\}", s)
         for sc in smallcaps:
             cats = re.split("[-=.:0-9)(/\[\]]", sc)
             for cat in cats:
-                d[cat] = True
-        return sorted(list(d.keys()))
-
-    #def json(self):
-        #print(json.dumps(self.__dict__, sort_keys=True, indent=4))
-
-    #def __str__(self):
-        #return "%s\n%s\n%s\n" % (self.srcwordshtml, self.imtwordshtml, self.trs)
+                if cat:
+                    d.add(cat)
+        return sorted(d)
 
     def analyze(self):
         if " and " in self.trs:
@@ -235,26 +171,6 @@ class gll:
             self.modality = "volitive"
         if " not " in self.trs.lower():
             self.polarity = "negative"
-
-
-def get_iso(glottocode):
-    global glotto_iso6393
-    if glottocode == None:
-        return "und"
-    try:
-        return glotto_iso6393[glottocode]
-    except KeyError:
-        request_url = f"https://glottolog.org/resource/languoid/id/{glottocode}"
-        html = requests.get(request_url).text
-        soup = BeautifulSoup(html, "html.parser")
-        try:
-            iso = soup.find("span", class_="iso639-3").a["title"]
-        except AttributeError:
-            return "und"
-        glotto_iso6393[glottocode] = iso
-        print(glottocode, iso)
-        return iso
-
 
 
 def get_abbreviations(lines):
@@ -277,12 +193,10 @@ def get_abbreviations(lines):
     return result
 
 
-def langsciextract(directory):
-    globstring = f"{directory}/*"
-    books = glob.glob(globstring)
-    # books = glob.glob(f"{directory}/16")
-    for book in books:
-        book_ID = int(book.split("/")[-1])
+def langsciextract(directory, outdir, gl_by_name):
+    unknown_lgs = collections.Counter()
+    for book in directory.iterdir():
+        book_ID = int(book.name)
         if book_ID in SUPERSEDED:
             continue
         book_metalanguage = "eng"
@@ -297,22 +211,16 @@ def langsciextract(directory):
         if book_ID in CHINESE:
             book_metalanguage = "cmn"
         booklanguage = ONE_LANGUAGE_BOOKS.get(int(book_ID), False)
-        glossesd = defaultdict(int)
-        excludechars = ".\\}{=~:/"
         abbrkey = {}
-        try:
-            with open(f"{directory}/{book_ID}/abbreviations.tex") as abbrin:
+        if book.joinpath("abbreviations.tex").exists():
+            with book.joinpath("abbreviations.tex").open() as abbrin:
                 abbrkey = get_abbreviations(abbrin.readlines())
-        except FileNotFoundError:
-            pass
-        files = glob.glob(f"{directory}/{book_ID}/chapters/*tex")
-        files = glob.glob(f"{directory}/{book_ID}/*tex")
-        # print(" found %i tex files for %s" % (len(files), book_ID))
-        for filename in files:
+        for filename in book.glob('*tex'):
             try:
-                s = open(filename).read()
+                s = filename.read_text(encoding='utf8')
             except UnicodeDecodeError:
                 print("Unicode problem in %s" % filename)
+                continue
             s = s.replace(r"{\bfseries ", r"\textbf{")
             s = s.replace(r"{\itshape ", r"\textit{")
             s = s.replace(r"{\scshape ", r"\textsc{")
@@ -326,7 +234,7 @@ def langsciextract(directory):
             examples = []
             for g in [m.groupdict() for m in GLL.finditer(s)]:
                 presource = g["presourceline"] or ""
-                lg = g["language_name"]
+                lg = (g["language_name"] or '').split('{', maxsplit=1)[-1].strip()
                 if g["imtline2"] in (None, ""):  # standard \gll example¨
                     src = g["sourceline"]
                     imt = g["imtline1"]
@@ -335,6 +243,8 @@ def langsciextract(directory):
                     src = g["imtline1"]
                     imt = g["imtline2"]
                 trs = g["translationline"]
+                if lg not in gl_by_name:
+                    unknown_lgs.update([lg])
                 try:
                     thisgll = gll(
                         presource,
@@ -346,6 +256,7 @@ def langsciextract(directory):
                         booklanguage=booklanguage,
                         book_metalanguage=book_metalanguage,
                         abbrkey=abbrkey,
+                        gl_by_name=gl_by_name,
                     )
                     if thisgll.book_ID in NON_CCBY_LIST:
                         continue
@@ -353,30 +264,13 @@ def langsciextract(directory):
                     continue
                 examples.append(thisgll)
             if examples != []:
-                jsons = json.dumps(
+                #print("   ", outdir / 'store-{}-{}examples.json'.format(book_ID, filename.stem))
+                #
+                # FIXME: dump!
+                #
+                jsonlib.dump(
                     [ex.__dict__ for ex in examples],
-                    sort_keys=True,
-                    indent=4,
-                    ensure_ascii=False,
-                )
-                try:
-                    os.mkdir('langscijson')
-                except FileExistsError:
-                    pass
-                jsonname = "langscijson/%sexamples.json" % filename[:-4]\
-                            .replace("/", "-")\
-                            .replace("raw-raw_texfiles-raw-", "")
-                print("   ", jsonname)
-                with open(jsonname, "w", encoding="utf8") as jsonout:
-                    jsonout.write(jsons)
-    with open("glottonames.json", "w") as namesout:
-        namesout.write(
-            json.dumps(glottonames, sort_keys=True, indent=4, ensure_ascii=False)
-        )
-    with open("glottoiso.json", "w") as glottoisoout:
-        glottoisoout.write(
-            json.dumps(glotto_iso6393, sort_keys=True, indent=4, ensure_ascii=False)
-        )
-
-if __name__ == "__main__":
-    langsciextract('raw/raw_texfiles/raw')
+                    outdir / 'store-{}-{}examples.json'.format(book_ID, filename.stem),
+                    sort_keys=True, indent=4, ensure_ascii=False)
+    for k, v in unknown_lgs.most_common(50):
+        print(k, v)

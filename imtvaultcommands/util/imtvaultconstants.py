@@ -1,5 +1,5 @@
 import re
-from lgrlist import LGRLIST
+from .lgrlist import LGRLIST
 
 NON_CCBY_LIST = [148, 149, 234]
 

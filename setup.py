@@ -17,6 +17,7 @@ setup(
     install_requires=[
         'pyigt',
         'cldfbench',
+        'wptools',
         'cldfviz[cartopy]',
     ],
     extras_require={
