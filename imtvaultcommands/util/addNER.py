@@ -30,11 +30,9 @@ def get_entities(text):
     }
 
 
-def run(d, etc):
-    with jsonlib.update(etc / 'nercache.json', default={}) as nercache:
-        for p in d.glob('*json'):
-            with jsonlib.update(p, sort_keys=True, indent=4, ensure_ascii=False) as json:
-                for ex in json:
-                    if ex["trs"] not in nercache:
-                        nercache[ex["trs"]] = get_entities(ex['trs'])
-                    ex["entities"] =  nercache[ex['trs']]
+def run(ds):
+    with jsonlib.update(ds.etc_dir / 'nercache.json', default={}) as nercache:
+        for ex in ds.iter_extracted_examples():
+            if ex["trs"] not in nercache:
+                nercache[ex["trs"]] = get_entities(ex['trs'])
+            ex["entities"] =  nercache[ex['trs']]

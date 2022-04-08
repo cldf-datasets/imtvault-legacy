@@ -24,26 +24,32 @@ def get_title(wikidata_ID, entitiescache):
     return title
 
 
-def run(jd, etc):
+def process_entities(d):
+    return [{"wdid": key, "label": value} for key, value in sorted(d.items(), key=lambda i: i[0])]
+
+
+def run(ds):
     d = defaultdict(dict)
-    for ancestor, degree, child in reader(etc / 'closure.csv', delimiter='\t'):
+    for ancestor, degree, child in reader(ds.etc_dir / 'closure.csv', delimiter='\t'):
         d[child][ancestor] = True
 
-    with jsonlib.update(etc / 'entitiestitles.json', default={}, indent=4, sort_keys=True) as entitiescache:
-        for p in jd.glob('*json'):
-            with jsonlib.update(p, sort_keys=True, indent=4, ensure_ascii=False) as json:
-                for ex in json:
-                    if 'entities' in ex:
-                        entities = ex.get("entities", [])
-                        parents = []
-                        for entity in entities:
-                            if entity in misextractions:
-                                continue
-                            parents += list(d[entity].keys())
-                        parents = {
-                            parent: get_title(parent, entitiescache)
-                            for parent in parents
-                            if parent not in entities and parent not in excludelist
-                        }
-                        if parents != {}:
-                            ex["parententities"] = parents
+    with jsonlib.update(
+        ds.etc_dir / 'entitiestitles.json', default={}, indent=4, sort_keys=True
+    ) as entitiescache:
+        for ex in ds.iter_extracted_examples():
+            if 'entities' in ex:
+                entities = ex.get("entities", [])
+                parents = []
+                for entity in entities:
+                    if entity in misextractions:
+                        continue
+                    parents += list(d[entity].keys())
+                parents = {
+                    parent: get_title(parent, entitiescache)
+                    for parent in parents
+                    if parent not in entities and parent not in excludelist
+                }
+                if parents != {}:
+                    ex["parententities"] = parents
+                ex["entities"] = process_entities(ex["entities"])
+                ex["parententities"] = process_entities(ex.get("parententities", {}))

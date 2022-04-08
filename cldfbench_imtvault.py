@@ -12,6 +12,7 @@ from clldutils.lgr import ABBRS as lgrabbrs
 from clldutils.jsonlib import load
 from cldfbench import Dataset as BaseDataset
 from bs4 import BeautifulSoup as bs
+from clldutils import jsonlib
 
 ABBRS = list(lgrabbrs.keys())
 ABBRS.extend([
@@ -131,6 +132,22 @@ class Dataset(BaseDataset):
 
     def cldf_specs(self):  # A dataset must declare all CLDF sets it creates.
         return super().cldf_specs()
+
+    def dump_extracted_examples(self, examples, fname):
+        if examples:
+            jsonlib.dump(
+                examples,
+                self.dir / 'extracted_examples' / fname,
+                sort_keys=True, indent=4, ensure_ascii=False)
+
+    def iter_extracted_examples(self):
+        for p in self.dir.joinpath('extracted_examples').glob('*json'):
+            with jsonlib.update(p, sort_keys=True, indent=4, ensure_ascii=False) as json:
+                yield from json
+
+    def iter_tex_dirs(self):
+        for p in self.raw_dir.joinpath('raw_texfiles', 'raw').iterdir():
+            yield int(p.name), p
 
     def cmd_download(self, args):
         def get_bibtex(book_id):

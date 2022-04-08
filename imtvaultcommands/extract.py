@@ -7,7 +7,6 @@ from cldfbench_imtvault import Dataset
 from .util.extractgll import langsciextract
 from .util import addNER
 from .util import add_closure
-from .util import integrate_entities
 
 LNAME_TO_GC = {
     'Singapore Malay': 'mala1479',  # 42
@@ -69,7 +68,6 @@ def register(parser):
 
 def run(args):
     ds = Dataset()
-    extracted = ds.dir / 'extracted_examples'
     gl_by_name = {}
     gl_by_gc = {}
     for lg in args.glottolog.api.languoids():
@@ -82,7 +80,6 @@ def run(args):
                     gl_by_name[name] = lg
     for n, gc in LNAME_TO_GC.items():
         gl_by_name[n] = gl_by_gc[gc]
-    langsciextract(ds.raw_dir / 'raw_texfiles' / 'raw', extracted, gl_by_name)
-    addNER.run(extracted, ds.etc_dir)
-    add_closure.run(extracted, ds.etc_dir)
-    integrate_entities.run(extracted)
+    langsciextract(ds, gl_by_name)
+    addNER.run(ds)
+    add_closure.run(ds)

@@ -1,5 +1,8 @@
 import re
-from .lgrlist import LGRLIST
+
+from clldutils import lgr
+
+LGRLIST = list(lgr.PERSONS.keys()) + list(lgr.ABBRS.keys())
 
 NON_CCBY_LIST = [148, 149, 234]
 
@@ -17,7 +20,7 @@ LGRPATTERN_UPPER_LOWER = re.compile(
 )
 #braces after a space or after the beginning of the line
 BRACESPATTERN = re.compile(r"(?<=.^| ){([^}{ ]+)}")
-GLL = re.compile(PRESOURCELINE + SOURCELINE + IMTLINE1 + IMTLINE2 + TRSLINE)
+GLL_PATTERN = re.compile(PRESOURCELINE + SOURCELINE + IMTLINE1 + IMTLINE2 + TRSLINE)
 TEXTEXT = re.compile(r"\\text(.*?)\{(.*?)\}")
 TEXSTYLEENVIRONMENT = re.compile(r"\\\\textstyle[A-Z][A-Za-z].*?{(.*?)}")
 INDEXCOMMANDS = re.compile(r"\\\\i[sl]{(.*?)}")
@@ -284,8 +287,10 @@ ONE_LANGUAGE_BOOKS = {
 
 
 SUPERSEDED = [22, 25, 46, 141, 144, 149, 195]
-FRENCH = [27, 143]
-GERMAN = [101, 234, 155, 134, 116]
-PORTUGUESE = [160, 200]
-CHINESE = [177]
-SPANISH = [236]
+METALANGS = {
+    'por': {160, 200},
+    'deu': {101, 234, 155, 134, 116},
+    'fra': {27, 143},
+    'spa': {236},
+    'cmn': {177},
+}
