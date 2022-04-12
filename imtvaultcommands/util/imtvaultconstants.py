@@ -259,29 +259,30 @@ TEXTARGYANKS = [
 
 ONE_LANGUAGE_BOOKS = {
 #   ID  ISO6393 Glottocode   Name
+    16: ("ita", "ital1282", "Italian"),
     17: ("sje", "pite1240", "Pite Saami"),
     66: ("ybh", "yakk1236", "Yakkha"),
     67: ("mhl", "mauw1238", "Mauwake"),
     78: ("pmy", "papu1250", "Papuan Malay"),
     82: ("phl", "phal1254", "Palula"),
     85: ("fpe", "fern1234", "Pichi"),
+    98: ("ikx", "ikkk1242", "Ik"),
+    109: ("nru", "yong1288", "Yongning Na"),
     118: ("mlw", "molo1266", "Moloko"),
     124: ("rap", "rapa1244", "Rapa Nui"),
+    150: ("rus", "russ1263", "Russian"),
     212: ("tci", "wara1294", "Komnzo"),
+    219: ("zai", "isth1244", "Isthmus Zapotec"),
+    225: ("dar", "mege1234", "Mehweb"),
+    228: ("aaz", "amar1273", "Amarasi"),
+    245: ("dga", "sout2789", "Dagaare"),
     250: ("dar", "sanz1248", "Sanzhi Dargwa"),  #      (Iso is not precise here)
+    287: ("nyy", "nyak1261", "Nyakyusa"),
     298: ("gyi", "gyel1242", "Gyeli"),
     295: ("jya", "japh1234", "Japhug"),  # (Iso is not precise here)
     308: ("roh", "surs1245", "Tuatschin"),  # (Iso is not precise here)
-    245: ("dga", "sout2789", "Dagaare"),
-    98: ("ikx", "ikkk1242", "Ik"),
     326: ("ruc", "ruul1235", "Ruruuli"),
-    287: ("nyy", "nyak1261", "Nyakyusa"),
-    109: ("nru", "yong1288", "Yongning Na"),
-    225: ("dar", "mege1234", "Mehweb"),
-    228: ("aaz", "amar1273", "Amarasi"),
-    150: ("rus", "russ1263", "Russian"),
     329: ("swe", "swed1254", "Swedish"),
-    16: ("ita", "ital1282", "Italian"),
 }
 
 

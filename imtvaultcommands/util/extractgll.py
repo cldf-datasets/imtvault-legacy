@@ -2,16 +2,23 @@ import hashlib
 import collections
 
 import attr
+from pyigt.igt import NON_OVERT_ELEMENT
+
 from . import LaTexAccents
 from .titlemapping import titlemapping
 
 from .imtvaultconstants import *
 
+EMPTY = NON_OVERT_ELEMENT
+ELLIPSIS = '…'
 converter = LaTexAccents.AccentConverter()
 glottotmp = {}
 
 
 def strip_tex_comment(s):
+    lines = re.split(r'\\\\', s)
+    if len(lines) == 2 and lines[1].startswith('%'):
+        s = lines[0] + r'\\'
     return re.split(r"(?<!\\)%", s)[0].replace(r"\%", "%")
 
 
@@ -246,21 +253,297 @@ def iter_tex(book):
         except UnicodeDecodeError:
             print("Unicode problem in %s" % filename)
             continue
-        s = s.replace(r"{\bfseries ", r"\textbf{")
-        s = s.replace(r"{\itshape ", r"\textit{")
-        s = s.replace(r"{\scshape ", r"\textsc{")
         yield filename.name, (filename, s)
 
 
-def langsciextract(ds, gl_by_name):
+def parse_langinfo(l):
+    from TexSoup import TexSoup
+    from TexSoup.data import TexCmd
+
+    # FIXME: extract page numbers, too!
+
+    def get_name(arg):
+        if len(arg.contents) == 1 and isinstance(arg.contents[0], TexCmd) and not arg.contents[0].args:
+            return '\\' + arg.contents[0].name
+        return ''.join(TexSoup(re.sub(r'\\label{[^}]+}', '', arg.string)).text)
+
+    langinfo = TexSoup(r'\langinfo' + l.split(r'\langinfo')[-1], tolerance=1).langinfo
+    if langinfo and len(langinfo.args) == 3:
+        return (
+            get_name(langinfo.args[0]),
+            ''.join(TexSoup(langinfo.args[1].string).text),
+            (TexSoup(langinfo.args[2].string).text or [''])[-1],
+        )
+
+def parse_ili(l):
+    from TexSoup import TexSoup
+    try:
+        ili = TexSoup(r'\ili{' + l.split(r'\ili{')[-1].split('}')[0], tolerance=1).ili
+    except:
+        raise ValueError(l)
+    return (ili.args[0].string, '', '')
+
+
+def iter_gll(s):
+    gll_start = re.compile(r'\\gll(l)?[^a-zA-Z]')
+    glt_start = re.compile(r'\\(glt|trans)[^a-zA-Z]')
+    longexampleandlanguage_pattern = re.compile(r'\\\\}{([^}]+)}$')
+
+    linfo = None
+    ex_pattern = re.compile(r"\\ex\s+(?P<lname>[A-Z][a-z]+)\s+(\([A-Z][0-9],\s+)?\\cite[^{]+{(?P<ref>[^}]+)}")
+    gll, in_gll = [], False
+    for lineno, line in enumerate(s.split('\n')):
+        line = strip_tex_comment(line).strip()
+        if r'\langinfo' in line:
+            res = parse_langinfo(line)
+            if res:
+                linfo = (res, lineno)
+        elif r'\ili{' in line:
+            res = parse_ili(line)
+            if res:
+                linfo = (res, lineno)
+                line, rem = line.split(r'\ili{', maxsplit=1)
+                line += rem.split('}', maxsplit=1)[1] if '}' in rem else ''
+                line = line.replace('()', '').strip()
+        elif ex_pattern.match(line):
+            m = ex_pattern.match(line)
+            linfo = ((m.group('lname'), '', m.group('ref')), lineno)
+
+        m = glt_start.search(line)
+        if m:
+            if gll and len(gll) < 10:
+                #
+                # We may need to fix the gloss line:
+                mm = longexampleandlanguage_pattern.search(gll[-1])
+                if mm:
+                    linfo = ((mm.groups()[0], '', ''), lineno)
+                    gll[-1] = gll[-1][:mm.start()]
+                pre = line[:m.start()]
+                line = line[m.end() - 1:]
+                gll.append(pre)
+                gll.append(line)
+                # Return linfo it wasn't parsed too far from the example:
+                yield linfo[0] if linfo and (lineno - linfo[1] < 25) else None, gll
+            gll, in_gll = [], False
+            continue
+        m = gll_start.search(line)
+        if m:
+            line = line[m.end() - 1:]
+            gll = []
+            in_gll = True
+        if in_gll:
+            gll.append(line)
+
+
+# per chapter "one language":
+ONE_LANGUAGE_CHAPTERS = {
+    '173/04-me.tex': 'Spanish',
+    '306/owusu.tex': 'Akan',
+    '271/04.tex': 'Hebrew',
+    '137/ch3.tex': 'Tashlhiyt',
+    '254/08-dalessandro.tex': 'Ripano',
+    '254/04-smith.tex': 'Ostyak',
+    '120/mwamzandi.tex': 'Swahili',
+    '189/06.tex': 'Russian',
+}
+
+
+def recombine(l):
+    from pyigt.lgrmorphemes import MORPHEME_SEPARATORS
+    chunk = []
+    for c in l:
+        if not c:
+            continue
+        if c[0] in MORPHEME_SEPARATORS or (chunk and chunk[-1][-1] in MORPHEME_SEPARATORS):
+            chunk.append(c)
+        else:
+            if chunk:
+                yield ''.join(chunk)
+            chunk = [c]
+    if chunk:
+        yield ''.join(chunk)
+
+
+def fixed_alignment(pt, gl):
+    from .latex import to_text
+    # pre-process
+    # Merge multi-word lexical glosses:
+    multi_word_gloss = re.compile(r'(\s|^){([a-z ]+)}(\s|$)')
+    gl = multi_word_gloss.sub(
+        lambda m: ' {} '.format(re.sub(r'\s+', '_', m.groups()[1])), gl).strip()
+    gl = re.sub(r'(\s|^){}(\s|$)', ' _ ', gl)
+    gl = re.sub(r'(\s|^){}{}(\s|$)', ' _ ', gl)
+    gl = re.sub(r'(\s|^)~(\s|$)', ' _ ', gl)
+
+    # Merge multi-word primary text groups:
+    multi_word_pt = re.compile(r'(\s|^){([\w .]+)}(\s|$)')
+    pt = multi_word_pt.sub(
+        lambda m: ' {} '.format(re.sub(r'\s+', '_', m.groups()[1])), pt).strip()
+    pt = re.sub(r'(\s|^){}(\s|$)', ' _ ', pt)
+
+    comment = None
+
+    #
+    # FIXME: There are multi-word primary text groups, too. E.g. {t\^{a}n ishpish na}
+    #
+
+    # de-latex
+    pt = to_text(pt)[0].split()
+    gl = to_text(gl)[0].split()
+
+    # post-process
+    pt = [ELLIPSIS if w in ['[...]', '...', '“…”'] else w for w in pt]
+    gl = [ELLIPSIS if w in ['[...]', '...', '“…”'] else w for w in gl]
+
+    if len(pt) > len(gl):
+        if pt[-1] == '.':
+            pt = pt[:-1]
+            pt[-1] += '.'
+        elif pt[-1] == '[]':
+            pt = pt[:-1]
+
+    if len(pt) - len(gl) == 1:
+        if ELLIPSIS in pt:
+            gl.insert(pt.index(ELLIPSIS), ELLIPSIS)
+        elif '/' in pt:
+            gl.insert(pt.index('/'), '/')
+        elif EMPTY in pt:
+            gl.insert(pt.index(EMPTY), EMPTY)
+        elif EMPTY + '.' in pt:
+            gl.insert(pt.index(EMPTY + '.'), EMPTY)
+        elif pt[-1] in [']', '].']:
+            gl.append('_')
+        elif re.fullmatch(r'\([^)]+\)', pt[-1]):
+            comment = pt[-1].replace('(', '').replace(')', '')
+            pt = pt[:-1]
+
+    pt_r, gl_r = list(recombine(pt)), list(recombine(gl))
+    if len(pt_r) == len(gl_r):
+        pt, gl = pt_r, gl_r
+    return pt, gl, comment
+
+
+def lines_and_comment(lines):
+    """
+    :param lines:
+    :return:
+    """
+    from .latex import to_text
+    from TexSoup import TexSoup
+    res, comment, linfo = [], [], None
+    for line in lines:
+        line = line.strip()
+        if line:
+            try:
+                s = TexSoup(line, tolerance=1)
+                if s.jambox:
+                    comment.append(s.jambox.string)
+                    s.jambox.delete()
+                    line = str(s)
+            except:
+                pass
+            if line:
+                res.append(line)
+    if len(res) > 2:
+        m = re.fullmatch(r'}{([A-Z][a-z]+)}', res[-1].split('\n')[0])
+        if m:
+            linfo = (m.groups()[0], '', '')
+            res = res[:-1]
+        else:
+            m = re.fullmatch(r'\(([A-Z][a-z]+)\)', to_text(res[-1].split('\n')[0])[0])
+            if m:
+                linfo = (m.groups()[0], '', '')
+                res = res[:-1]
+    return [r.replace('\n', ' ') for r in res], '; '.join(comment), linfo
+
+
+def langsciextract(ds, gl_by_name, bid):
+    from .latex import to_text
     unknown_lgs = collections.Counter()
+    macros = collections.Counter()
+    macroex = {}
+    mp = re.compile(r'\\([a-zA-Z]+)[^a-zA-Z]')
+    ii, xx = 0, 0
+    allex = collections.Counter()
+    invex = collections.Counter()
     for book_ID, book in ds.iter_tex_dirs():
         if (book_ID in SUPERSEDED) or (book_ID in NON_CCBY_LIST):
+            continue
+        if bid and (book_ID != int(bid)):
             continue
         tex = dict(iter_tex(book))
         abbrkey = get_abbrkey(tex)
 
         for filename, s in tex.values():
+            for linfo, gll in iter_gll(s):
+                #for line in gll:
+                #    for m in mp.finditer(line):
+                #        macros.update([m.groups()[0]])
+                #        macroex[m.groups()[0]] = line
+                #continue
+
+                aligned, translation = '\n'.join(gll[:-1]), gll[-1]
+                aligned = [l.strip() for l in re.split(r'\\(?:\\|newline)', aligned) if l.strip()]
+                # book-specifics:
+                if book_ID == 212:
+                    if len(aligned) > 2:
+                        if 'footnotesize' in aligned[2]:
+                            aligned = aligned[:2]
+
+                #
+                # must remove stuff like \jambox{...}
+                #
+                aligned, comment, linfo2 = lines_and_comment(aligned)
+                aligned = [l for l in aligned if to_text(l)[0].replace('*', '').strip()]
+                if len(aligned) == 3:
+                    # There's a separate line for the morpheme-segmented primary text!
+                    obj, pt, gl = aligned
+                elif len(aligned) == 2:
+                    pt, gl = aligned
+                    obj = pt
+                else:
+                    print(filename)
+                    print(len(aligned), aligned)
+                    print('---')
+                    continue
+
+                ii += 1
+                allex.update([book_ID])
+                pt, gl, comment = fixed_alignment(pt, gl)
+                if len(pt) == len(gl):
+                    continue
+                if gl and gl[-1] in ['()', '*()']:
+                    gl = gl[:-1]
+                if len(pt) == len(gl):
+                    continue
+                xx += 1
+                invex.update([book_ID])
+                print(filename.parent.name, filename.name, linfo)
+                print(re.sub(r'\s+', ' ', to_text(obj)[0]))
+                #print(len(pt), pt)
+                #print(len(gl), gl)
+                print('\t'.join(pt))
+                print('\t'.join(gl))
+                print(to_text(translation)[0])
+
+                print('------')
+                continue
+                if not linfo:
+                    if 'longexampleandlanguage' in gll:
+                        pass
+                        # TexSoup(gll, tolerance=1).longexampleandlanguage.args[1].string
+                    elif book_ID in ONE_LANGUAGE_BOOKS:
+                        pass
+                    elif '{}/{}'.format(book_ID, filename.name) in ONE_LANGUAGE_CHAPTERS:
+                        pass
+                    else:
+                        ii += 1
+                        #print(filename)
+                        #print(gll)
+                        #print('+++', linfo)
+                        #print('-----------------------------------------')
+                break
+            continue
             examples = []
             for match in GLL_PATTERN.finditer(s):
                 try:
@@ -274,3 +557,8 @@ def langsciextract(ds, gl_by_name):
                 examples, 'store-{}-{}examples.json'.format(book_ID, filename.stem))
     #for k, v in unknown_lgs.most_common(50):
     #    print(k, v)
+    print(ii, xx)
+    #for k, v in macros.most_common():
+    #    print('{}\t{}\t{}\t{}'.format(k, v, macroex[k], to_text(macroex[k])))
+    for k, v in invex.most_common(30):
+        print(k, v, allex[k])

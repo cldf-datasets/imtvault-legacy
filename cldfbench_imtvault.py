@@ -146,7 +146,7 @@ class Dataset(BaseDataset):
                 yield from json
 
     def iter_tex_dirs(self):
-        for p in self.raw_dir.joinpath('raw_texfiles', 'raw').iterdir():
+        for p in sorted(self.raw_dir.joinpath('raw_texfiles', 'raw').iterdir(), key=lambda pp: int(pp.name)):
             yield int(p.name), p
 
     def cmd_download(self, args):

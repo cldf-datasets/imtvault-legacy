@@ -64,12 +64,17 @@ Västra Ämtervik (Vm) 2
 
 def register(parser):
     add_catalog_spec(parser, 'glottolog')
+    parser.add_argument('-b', '--book-id', default=None)
 
 
 def run(args):
     ds = Dataset()
     gl_by_name = {}
     gl_by_gc = {}
+
+    langsciextract(ds, gl_by_name, args.book_id)
+    return
+
     for lg in args.glottolog.api.languoids():
         gl_by_gc[lg.id] = lg
         gl_by_name[lg.name] = lg
