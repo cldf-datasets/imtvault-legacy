@@ -213,6 +213,10 @@ class GLL:
         )
 
 
+
+
+
+
 def get_abbreviations(tex):
     result = {}
     for line in tex.split('\n'):
@@ -250,6 +254,9 @@ def iter_tex(book):
     for filename in book.glob('*tex'):
         try:
             s = filename.read_text(encoding='utf8')
+            s = s.replace(r'\langinfobreak', r'\langinfo')
+            s = s.replace(r'{\db}{\db}{\db}', '[[[')
+            s = s.replace(r'{\db}{\db}', '[[')
         except UnicodeDecodeError:
             print("Unicode problem in %s" % filename)
             continue
@@ -275,6 +282,7 @@ def parse_langinfo(l):
             (TexSoup(langinfo.args[2].string).text or [''])[-1],
         )
 
+
 def parse_ili(l):
     from TexSoup import TexSoup
     try:
@@ -282,6 +290,15 @@ def parse_ili(l):
     except:
         raise ValueError(l)
     return (ili.args[0].string, '', '')
+
+
+def parse_il(l):
+    from TexSoup import TexSoup
+    try:
+        il = TexSoup(r'\il{' + l.split(r'\il{')[-1].split('}')[0], tolerance=1).il
+    except:
+        raise ValueError(l)
+    return (il.args[0].string.split('!')[-1], '', '')
 
 
 def iter_gll(s):
@@ -302,7 +319,14 @@ def iter_gll(s):
             res = parse_ili(line)
             if res:
                 linfo = (res, lineno)
-                line, rem = line.split(r'\ili{', maxsplit=1)
+                #line, rem = line.split(r'\ili{', maxsplit=1)
+                #line += rem.split('}', maxsplit=1)[1] if '}' in rem else ''
+                line = line.replace('()', '').strip()
+        elif r'\il{' in line:
+            res = parse_il(line)
+            if res:
+                linfo = (res, lineno)
+                line, rem = line.split(r'\il{', maxsplit=1)
                 line += rem.split('}', maxsplit=1)[1] if '}' in rem else ''
                 line = line.replace('()', '').strip()
         elif ex_pattern.match(line):
@@ -364,36 +388,45 @@ def recombine(l):
         yield ''.join(chunk)
 
 
+CHAR_REPLS = {
+    r'\v{s}': 'š',
+    r"\'u": 'ú',
+    r'\v{h}': "ȟ",
+    r"\'a": "á",
+}
+
+
 def fixed_alignment(pt, gl):
     from .latex import to_text
+
     # pre-process
     # Merge multi-word lexical glosses:
-    multi_word_gloss = re.compile(r'(\s|^){([a-z ]+)}(\s|$)')
+    multi_word_gloss = re.compile(r'(\s|^){([Ia-z ]+|North Wales|The birds)}(\s|,|$)')
     gl = multi_word_gloss.sub(
         lambda m: ' {} '.format(re.sub(r'\s+', '_', m.groups()[1])), gl).strip()
-    gl = re.sub(r'(\s|^){}(\s|$)', ' _ ', gl)
+    gl = re.sub(r'(\s|^){}(\s|$)', ' _ ', gl.replace('{} {}', '{}  {}'))
     gl = re.sub(r'(\s|^){}{}(\s|$)', ' _ ', gl)
     gl = re.sub(r'(\s|^)~(\s|$)', ' _ ', gl)
 
     # Merge multi-word primary text groups:
-    multi_word_pt = re.compile(r'(\s|^){([\w .]+)}(\s|$)')
+    for k, v in CHAR_REPLS.items():
+        pt = pt.replace(k, v)
+    multi_word_pt = re.compile(r'(\s|^){([\w žąį./]+)}(\s|\.|$)')
     pt = multi_word_pt.sub(
         lambda m: ' {} '.format(re.sub(r'\s+', '_', m.groups()[1])), pt).strip()
     pt = re.sub(r'(\s|^){}(\s|$)', ' _ ', pt)
 
     comment = None
 
-    #
-    # FIXME: There are multi-word primary text groups, too. E.g. {t\^{a}n ishpish na}
-    #
-
     # de-latex
     pt = to_text(pt)[0].split()
     gl = to_text(gl)[0].split()
 
     # post-process
-    pt = [ELLIPSIS if w in ['[...]', '...', '“…”'] else w for w in pt]
-    gl = [ELLIPSIS if w in ['[...]', '...', '“…”'] else w for w in gl]
+    ellipsis_variants = [
+        '....', '[…]', '[...]', '...', '[...].', '“…”', '[…].', '(...).', '…]']
+    pt = [ELLIPSIS if w in ellipsis_variants else w for w in pt]
+    gl = [ELLIPSIS if w in ellipsis_variants else w for w in gl]
 
     if len(pt) > len(gl):
         if pt[-1] == '.':
@@ -402,7 +435,12 @@ def fixed_alignment(pt, gl):
         elif pt[-1] == '[]':
             pt = pt[:-1]
 
-    if len(pt) - len(gl) == 1:
+    ldiff = len(pt) - len(gl)
+    if ldiff == -1:
+        if gl and gl[-1].startswith('[') and gl[-1].endswith(']'):
+            comment = gl[-1][1:-1].strip()
+            gl = gl[:-1]
+    elif ldiff == 1:
         if ELLIPSIS in pt:
             gl.insert(pt.index(ELLIPSIS), ELLIPSIS)
         elif '/' in pt:
@@ -411,11 +449,22 @@ def fixed_alignment(pt, gl):
             gl.insert(pt.index(EMPTY), EMPTY)
         elif EMPTY + '.' in pt:
             gl.insert(pt.index(EMPTY + '.'), EMPTY)
-        elif pt[-1] in [']', '].']:
+        elif pt[-1] in [']', '].', ']?']:
             gl.append('_')
         elif re.fullmatch(r'\([^)]+\)', pt[-1]):
             comment = pt[-1].replace('(', '').replace(')', '')
             pt = pt[:-1]
+
+    ldiff = len(pt) - len(gl)
+    if ldiff > 0:
+        if ldiff == pt.count(ELLIPSIS):
+            for i, c in enumerate(pt):
+                if c == ELLIPSIS:
+                    gl.insert(i, ELLIPSIS)
+        elif ldiff == pt.count('<') + pt.count('>'):
+            for i, c in enumerate(pt):
+                if c in ['<', '>']:
+                    gl.insert(i, '_')
 
     pt_r, gl_r = list(recombine(pt)), list(recombine(gl))
     if len(pt_r) == len(gl_r):
@@ -425,6 +474,9 @@ def fixed_alignment(pt, gl):
 
 def lines_and_comment(lines):
     """
+    Figure out which lines of all lines between \gll and \glt to be considered as
+    word/morpheme-segmented primary text and gloss.
+
     :param lines:
     :return:
     """
@@ -445,15 +497,26 @@ def lines_and_comment(lines):
             if line:
                 res.append(line)
     if len(res) > 2:
+        # Language names as second argument to "longexampleandlanguage" commands.
         m = re.fullmatch(r'}{([A-Z][a-z]+)}', res[-1].split('\n')[0])
         if m:
             linfo = (m.groups()[0], '', '')
             res = res[:-1]
         else:
-            m = re.fullmatch(r'\(([A-Z][a-z]+)\)', to_text(res[-1].split('\n')[0])[0])
+            # Comments in square brackets appended to the example.
+            m = re.fullmatch(r'\[([\w ]+)]', to_text(res[-1].split('\n')[0])[0].strip())
             if m:
-                linfo = (m.groups()[0], '', '')
+                comment = m.groups()[0]
                 res = res[:-1]
+            else:
+                # Language names appended as special comment in parentheses to the example.
+                m = re.fullmatch(r'\(?([A-Z][a-z]+(-English)?|[0-9/]+|[A-Z][A-Z]+)\)?', to_text(res[-1].split('\n')[0])[0].strip())
+                if m:
+                    if m.groups()[0][0].isalpha() and m.groups()[0][0].islower():
+                        linfo = (m.groups()[0], '', '')
+                    else:
+                        comment = m.groups()[0]
+                    res = res[:-1]
     return [r.replace('\n', ' ') for r in res], '; '.join(comment), linfo
 
 
@@ -476,6 +539,8 @@ def langsciextract(ds, gl_by_name, bid):
 
         for filename, s in tex.values():
             for linfo, gll in iter_gll(s):
+                if linfo:
+                    linfo = [to_text(s or '')[0] for s in linfo]
                 #for line in gll:
                 #    for m in mp.finditer(line):
                 #        macros.update([m.groups()[0]])
@@ -561,4 +626,4 @@ def langsciextract(ds, gl_by_name, bid):
     #for k, v in macros.most_common():
     #    print('{}\t{}\t{}\t{}'.format(k, v, macroex[k], to_text(macroex[k])))
     for k, v in invex.most_common(30):
-        print(k, v, allex[k])
+        print(k, v, allex[k], '{}%'.format(round(100 * float(v)/allex[k])))

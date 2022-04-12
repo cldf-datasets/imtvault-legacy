@@ -263,6 +263,7 @@ ONE_LANGUAGE_BOOKS = {
     17: ("sje", "pite1240", "Pite Saami"),
     66: ("ybh", "yakk1236", "Yakkha"),
     67: ("mhl", "mauw1238", "Mauwake"),
+    74: ("cli", "chak1271", "Chakali"),
     78: ("pmy", "papu1250", "Papuan Malay"),
     82: ("phl", "phal1254", "Palula"),
     85: ("fpe", "fern1234", "Pichi"),
