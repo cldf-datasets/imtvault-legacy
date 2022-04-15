@@ -509,14 +509,20 @@ def lines_and_comment(lines):
                 comment = m.groups()[0]
                 res = res[:-1]
             else:
-                # Language names appended as special comment in parentheses to the example.
-                m = re.fullmatch(r'\(?([A-Z][a-z]+(-English)?|[0-9/]+|[A-Z][A-Z]+)\)?', to_text(res[-1].split('\n')[0])[0].strip())
+                # A single word: Considered a comment.
+                m = re.fullmatch(r'([\w]+)', to_text(res[-1].split('\n')[0])[0].strip())
                 if m:
-                    if m.groups()[0][0].isalpha() and m.groups()[0][0].islower():
-                        linfo = (m.groups()[0], '', '')
-                    else:
-                        comment = m.groups()[0]
+                    comment = m.groups()[0]
                     res = res[:-1]
+                else:
+                    # Language names appended as special comment in parentheses to the example.
+                    m = re.fullmatch(r'\(?([A-Z][a-z]+(-English)?|[0-9/]+|[A-Z][A-Z]+)\)?', to_text(res[-1].split('\n')[0])[0].strip())
+                    if m:
+                        if m.groups()[0][0].isalpha() and m.groups()[0][0].islower():
+                            linfo = (m.groups()[0], '', '')
+                        else:
+                            comment = m.groups()[0]
+                        res = res[:-1]
     return [r.replace('\n', ' ') for r in res], '; '.join(comment), linfo
 
 
