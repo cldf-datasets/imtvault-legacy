@@ -411,7 +411,7 @@ def fixed_alignment(pt, gl):
     # Merge multi-word primary text groups:
     for k, v in CHAR_REPLS.items():
         pt = pt.replace(k, v)
-    multi_word_pt = re.compile(r'(\s|^){([\w žąį./]+)}(\s|\.|$)')
+    multi_word_pt = re.compile(r'(\s|^|-){([\w žąį./]+)}(\s|\.|$)')
     pt = multi_word_pt.sub(
         lambda m: ' {} '.format(re.sub(r'\s+', '_', m.groups()[1])), pt).strip()
     pt = re.sub(r'(\s|^){}(\s|$)', ' _ ', pt)

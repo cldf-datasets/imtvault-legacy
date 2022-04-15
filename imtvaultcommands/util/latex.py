@@ -231,6 +231,7 @@ SIMPLE_MACROS = {
     'Asp': 'ASP',
     'Invol': 'INVOL',
     'Volition': 'volition',
+    'sVP': 'VP',
 }
 
 logging.getLogger('pylatexenc.latexwalker').setLevel(logging.WARNING)
