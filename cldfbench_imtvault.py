@@ -7,123 +7,105 @@ import urllib.request
 from tqdm import tqdm
 from pyigt import IGT
 from pyigt.igt import NON_OVERT_ELEMENT, LGRConformance
-from pyigt.lgrmorphemes import MORPHEME_SEPARATORS
-from clldutils.lgr import ABBRS as lgrabbrs
 from clldutils.jsonlib import load
 from cldfbench import Dataset as BaseDataset
 from bs4 import BeautifulSoup as bs
 from clldutils import jsonlib
+from clldutils.misc import lazyproperty
+from clldutils.path import walk
+from pybtex import database
 
-ABBRS = list(lgrabbrs.keys())
-ABBRS.extend([
-    'FEM',
-    'CL',
-    'COMP',
-    'CONN',
-    'CONJ',
-    'DIM',
-    'PRAG',
-    'R', 'RETRO', 'LINK', 'IFV', 'DEP', 'EXT', 'ID', 'CONTR', 'IO', 'DO', 'TNS'])
-META_LANGS = {
-    'eng',
-    'fra',
-    'spa',
-    'cmn',
-    'por',
-    'deu',
-}
+from imtvaultcommands.util.lsp import Record
 
 
-def clean(tex, count):
-    tex = re.sub(  # {\ABBR}
-        r'{\\(%s)}' % '|'.join(re.escape(a) for a in ABBRS),
-        lambda m: m.groups()[0],
-        tex
-    )
-    tex = re.sub(  # {\abbr}
-        r'{\\(%s)}' % '|'.join(re.escape(a.lower()) for a in ABBRS),
-        lambda m: m.groups()[0].upper(),
-        tex
-    )
-    tex = re.sub(  # \abbr{}
-        r'\\(%s){}' % '|'.join(re.escape(a.lower()) for a in ABBRS),
-        lambda m: m.groups()[0].upper(),
-        tex
-    )
-    tex = re.sub(  # {\Abbr}
-        r'{\\(%s)}' % '|'.join(re.escape(a.capitalize()) for a in ABBRS),
-        lambda m: m.groups()[0].upper(),
-        tex
-    )
-    tex = re.sub(  # {ABBR}
-        r'{([A-Z]+)}',
-        lambda m: m.groups()[0],
-        tex
-    )
-    #\gloss{cl.3sg}
-    tex = re.sub(
-        r'\\gloss{([a-z0-9.:-]+)}',
-        lambda m: m.groups()[0].upper(),
-        tex
-    )
-    tex = re.sub(
-        r'\\gloss([A-Z]+){}',
-        lambda m: m.groups()[0],
-        tex
-    )
-    tex = tex.replace('$\\emptyset$', NON_OVERT_ELEMENT)
-    tex = re.sub(r'\\hspace{[^}]+}', '', tex)
-    tex = re.sub(r'\\(emph|stem|bf){([^}]+)}', lambda m: m.groups()[1], tex)
-    tex = re.sub(r'\\(mc){([^}]+)}', lambda m: m.groups()[1].upper(), tex)
-    tex = tex.replace(r'\(ø\)', NON_OVERT_ELEMENT)
-    tex = re.sub(r'\\gsc([A-Z]+)', lambda m: m.groups()[0], tex)
-    tex = tex.replace(r'\redp{}', '~')
-    tex = tex.replace('${\\Rightarrow}$', '→')
-    tex = tex.replace(r'{\USSmaller}', '<')
-    tex = tex.replace(r'{\USGreater}', '>')
-    tex = tex.replace(r'\Third{}', '3')
-    tex = tex.replace(r'\Tsg{}', '3SG')
-    tex = tex.replace(r'\Tpl{}', '3PL')
-    tex = tex.replace(r'\Third.', '3.')
-    tex = tex.replace(r'\Third>', '3>')
-    tex = tex.replace(r'\Tsg.', '3SG.')
-    tex = tex.replace(r'\squish', '')
-    tex = tex.replace('__tld{}', '~')
-    #\\op...\\cp{} -> (…)
-    if '\\' in tex:
-        count.update([tex])
-    return tex
+def fix_bibtex(s):
+    string_pattern = re.compile(r"^@string{(.+)$")
+    s = string_pattern.sub('', s)
+    s = re.sub(r'\s*=\s*([a-zA-Z]+),\s*$', lambda m: ' = {' + m.groups()[0] + '},', s)
+    return s
 
 
-def recombine(l):
-    chunk = []
-    for c in l:
-        if not c:
-            continue
-        if c[0] in MORPHEME_SEPARATORS or (chunk and chunk[-1][-1] in MORPHEME_SEPARATORS):
-            chunk.append(c)
-        else:
-            if chunk:
-                yield ''.join(chunk)
-            chunk = [c]
-    if chunk:
-        yield ''.join(chunk)
+class TexDir:
+    def __init__(self, p, bib, languages=None, log=None):
+        self.bib = {}
+        if bib.exists():
+            for i, rec in enumerate(fix_bibtex(bib.read_text(encoding='utf8')).split('@')):
+                if i:
+                    try:
+                        for k, v in database.parse_string('@' + rec, 'bibtex').entries.items():
+                            self.bib[k] = (k, v)
+                            for kk, vv in v.fields.items():
+                                if kk.lower() == 'ids':
+                                    self.bib[vv] = (k, v)
+                    except Exception as e:
+                        #print(bib.name, e)
+                        pass
+        self.languages = languages or {}
+        self.dir = p
+        self.file_dict = {}
+        for filename in walk(self.dir, mode='files'):
+            if filename.suffix != '.tex':
+                continue
+            try:
+                s = filename.read_text(encoding='utf8')
+                s = re.sub(r'\s*\\hfill\s*\[\\href{[^}]+}[^]]*]\s*$', '', s, re.MULTILINE)
+                # We replace a couple of latex constructs to reduce the complexity.
+                s = s.replace(r'\langinfobreak', r'\langinfo')  # Mostly a synonym.
+                s = s.replace(r'{\db}{\db}{\db}', '[[[')
+                s = s.replace(r'{\db}{\db}', '[[')
+                s = s.replace(r'\textsc{id}:', '')
+                s = s.replace(r'\glossN.', r'\glossN{}.')
+                self.file_dict[filename.name] = s
+            except UnicodeDecodeError as e:
+                #print(e)
+                if log:
+                    log.warning("Unicode problem in %s" % filename)
+                continue
 
-def clean_abbr(k):
-    # 1, 2, 3
-    # 1/2/3
-    # 1,2,3
-    # 1, 2, 3,
-    # I,II,III
-    k = re.sub(r'{\\(sc|SC){([a-z]+)}}', lambda m: m.groups()[1], k)
-    k = re.sub(r'{\\(sc|SC)\s+([a-z]+)}', lambda m: m.groups()[1], k)
-    k = re.sub(r'^{([A-Z]+)}$', lambda m: m.groups()[0], k)
-    k = re.sub(r'^\\([A-Z]+)({})?$', lambda m: m.groups()[0], k)
-    k = re.sub(r'^([A-Z]+)({})?$', lambda m: m.groups()[0], k)
-    #k = k.replace('\\', '').replace('{', '').replace('}', '')
-    k = k.upper()
-    if re.fullmatch('[A-Z]+', k):
-        return k
+    def __iter__(self):
+        yield from ((self.dir / fn, fn, tex, self.languages.get(fn))
+                    for fn, tex in sorted(self.file_dict.items()))
+
+    @staticmethod
+    def get_abbreviations(tex):
+        from imtvaultcommands.util.latex import to_text
+        result = collections.OrderedDict()
+        for line in tex.split('\n'):
+            if not line.strip().startswith("%"):
+                cells = line.split("&")
+                if len(cells) == 2:
+                    result[to_text(cells[0].strip())[0]] = to_text(cells[1].strip())[0]
+        return result
+
+    @lazyproperty
+    def abbreviations(self):
+        abbrfile = 'abbreviations.tex'
+        res = None
+        if abbrfile in self.file_dict:
+            res = self.get_abbreviations(self.file_dict[abbrfile])
+        if not res:
+            for p, fn, s, _ in self:
+                if fn != abbrfile:
+                    try:
+                        abbr = s.split("section*{Abbreviations}")[1]
+                        res = self.get_abbreviations(abbr.split(r"\section")[0])
+                        if res:
+                            break
+                    except IndexError:
+                        pass
+        return res
+
+    def iter_examples(self, record, gl_by_name, unknown_lgs=None):
+        from imtvaultcommands.util.extractgll import iter_gll, make_example
+
+        seen = set()
+        for filename, fn, s, filelanguage in self:
+            for linfo, gll, prevline in iter_gll(s):
+                ex = make_example(record, self, linfo, gll, prevline, filelanguage, gl_by_name, unknown_lgs)
+                if ex:
+                    if ex.ID not in seen:
+                        yield ex, fn
+                        seen.add(ex.ID)
 
 
 class Dataset(BaseDataset):
@@ -146,8 +128,16 @@ class Dataset(BaseDataset):
                 yield from json
 
     def iter_tex_dirs(self):
-        for p in sorted(self.raw_dir.joinpath('raw_texfiles', 'raw').iterdir(), key=lambda pp: int(pp.name)):
-            yield int(p.name), p
+        filelanguages = collections.defaultdict(dict)
+        for d in self.etc_dir.read_csv('texfile_titles.tsv', delimiter='\t', dicts=True):
+            if d['Language']:
+                filelanguages[int(d['Book_ID'])][d['Filename']] = d['Language']
+        for d in self.etc_dir.read_csv('catalog.csv', dicts=True):
+            rec = Record(**d)
+            if rec.published and rec.cc_by:
+                tex = self.raw_dir / 'raw_texfiles' / 'raw' / str(rec.id)
+                if tex.exists():
+                    yield rec, TexDir(tex, self.etc_dir / 'refs' / '{}.bib'.format(rec.id), filelanguages[rec.id])
 
     def cmd_download(self, args):
         def get_bibtex(book_id):
@@ -301,6 +291,7 @@ class Dataset(BaseDataset):
                     #print('+++dup+++', p.name, ID)
                     continue
                 seen.add(ID)
+
                 args.writer.objects['ExampleTable'].append(dict(
                     ID=ID,
                     Language_ID=ex['language_glottocode'],
@@ -311,8 +302,12 @@ class Dataset(BaseDataset):
                     Translated_Text=tr,
                     LGR_Conformance_Level=str(conformance),
                     Abbreviations=igt.gloss_abbrs if conformance == LGRConformance.MORPHEME_ALIGNED else {},
-                    Source=['lsp{}'.format(ex['book_ID'])]
+                    Source=['lsp{}'.format(ex['book_ID'])],
+                    #
+                    # FIXME: add comment!
+                    #
                 ))
+
         for lg in args.writer.objects['LanguageTable']:
             if lg['ID'] != 'und':
                 lg['Examples_Count'] = lgs.get(lg['ID'], 0)

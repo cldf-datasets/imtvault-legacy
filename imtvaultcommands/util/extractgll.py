@@ -1,18 +1,16 @@
+import re
 import hashlib
 import collections
 
 import attr
 from pyigt.igt import NON_OVERT_ELEMENT
 
-from . import LaTexAccents
-from .titlemapping import titlemapping
+from .latex import to_text
 
-from .imtvaultconstants import *
-
+STARTINGQUOTE = "`‘"
+ENDINGQUOTE = "'’"
 EMPTY = NON_OVERT_ELEMENT
 ELLIPSIS = '…'
-converter = LaTexAccents.AccentConverter()
-glottotmp = {}
 
 
 def strip_tex_comment(s):
@@ -22,63 +20,6 @@ def strip_tex_comment(s):
     return re.split(r"(?<!\\)%", s)[0].replace(r"\%", "%")
 
 
-def resolve_lgr(s):
-    s = re.sub(LGRPATTERN_UPPER, r"\1", s)
-    for m in LGRPATTERN_LOWER.findall(s):
-        g = m[0]
-        s = re.sub(r"\\%s(?![a-zA-Z])" % g, g.upper(), s)
-    for m in LGRPATTERN_UPPER_LOWER.findall(s):
-        g = m[0]
-        s = re.sub(r"\\%s(?![a-zA-Z])" % g, g.upper(), s)
-    return s
-
-
-def tex2html(s):
-    result = striptex(s, html=True)
-    # repeated for nested  \textsomething{\textsomethingelse{}}
-    result = TEXTEXT.sub('<span class="\\1">\\2</span>', result)
-    result = TEXTEXT.sub('<span class="\\1">\\2</span>', result)
-    result = TEXTEXT.sub('<span class="\\1">\\2</span>', result)
-    return result
-
-
-def striptex(s, sc2upper=False, html=False):
-    result = converter.decode_Tex_Accents(s, utf8_or_ascii=1)
-    if sc2upper:
-        for m in re.findall("\\\\textsc{([-\.:=<> a-zA-Z0-9]*?)}", result):
-            result = result.replace("\\textsc{%s}" % m, m.upper())
-    result = re.sub(INDEXCOMMANDS, "", result)
-    result = re.sub(LABELCOMMANDS, "", result)
-    result = re.sub(TEXSTYLEENVIRONMENT, r"\1", result)
-    for r in TEXREPLACEMENTS:
-        result = result.replace(*r)
-    for r in TEXTARGYANKS:
-        result = re.sub(r"\\%s{.*?}" % r, "", result)
-    result = re.sub(r"\footnote{[^}{]*}", "", result)
-    # add " " in front of string so that lookbehind matches if at beginning of line
-    result = re.sub(BRACESPATTERN, r"\1", " " + result)[1:]
-    # strip "\ " (latex protected space)
-    result = re.sub(r"(?<!\\)\\ ", " ", result)
-    if html:  # keep \textbf, \texit for the time being, to be included in <span>s
-        return result
-    # repeat  for nested  \textsomething{\textsomethingelse{}}
-    result = re.sub(TEXTEXT, "\\2", result)
-    result = re.sub(TEXTEXT, "\\2", result)
-    result = re.sub(BRACESPATTERN, r"\1", " " + result)[1:]
-    return re.sub(TEXTEXT, "\\2", result)
-
-
-def tex2categories(s):
-    d = set()
-    smallcaps = re.findall("\\\\textsc\{([-=.:a-zA-Z0-9)(/\[\]]*?)\}", s)
-    for sc in smallcaps:
-        cats = re.split("[-=.:0-9)(/\[\]]", sc)
-        for cat in cats:
-            if cat:
-                d.add(cat)
-    return sorted(d)
-
-
 def clean_translation(trs):
     trs = trs.replace("\\\\", " ").strip()
     try:
@@ -86,181 +27,11 @@ def clean_translation(trs):
             trs = trs[1:]
         if trs[-1] in ENDINGQUOTE:
             trs = trs[:-1]
-        trs = strip_tex_comment(trs)
-        trs = striptex(trs)
         trs = trs.replace("()", "")
     except IndexError:  # s is  ''
         pass
-    m = CITATION.search(trs)
-    if m is not None:
-        if m.group(2) != "":
-            trs = re.sub(CITATION, r"(\2: \1)", trs).replace("[", "").replace("]", "")
-        else:
-            trs = re.sub(CITATION, r"(\2)", trs)
+    trs = trs.replace('...', ELLIPSIS)
     return trs
-
-
-@attr.s
-class GLL:
-    abbrkey = attr.ib()
-    categories = attr.ib()
-    book_ID = attr.ib(validator=attr.validators.instance_of(int))
-    book_metalanguage = attr.ib()
-    ID = attr.ib()
-    html = attr.ib()
-    srcwordsbare = attr.ib(validator=attr.validators.instance_of(list))
-    language_iso6393 = attr.ib()
-    language_glottocode = attr.ib()
-    language_name = attr.ib()
-    imtwordsbare = attr.ib()
-    clength = attr.ib(validator=attr.validators.instance_of(int))
-    citation = attr.ib()
-    trs = attr.ib(converter=clean_translation)
-
-    def json(self):
-        res = attr.asdict(self)
-        res.update(
-            license="https://creativecommons.org/licenses/by/4.0",
-            book_URL="https://langsci-press.org/catalog/book/{}".format(self.book_ID),
-            book_title=titlemapping.get(self.book_ID),
-            wlength=len(self.srcwordsbare),
-            label=" ".join(self.srcwordsbare),
-        )
-        for type_ in [' and ', ' or ']:
-            if type_ in self.trs:
-                res['coordination'] = type_.strip()
-
-        res["language"] = None
-        if self.language_glottocode:
-            if self.language_glottocode != "und":
-                res["language"] = \
-                    "https://glottolog.org/resource/languoid/id/{}".format(self.language_glottocode)
-        else:
-            del res['language_glottocode']
-
-        for aspect, types_ in [
-            ('time', [(' yesterday ', 'past'), (' tomorrow ', 'future'), (' now ', 'present')]),
-            ('modality', [(' want ', 'volitive')]),
-            ('polarity', [(' not ', 'negative')]),
-        ]:
-            for marker, type_ in types_:
-                if marker in self.trs.lower():
-                    res[aspect] = type_
-        return res
-
-    @classmethod
-    def from_match(cls, match, p, book_ID, abbrkey, gl_by_name):
-        g = match.groupdict()
-
-        metalang = 'eng'
-        for iso, book_ids in METALANGS.items():
-            if book_ID in book_ids:
-                metalang = iso
-
-        # Try to identify the language:
-        language = list(ONE_LANGUAGE_BOOKS.get(book_ID, (None, None, None)))
-        if language[1] is None:
-            lg = (g["language_name"] or '').split('{', maxsplit=1)[-1].strip()
-            if lg:
-                language[2] = lg
-                gl = gl_by_name.get(lg)
-                if gl:
-                    language[1] = gl.id
-                    language[0] = gl.iso
-
-        # we ignore the first line of \glll examples if there's a second line,
-        # as the second line typically contains the morpheme breaks
-        src, imt = (g["imtline1"], g["imtline2"]) if g["imtline2"] \
-            else (g["sourceline"], g["imtline1"])  # standard \gll example¨
-
-        srcwordstex = strip_tex_comment(src).split()
-        imtwordstex = [resolve_lgr(i) for i in strip_tex_comment(imt).split()]
-        assert len(srcwordstex) == len(imtwordstex)
-        imt_html = "\n".join(
-            [
-                '\t<div class="imtblock">\n\t\t<div class="srcblock">'
-                + tex2html(t[0])
-                + '</div>\n\t\t<div class="glossblock">'
-                + tex2html(t[1])
-                + "</div>\n\t</div>"
-                for t in zip(srcwordstex, imtwordstex)
-            ]
-        )
-        srcwordsbare = [striptex(w) for w in srcwordstex]
-
-        citation = None
-        match = CITATION.search(g["presourceline"] or "") or CITATION.search(g["translationline"])
-        if match:
-            citation = match.group(2)
-
-        return cls(
-            abbrkey=abbrkey,
-            categories=tex2categories(imt or ""),
-            book_ID=book_ID,
-            book_metalanguage=metalang,
-            ID="{}-{}".format(
-                p.stem,
-                hashlib.sha256(" ".join(srcwordsbare).encode("utf-8")).hexdigest()[:10]),
-            html='<div class="imtblocks">\n{}\n</div>\n'.format(imt_html),
-            srcwordsbare=srcwordsbare,
-            language_iso6393 = language[0],
-            language_glottocode = language[1],
-            language_name = language[2],
-            imtwordsbare=[striptex(w, sc2upper=True) for w in imtwordstex],
-            clength=len(src),
-            citation=citation,
-            trs=g["translationline"],
-        )
-
-
-
-
-
-
-def get_abbreviations(tex):
-    result = {}
-    for line in tex.split('\n'):
-        if line.strip().startswith("%"):
-            continue
-        cells = line.split("&")
-        if len(cells) == 2:
-            abbreviation = resolve_lgr(striptex(cells[0]).strip())
-            if abbreviation == "...":
-                continue
-            expansion = striptex(cells[1]).replace(r"\\", "").strip().replace(r"\citep", "")
-            result[abbreviation] = expansion
-    return result
-
-
-def get_abbrkey(tex):
-    abbrfile = 'abbreviations.tex'
-    abbrkey = {}
-    if abbrfile in tex:
-        abbrkey = get_abbreviations(tex[abbrfile][1])
-    if not abbrkey:
-        for p, s in tex.values():
-            if p.name != abbrfile:
-                try:
-                    abbr = s.split("section*{Abbreviations}")[1]
-                    abbrkey = get_abbreviations(abbr.split(r"\section")[0])
-                    if abbrkey:
-                        break
-                except IndexError:
-                    pass
-    return abbrkey
-
-
-def iter_tex(book):
-    for filename in book.glob('*tex'):
-        try:
-            s = filename.read_text(encoding='utf8')
-            s = s.replace(r'\langinfobreak', r'\langinfo')
-            s = s.replace(r'{\db}{\db}{\db}', '[[[')
-            s = s.replace(r'{\db}{\db}', '[[')
-        except UnicodeDecodeError:
-            print("Unicode problem in %s" % filename)
-            continue
-        yield filename.name, (filename, s)
 
 
 def parse_langinfo(l):
@@ -279,7 +50,7 @@ def parse_langinfo(l):
         return (
             get_name(langinfo.args[0]),
             ''.join(TexSoup(langinfo.args[1].string).text),
-            (TexSoup(langinfo.args[2].string).text or [''])[-1],
+            '_'.join(TexSoup(langinfo.args[2].string).text or ['']),
         )
 
 
@@ -302,13 +73,22 @@ def parse_il(l):
 
 
 def iter_gll(s):
-    gll_start = re.compile(r'\\gll(l)?[^a-zA-Z]')
-    glt_start = re.compile(r'\\(glt|trans)[^a-zA-Z]')
+    """
+    FIXME: 123:
+    \syacex{Noun}{Pronoun}{984}
+    {ܗܲܝܡܵܢܘܼܬ݂ܹܗ}
+    {haymānut-ēh}
+    {faith-\poss.3\masc}
+    {his faith}
+    {\cite[70, \S 91e]{MuraokaSyriac}}
+    """
+    gll_start = re.compile(r'\\(g[l]{2,3}|exg\.|ag\.|bg\.)([^a-zA-Z]|$)')
+    glt_start = re.compile(r'\\(glt|trans|Transl|TranslMulti|rede)([^a-zA-Z]|$)')
     longexampleandlanguage_pattern = re.compile(r'\\\\}{([^}]+)}$')
 
     linfo = None
     ex_pattern = re.compile(r"\\ex\s+(?P<lname>[A-Z][a-z]+)\s+(\([A-Z][0-9],\s+)?\\cite[^{]+{(?P<ref>[^}]+)}")
-    gll, in_gll = [], False
+    gll, in_gll, prevline, pregll = [], False, None, None
     for lineno, line in enumerate(s.split('\n')):
         line = strip_tex_comment(line).strip()
         if r'\langinfo' in line:
@@ -347,29 +127,18 @@ def iter_gll(s):
                 gll.append(pre)
                 gll.append(line)
                 # Return linfo it wasn't parsed too far from the example:
-                yield linfo[0] if linfo and (lineno - linfo[1] < 25) else None, gll
+                yield linfo[0] if linfo and (lineno - linfo[1] < 25) else None, gll, pregll
             gll, in_gll = [], False
             continue
         m = gll_start.search(line)
         if m:
             line = line[m.end() - 1:]
-            gll = []
+            gll, pregll = [], prevline
             in_gll = True
         if in_gll:
             gll.append(line)
 
-
-# per chapter "one language":
-ONE_LANGUAGE_CHAPTERS = {
-    '173/04-me.tex': 'Spanish',
-    '306/owusu.tex': 'Akan',
-    '271/04.tex': 'Hebrew',
-    '137/ch3.tex': 'Tashlhiyt',
-    '254/08-dalessandro.tex': 'Ripano',
-    '254/04-smith.tex': 'Ostyak',
-    '120/mwamzandi.tex': 'Swahili',
-    '189/06.tex': 'Russian',
-}
+        prevline = line
 
 
 def recombine(l):
@@ -398,6 +167,7 @@ CHAR_REPLS = {
 
 def fixed_alignment(pt, gl):
     from .latex import to_text
+    comment = None
 
     # pre-process
     # Merge multi-word lexical glosses:
@@ -409,14 +179,19 @@ def fixed_alignment(pt, gl):
     gl = re.sub(r'(\s|^)~(\s|$)', ' _ ', gl)
 
     # Merge multi-word primary text groups:
+    for k, v in {
+        'Adnominal clause': '(Adnominal_clause)',
+        'Adverbial clause': '(Adverbial_clause)',
+        'Adverbila clause': '(Adverbial_clause)',
+
+    }.items():
+        pt = pt.replace(k, v)
     for k, v in CHAR_REPLS.items():
         pt = pt.replace(k, v)
     multi_word_pt = re.compile(r'(\s|^|-){([\w žąį./]+)}(\s|\.|$)')
     pt = multi_word_pt.sub(
         lambda m: ' {} '.format(re.sub(r'\s+', '_', m.groups()[1])), pt).strip()
     pt = re.sub(r'(\s|^){}(\s|$)', ' _ ', pt)
-
-    comment = None
 
     # de-latex
     pt = to_text(pt)[0].split()
@@ -482,6 +257,7 @@ def lines_and_comment(lines):
     """
     from .latex import to_text
     from TexSoup import TexSoup
+
     res, comment, linfo = [], [], None
     for line in lines:
         line = line.strip()
@@ -496,6 +272,7 @@ def lines_and_comment(lines):
                 pass
             if line:
                 res.append(line)
+
     if len(res) > 2:
         # Language names as second argument to "longexampleandlanguage" commands.
         m = re.fullmatch(r'}{([A-Z][a-z]+)}', res[-1].split('\n')[0])
@@ -526,110 +303,195 @@ def lines_and_comment(lines):
     return [r.replace('\n', ' ') for r in res], '; '.join(comment), linfo
 
 
-def langsciextract(ds, gl_by_name, bid):
-    from .latex import to_text
-    unknown_lgs = collections.Counter()
-    macros = collections.Counter()
-    macroex = {}
-    mp = re.compile(r'\\([a-zA-Z]+)[^a-zA-Z]')
-    ii, xx = 0, 0
-    allex = collections.Counter()
-    invex = collections.Counter()
-    for book_ID, book in ds.iter_tex_dirs():
-        if (book_ID in SUPERSEDED) or (book_ID in NON_CCBY_LIST):
-            continue
-        if bid and (book_ID != int(bid)):
-            continue
-        tex = dict(iter_tex(book))
-        abbrkey = get_abbrkey(tex)
+def get_title(s):
+    from TexSoup import TexSoup
+    for i, line in enumerate(s.split('\n')):
+        try:
+            ts = TexSoup(line, tolerance=1)
+            if ts.chapter:
+                return ' '.join(ts.chapter.text)
+        except:
+            pass
+        if i > 5:
+            return
 
-        for filename, s in tex.values():
-            for linfo, gll in iter_gll(s):
-                if linfo:
-                    linfo = [to_text(s or '')[0] for s in linfo]
-                #for line in gll:
-                #    for m in mp.finditer(line):
-                #        macros.update([m.groups()[0]])
-                #        macroex[m.groups()[0]] = line
-                #continue
 
-                aligned, translation = '\n'.join(gll[:-1]), gll[-1]
-                aligned = [l.strip() for l in re.split(r'\\(?:\\|newline)', aligned) if l.strip()]
-                # book-specifics:
-                if book_ID == 212:
-                    if len(aligned) > 2:
-                        if 'footnotesize' in aligned[2]:
-                            aligned = aligned[:2]
+def make_example(record, book, linfo, gll, prevline, filelanguage, gl_by_name, unknown_lgs):
+    unknown_lgs = collections.Counter() if unknown_lgs is None else unknown_lgs
+    _, _, refs = to_text(prevline)
+    comment = []
+    if linfo:
+        linfo = [to_text(s or '')[0] for s in linfo]
+        if linfo[2]:
+            comment.append(linfo[2])
+    #
+    # Determine language:
+    # 1. linfo
+    # 2. chapter language
+    # 3. book language
+    #
+    lname, glang = None, None
+    if linfo:
+        if linfo[0] not in gl_by_name:
+            unknown_lgs.update([linfo[0]])
+        else:
+            lname = linfo[0]
+            glang = gl_by_name[lname].id
+    elif filelanguage:
+        if filelanguage not in gl_by_name:
+            unknown_lgs.update([filelanguage])
+        else:
+            lname = filelanguage
+            glang = gl_by_name[lname].id
+    elif record.language_glottocode:
+        glang = record.language_glottocode
+        lname = record.language_name
 
-                #
-                # must remove stuff like \jambox{...}
-                #
-                aligned, comment, linfo2 = lines_and_comment(aligned)
-                aligned = [l for l in aligned if to_text(l)[0].replace('*', '').strip()]
-                if len(aligned) == 3:
-                    # There's a separate line for the morpheme-segmented primary text!
-                    obj, pt, gl = aligned
-                elif len(aligned) == 2:
-                    pt, gl = aligned
-                    obj = pt
-                else:
-                    print(filename)
-                    print(len(aligned), aligned)
-                    print('---')
-                    continue
+    #
+    # At this point `gll` is just a bunch of text lines containing latex formatting.
+    #
+    # We assume the last text line to be the translation ...
+    aligned, translation = '\n'.join(gll[:-1]), gll[-1]
+    translation, cmt, _refs = to_text(translation)
+    if _refs:
+        refs.extend(_refs)
+    if cmt:
+        comment.append(cmt)
 
-                ii += 1
-                allex.update([book_ID])
-                pt, gl, comment = fixed_alignment(pt, gl)
-                if len(pt) == len(gl):
-                    continue
-                if gl and gl[-1] in ['()', '*()']:
-                    gl = gl[:-1]
-                if len(pt) == len(gl):
-                    continue
-                xx += 1
-                invex.update([book_ID])
-                print(filename.parent.name, filename.name, linfo)
-                print(re.sub(r'\s+', ' ', to_text(obj)[0]))
-                #print(len(pt), pt)
-                #print(len(gl), gl)
-                print('\t'.join(pt))
-                print('\t'.join(gl))
-                print(to_text(translation)[0])
+    # ... and split the remainder at latex newlines:
+    aligned = [l.strip() for l in re.split(r'\\(?:\\|newline)', aligned) if l.strip()]
 
-                print('------')
-                continue
-                if not linfo:
-                    if 'longexampleandlanguage' in gll:
-                        pass
-                        # TexSoup(gll, tolerance=1).longexampleandlanguage.args[1].string
-                    elif book_ID in ONE_LANGUAGE_BOOKS:
-                        pass
-                    elif '{}/{}'.format(book_ID, filename.name) in ONE_LANGUAGE_CHAPTERS:
-                        pass
-                    else:
-                        ii += 1
-                        #print(filename)
-                        #print(gll)
-                        #print('+++', linfo)
-                        #print('-----------------------------------------')
-                break
-            continue
-            examples = []
-            for match in GLL_PATTERN.finditer(s):
-                try:
-                    gll = GLL.from_match(match, filename, book_ID, abbrkey, gl_by_name)
-                except AssertionError:
-                    continue
-                if gll.language_name and not gll.language_glottocode:
-                    unknown_lgs.update([gll.language_name])
-                examples.append(gll.json())
-            ds.dump_extracted_examples(
-                examples, 'store-{}-{}examples.json'.format(book_ID, filename.stem))
-    #for k, v in unknown_lgs.most_common(50):
-    #    print(k, v)
-    print(ii, xx)
-    #for k, v in macros.most_common():
-    #    print('{}\t{}\t{}\t{}'.format(k, v, macroex[k], to_text(macroex[k])))
-    for k, v in invex.most_common(30):
-        print(k, v, allex[k], '{}%'.format(round(100 * float(v)/allex[k])))
+    # book-specifics:
+    if record.id == 212:
+        if len(aligned) > 2:
+            if 'footnotesize' in aligned[2]:
+                aligned = aligned[:2]
+
+    aligned, cmt, linfo2 = lines_and_comment(aligned)
+    if linfo2 and linfo2[0]:
+        if linfo2[0] in gl_by_name:
+            glang = gl_by_name[linfo2[0]].id
+            lname = linfo2[0]
+        else:
+            unknown_lgs.update([linfo2[0]])
+    # if glang:
+    #    xx += 1
+    if cmt:
+        comment.append(cmt)
+
+    al = []
+    for l in aligned:
+        delatexed, cmt, _refs = to_text(l)
+        if _refs:
+            refs.extend(_refs)
+        if cmt:
+            comment.append(cmt)
+        if delatexed.replace('*', '').strip():
+            al.append(l)
+    aligned = al
+
+    if len(aligned) == 3:
+        # There's a separate line for the morpheme-segmented primary text!
+        obj, pt, gl = aligned
+    elif len(aligned) == 2:
+        pt, gl = aligned
+        obj = None
+    elif len(aligned):
+        if len(aligned) == 4 and aligned[3].startswith(r'}\\jambox'):
+            obj, pt = aligned[0], aligned[1]
+            gl = aligned[2] + aligned[3]
+        else:  # Dunno what to do here ...
+            # print(filename)
+            # print(len(aligned), aligned)
+            # print('---')
+            return
+    else:  # ... or here.
+        return
+    if obj:
+        obj, cmt, _refs = to_text(obj)
+        if _refs:
+            refs.extend(_refs)
+        if cmt:
+            comment.append(cmt)
+
+    pt, gl, cmt = fixed_alignment(pt, gl)
+    if cmt:
+        comment.append(cmt)
+    nrefs = []
+    if refs:
+        for sid, pages in refs:
+            if sid not in book.bib:
+                # print(record.id, sid)
+                comment.append('{}[{}]'.format(sid, pages))
+            else:
+                nrefs.append((book.bib[sid][0], pages))
+    if len(pt) != len(gl):
+        if gl and gl[-1] in ['()', '*()']:
+            gl = gl[:-1]
+    if len(pt) != len(gl):
+        return
+
+    return Example(
+        TexDir=book,
+        Primary_Text=obj,
+        Analyzed_Word=pt,
+        Gloss=gl,
+        Translated_Text=translation,
+        Language_ID=glang,
+        Language_Name=lname,
+        Comment=comment,
+        Source=refs,
+    )
+
+
+@attr.s
+class Example:
+    # FIXME: yield obj text, segmented text, gloss, translation, language info, comment, refs
+    TexDir = attr.ib()
+    Primary_Text = attr.ib()
+    Analyzed_Word = attr.ib(validator=attr.validators.instance_of(list))
+    Gloss = attr.ib(validator=attr.validators.instance_of(list))
+    Translated_Text = attr.ib(converter=clean_translation)
+    Language_ID = attr.ib()
+    Language_Name = attr.ib()
+    Comment = attr.ib()
+    Source = attr.ib(validator=attr.validators.instance_of(list))
+    IGT = attr.ib(default=None)
+    ID = attr.ib(default=None)
+
+    def __attrs_post_init__(self):
+        from pyigt.igt import IGT
+
+        self.IGT = IGT(
+            phrase=self.Analyzed_Word,
+            gloss=self.Gloss,
+            translation=self.Translated_Text,
+            abbrs=self.TexDir.abbreviations or {})
+        assert self.IGT.is_valid(), str(self.IGT)
+        if not self.Primary_Text:
+            self.Primary_Text = self.IGT.primary_text
+        self.ID = "{}-{}".format(self.TexDir.dir.name, hashlib.sha256(self.Primary_Text.replace('.', '').encode('utf8')).hexdigest()[:10])
+        self.IGT.id = self.ID
+
+    @property
+    def coordination(self):
+        for type_ in [' and ', ' or ']:
+            if type_ in self.Translated_Text:
+                return type_.strip()
+
+    def _aspect(self, *types):
+        for marker, type_ in types:
+            if marker in self.Translated_Text.lower():
+                return type_
+
+    @property
+    def time(self):
+        return self._aspect((' yesterday ', 'past'), (' tomorrow ', 'future'), (' now ', 'present'))
+
+    @property
+    def modality(self):
+        return self._aspect((' want ', 'volitive'))
+
+    @property
+    def polarity(self):
+        return self._aspect((' not ', 'negative'))

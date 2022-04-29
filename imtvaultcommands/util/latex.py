@@ -232,6 +232,423 @@ SIMPLE_MACROS = {
     'Invol': 'INVOL',
     'Volition': 'volition',
     'sVP': 'VP',
+    'part': 'PARTICLE',
+    'prag': 'PRAG',
+    'pda': 'PDA',
+    'Recip': 'REC',
+    'persm': 'PM',
+    'complx': 'COMPLX',
+    'defsc': 'DEF',
+    'transitiv': 'TR',
+    'detr': 'DETR',
+    'epen': 'EPEN',
+    'agnm': 'AGNM',
+    'ssbj': 'SSBJ',
+    'rdp': 'RDP',
+    'NR': 'NR',
+    'con': 'CON',
+    'Verb': 'VBLZ',
+    'instr': 'INS',
+    'firstperson': '1',
+    'secondperson': '2',
+    'thirdperson': '3',
+    'an': 'AN',
+    'rep': 'REP',
+    'illa': 'ILLA',
+    'topi': 'TOP',
+    'lptcp': 'l_PTCP',
+    'masc': 'M',
+    'negation': 'NEG',
+    'object': 'O',
+    'impr': 'IMPR',
+    'add': 'ADD',
+    'andat': 'AND',  # andative
+    'Andat': 'AND',  # andative
+    'nsg': 'NSG',  # non-singular
+    'Nsg': 'NSG',
+    'Jj': 'J',
+    'Lv': 'LV',
+    'Lat': 'LAT',
+    'Tns': 'TNS',
+    'Cmpr': 'CMPR',
+    'AUTOCAUS': 'AUTOCAUS',
+    'HAB': 'HAB',
+    'Iii': 'III',
+    'Cont': 'CONT',
+    'Int': 'INT',
+    'Prov': 'PROV',
+    'Perm': 'PERM',
+    'Cntr': 'CNTR',
+    'Dv': 'DV',  # default vowel
+    'TNS': 'TNS',
+    'ASP': 'ASP',
+    'glinf': 'INF',
+    'glgen': 'GEN',
+    'glprog': 'PROG',
+    'Rem': 'REM',  # remote
+    'Ti': 'TI',
+    'Inv': 'INV',
+    'Ss': 'SS',
+    'Su': 'S',
+    'Tpl': '3PL',
+    'Desc': 'DESC',
+    'Red': 'RED',
+    'Iter': 'ITER',
+    'Th': 'TH',
+    'Vblz': 'VBLZ',
+    'Detr': 'DETR',
+    'Nth': 'NTH',
+    'zero': NON_OVERT_ELEMENT,
+    'sprl': 'SPRL',
+    'wk': 'WK',
+    'Ints': 'INTS',
+    'Ds': 'DS',  # different subject
+    'First': '1',
+    'GH': 'ɣ',
+    'vir': 'VIR',
+    'nvir': 'N_VIR',
+    'rls': 'RLS',
+    'bg': 'BG',
+    'stat': 'STAT',
+    'dep': 'DEP',
+    'punc': 'PUNC',
+    'neu': 'N',
+    'pstcont': 'PSTCONT',
+    'polite': 'POL',
+    'h': "'",
+    'eer': 'ε',
+    "D": "ɖ",  #\textrtaild} %for retroflex d
+    "F": "ʄ",  #\texthtbardotlessj}
+    "oor": "ɔ",  #\textopeno}  % for ooor
+    "Ng": "N",  #\textipa{N}}  %for NG
+    "shw": "ə",  #\textschwa}  %for Shwa
+    "gy": "ʤ",  #\textdyoghlig}  %for GY
+    "ssh": "ʃ",  #\textesh} %ssh
+    "tts": "ʧ",  # \textteshlig} %ts
+    "zzh": "ʒ",  # \textyogh} %zzh
+    "ny": "ɲ",  #\textltailn}
+    "ph": "ɸ",  #\textphi}  %phi
+    "lw": "`",  #\`} %LOW
+    #"ds": "",  #\textdownstep} %DOWNSTEP
+    "ns": "~",  #\~} %NAS
+    "syl": "σ",  #$\sigma$} %SYLL
+    "mo": "μ",  #$\mu$} %MORA
+    "rnk": "≫",  #$\gg$} %>>
+    "rs": "\u030c",  #\v}
+    'subj': "SUBJ",
+    'PREP': 'PREP',
+    'PAST': 'PAST',
+    'glossM': 'M',
+    'PRES': 'PRES',
+    'NUM': 'NUM',
+    'NOUNPROPER': 'NOUNPROPER',
+    'ESS': 'ESS',
+    'Redup': 'REDUP',
+    'Anim': 'ANIM',
+    'Snsg': '2NSG',
+    'Pos': 'POS',  # positional verb stem
+    'ᵓ': 'ᵓ',
+    '°': '°',
+    "ᵃ": "ᵃ",  #\textsf{{\hspace{.5pt}ᵃ}}}
+    "ᵋ": "ᵋ",  #\textsf{{\hspace{.5pt}ᵋ}}}
+    "ᵉ": "ᵉ",  #\textsf{{\hspace{.1pt}ᵉ}}}
+    "ⁱ": "ⁱ",  #{\raisebox{-.65mm": "",  #{\textsuperscript{\sffamily\scriptsize i}}}}}
+    "ᴵ": "ᴵ",  #\textsf{{\hspace{.5pt}ᴵ}}}
+    "ᶤ": "ᶤ",  #\textsf{{\hspace{.5pt}ᶤ}}}
+    "ᵒ": "ᵒ",  #\textsf{{\hspace{.5pt}ᵒ}}}
+    "ᵘ": "ᵘ",  #\textsf{{\hspace{.5pt}ᵘ}}}
+    "ᶶ": "ᶶ",  #\textsf{{\hspace{.5pt}ᶶ}}}
+    "ꜜ": "ꜜ",  #\textsf{ꜜ\hspace*{-2pt}}}
+    'supperl': 'SUPPERL',
+    'supp': 'SUP',
+    'definite': 'DEF',
+    "PART": "PART",
+    "PRV": "PRV",
+    "STR": "STR",
+    "INTENS": "INTENS",
+    "HUMAN": "HUMAN",
+    "NONHUMAN": "NONHUMAN",
+    "ASSERT": "ASSERT",
+    "IMPV": "IMPV",
+    "IMPF": "IMPF",
+    "INT": "INTR",
+    "POSTP": "POSTP",
+    'MAS': 'M',
+    "Fosg": "4SG",  # {\gls{4}\gls{sg}}
+    "Fopl": "4PL",  # {\gls{4}\gls{pl}}
+    "Abl": "ABL",  # {\gls{abl}}
+    "Abs": "ABS",  # {\gls{abs}}
+    "Acc": "ACC",  # {\gls{acc}}
+    "Ade": "ADE",  # {\gls{ade}}
+    "Adj": "ADJ",  # {\gls{adj}}
+    "Adv": "ADV",  # {\gls{adv}}
+    "Agr": "AGR",  # {\gls{agr}}
+    "All": "ALL",  # {\gls{all}}
+    "Anom": "ADNOM",  # {\gls{adnom}}
+    "Ant": "ANT",  # {\gls{ant}}
+    "Antip": "ANTIP",  # {\gls{antip}}
+    "An": "AN",  # {\gls{an}}
+    "Appl": "APPL",  # {\gls{appl}}
+    "Apud": "APUD",  # {\gls{apud}}
+    "Art": "ART",  # {\gls{art}}
+    "Assoc": "ASSOC",  # {\gls{assoc}}
+    "Aud": "AUD",  # {\gls{aud}}
+    "Aux": "AUX",  # {\gls{aux}}
+    "Bb": "B",  # {\gls{B}}
+    "Ben": "BEN",  # {\gls{ben}}
+    "BrP": "BRP",  # {\gls{BrP}}
+    "Caus": "CAUS",  # {\gls{caus}}
+    "Cci": "CCI",  # {\gls{cci}}
+    "Cf": "CF",  # {\gls{cf}}
+    "Cj": "CJ",  # {\gls{cj}}
+    "Clf": "CLF",  # {\gls{clf}}
+    "Cmpl": "CMPL",  # {\gls{cmpl}}
+    "Cnj": "CNJ",  # {\gls{cnj}}
+    "Comp": "COMP",  # {\gls{comp}}
+    "Compl": "COMPL",  # {\gls{compl}}
+    "Com": "COM",  # {\gls{com}}
+    "Cond": "COND",  # {\gls{cond}}
+    "Conn": "CONN",  # {\gls{conn}}
+    "Cop": "COP",  # {\gls{cop}}
+    "Cr": "CR",  # {\gls{cr}}
+    "Cvb": "CVB",  # {\gls{cvb}}
+    "Dat": "DAT",  # {\gls{dat}}
+    "Decl": "DECL",  # {\gls{decl}}
+    "Def": "DEF",  # {\gls{def}}
+    "Dem": "DEM",  # {\gls{dem}}
+    "Dep": "DEP",  # {\gls{dep}}
+    "Det": "DET",  # {\gls{det}}
+    "Dir": "DIR",  # {\gls{dir}}
+    "Disp": "DISP",  # {\gls{disp}}
+    "Distr": "DISTR",  # {\gls{distr}}
+    "Dist": "DIST",  # {\gls{dist}}
+    "Dom": "DOM",  # {\gls{dom}}
+    "Do": "DO",  # {\gls{do}}
+    "Dptcl": "DPTCL",  # {\gls{dptcl}}
+    "Dr": "DR",  # {\gls{dr}}
+    "Dur": "DUR",  # {\gls{dur}}
+    "Du": "DU",  # {\gls{du}}
+    "Ela": "ELA",  # {\gls{ela}}
+    "Ep": "EP",  # {\gls{ep}}
+    "Erg": "ERG",  # {\gls{erg}}
+    "Es": "ES",  # {\gls{es}}
+    "EuP": "EUP",  # {\gls{EuP}}
+    "Evid": "EVID",  # {\gls{evid}}
+    "Excl": "EXCL",  # {\gls{excl}}
+    "Foc": "FOC",  # {\gls{foc}}
+    "Fs": "FS",  # {\gls{fs}}
+    "Fut": "FUT",  # {\gls{fut}}
+    "Gen": "GEN",  # {\gls{gen}}
+    "Genc": "GENC",  # {\gls{genc}}
+    "Ger": "GER",  # {\gls{ger}}
+    "Gg": "G_grade_(Muskogean)",  # {\gls{g}-grade (Muskogean)}
+    "Ill": "ILL",  # {\gls{ill}}
+    "Impass": "IMPASS",  # {\gls{impass}}
+    "Imp": "IMP",  # {\gls{imp}}
+    "Inch": "INCH",  # {\gls{inch}}
+    "Incl": "INCL",  # {\gls{incl}}
+    "Incmpl": "INCMPL",  # {\gls{incmpl}}
+    "Indef": "INDEF",  # {\gls{indef}}
+    "Indir": "INDIR",  # {\gls{indir}}
+    "Ind": "IND",  # {\gls{ind}}
+    "Ine": "INE",  # {\gls{ine}}
+    "Inf": "INF",  # {\gls{inf}}
+    "Infr": "INFR",  # {\gls{infr}}
+    "Ins": "INS",  # {\gls{ins}}
+    "Intr": "INTR",  # {\gls{intr}}
+    "Ipfv": "IPFV",  # {\gls{ipfv}}
+    "Ipf": "IPF",  # {\gls{ipf}}
+    "Irr": "IRR",  # {\gls{irr}}
+    "Ll": "L",  # {\gls{l}}
+    "Loc": "LOC",  # {\gls{loc}}
+    "M": "M",  # {\gls{m}}
+    "Mnom": "MNOM",  # {\gls{mnom}}
+    "Mr": "MR",  # {\gls{mr}}
+    "Mut": "MUT",  # {\gls{mut}}
+    "glossN": "N",  # {\gls{n}}
+    "Nact": "NACT",  # {\gls{nact}}
+    "Ncm": "NCM",  # {\gls{ncm}}
+    "Neg": "NEG",  # {\gls{neg}}
+    "Nfin": "NFIN",  # {\gls{nfin}}
+    "Nmlz": "NMLZ",  # {\gls{nmlz}}
+    "Num": "NUM",  # {\gls{num}}
+    "Obj": "OBJ",  # {\gls{obj}}
+    "Obv": "OBJV",  # {\gls{obv}}
+    "Ov": "OV",  # {\gls{ov}}
+    "Part": "PART",  # {\gls{part}}
+    "Pass": "PASS",  # {\gls{pass}}
+    "Pauc": "PAUC",  # {\gls{pauc}}
+    "Pfv": "PFV",  # {\gls{pfv}}
+    "Pg": "PG",  # {\gls{pg}}
+    "Pip": "PIP",  # {\gls{pip}}
+    "Pl": "PL",  # {\gls{pl}}
+    "Pn": "PN",  # {\gls{pn}}
+    "Poss": "POSS",  # {\gls{poss}}
+    "Prdst": "PRDST",  # {\gls{prdst}}
+    "Pred": "PRED",  # {\gls{pred}}
+    "Prf": "PRF",  # {\gls{prf}}
+    "Prep": "PREP",  # {\gls{prep}}
+    "Prog": "PROG",  # {\gls{prog}}
+    "Proh": "PROH",  # {\gls{proh}}
+    "Pron": "PRON",  # {\gls{pron}}
+    "Propn": "PROPN",  # {\gls{propn}}
+    "Pros": "PROS",  # {\gls{pros}}
+    "Prox": "PROX",  # {\gls{prox}}
+    "Prs": "PRS",  # {\gls{prs}}
+    "Prv": "PRV",  # {\gls{prv}}
+    "Pst": "PST",  # {\gls{pst}}
+    "Ptcl": "PTCL",  # {\gls{ptcl}}
+    "Ptcp": "PTCP",  # {\gls{ptcp}}
+    "Purp": "PURP",  # {\gls{purp}}
+    "Pv": "PV",  # {\gls{pv}}
+    "Quot": "QUOT",  # {\gls{quot}}
+    "Real": "REAL",  # {\gls{real}}
+    "Recp": "RECP",  # {\gls{recp}}
+    "Refl": "REFL",  # {\gls{refl}}
+    "Rel": "REL",  # {\gls{rel}}
+    "Rep": "REP",  # {\gls{rep}}
+    "Res": "RES",  # {\gls{res}}
+    "Rg": "RG",  # {\gls{rg}}
+    "Rm": "RM",  # {\gls{rm}}
+    "Rpt": "RPT",  # {\gls{rpt}}
+    "Sbjv": "SBJV",  # {\gls{sbjv}}
+    "Sbj": "SBJ",  # {\gls{sbj}}
+    "Secun": "SEC",  # {\gls{sec}}
+    "Sg": "SG",  # {\gls{sg}}
+    "Sim": "SIM",  # {\gls{sim}}
+    "Sr": "SR",  # {\gls{sr}}
+    "Subl": "SUBL",  # {\gls{subl}}
+    "Supe": "SUPE",  # {\gls{supe}}
+    "Supl": "SUPL",  # {\gls{supl}}
+    "Ta": "TA",  # {\gls{ta}}
+    "Term": "TERM",  # {\gls{term}}
+    "Topic": "TOP",  # {\gls{top}}
+    "Transl": "TRANS",  # {\gls{transl}}
+    "Tr": "TR",  # {\gls{tr}}
+    "Tto": "TT",  # {\gls{tt}}
+    "Ut": "UT",  # {\gls{ut}}
+    "Uu": "U",  # {\gls{u}}
+    "Vm": "VM",  # {\gls{vm}}
+    "Voc": "VOC",  # {\gls{voc}}
+    "Vol": "VOL",  # {\gls{vol}}
+    "Yn": "Y.N",  # {\gls{y.n}}
+    "Aa": "A",  # {\gls{a}}
+    "Pp": "P",  # {\gls{p}}
+    "Rr": "R",  # {\gls{r}}
+    "Tt": "T",  # {\gls{t}}
+    "Ig": "I",  # {\gls{i}}
+    "Ii": "II",  # {\gls{ii}}
+    "Iv": "IV",  # {\gls{iv}}
+    "SCC": "SC3",  # {\gls{SC3}}
+    "SC": "SC2",  # {\gls{SC2}}
+    'SUB': 'SUB',
+    "nom": "NOM",  # {{\sc nom}}
+    "gen": "GEN",  # {{\sc gen}}
+    "dat": "DAT",  # {{\sc dat}}
+    "acc": "ACC",  # {{\sc acc}}
+    "abs": "ABS",  # {{\sc abs}}
+    "erg": "ERG",  # {{\sc erg}}
+    "voc": "VOC",  # {{\sc voc}}
+    "poss": "POSS",  # {{\sc poss}}
+    "pl": "PL",  # {{\sc pl}}
+    "sg": "SG",  # {{\sc sg}}
+    "thirdsg": "3SG",  # {3{\sc sg}}
+    "ali": "ALI",  # {{\sc ali}}
+    "appl": "APPL",  # {{\sc appl}}
+    "augv": "AUGV",  # {{\sc augv}}
+    "aux": "AUX",  # {{\sc aux}}
+    "ben": "BEN",  # {{\sc ben}}
+    "caus": "CAUS",  # {{\sc caus}}
+    "clf": "CLF",  # {{\sc clf}}
+    "coll": "COLL",  # {{\sc coll}}
+    "com": "COM",  # {{\sc com}}
+    "comp": "COMP",  # {{\sc comp}}
+    "compl": "COMPL",  # {{\sc compl}}
+    "cond": "COND",  # {{\sc cond}}
+    "cop": "COP",  # {{\sc cop}}
+    "cvb": "CVB",  # {{\sc cvb}}
+    "decl": "DECL",  # {{\sc decl}}
+    "dem": "DEM",  # {{\sc dem}}
+    "dist": "DIST",  # {{\sc dist}}
+    "distr": "DISTR",  # {{\sc distr}}
+    "dscn": "DSCN",  # {{\sc dscn}}
+    "du": "DU",  # {{\sc du}}
+    "dubt": "DUBT",  # {{\sc dubt}}
+    "dur": "DUR",  # {{\sc dur}}
+    "dyn": "DYN",  # {{\sc dyn}}
+    "ego": "EGO",  # {{\sc ego}}
+    "excl": "EXCL",  # {{\sc excl}}
+    "foc": "FOC",  # {{\sc foc}}
+    "fut": "FUT",  # {{\sc fut}}
+    "imp": "IMP",  # {{\sc imp}}
+    "incep": "INCEP",  # {{\sc incep}}
+    "ind": "IND",  # {{\sc ind}}
+    "indf": "INDF",  # {{\sc indf}}
+    "intr": "INTR",  # {{\sc intr}}
+    "ipfv": "IPFV",  # {{\sc ipfv}}
+    "irr": "IRR",  # {{\sc irr}}
+    "lin": "LIN",  # {{\sc lin}}
+    "loc": "LOC",  # {{\sc loc}}
+    "modal": "MODAL",  # {{\sc modal}}
+    "Non": "N",  # {{\sc n}}
+    "nmlz": "NMLZ",  # {{\sc nmlz}}
+    "nts": "NTS",  # {{\sc nts}}
+    "obj": "OBJ",  # {{\sc obj}}
+    "obl": "OBL",  # {{\sc obl}}
+    "opt": "OPT",  # {{\sc opt}}
+    "pass": "PASS",  # {{\sc pass}}
+    "propnoun": "PN",  # {{\sc pn}}
+    "pronoun": "PRO",  # {{\sc pro}}
+    "pred": "PRED",  # {{\sc pred}}
+    "prf": "PRF",  # {{\sc prf}}
+    "prog": "PROG",  # {{\sc prog}}
+    "prs": "PRS",  # {{\sc prs}}
+    "prtv": "PRTV",  # {{\sc prtv}}
+    "proh": "PROH",  # {{\sc proh}}
+    "propr": "PROPR",  # {{\sc propr}}
+    "prox": "PROX",  # {{\sc prox}}
+    "pst": "PST",  # {{\sc pst}}
+    "purp": "PURP",  # {{\sc purp}}
+    "pfv": "PFV",  # {{\sc pfv}}
+    "pvs": "PVS",  # {{\sc pvs}}
+    "reas": "REAS",  # {{\sc reas}}
+    "refl": "REFL",  # {{\sc refl}}
+    "result": "RES",  # {{\sc res}}
+    "sbj": "SBJ",  # {{\sc sbj}}
+    "semb": "SEMB",  # {{\sc semb}}
+    "simult": "SIM",  # {{\sc sim}}
+    "them": "THEM",  # {{\sc them}}
+    "tmp": "TMP",  # {{\sc tmp}}
+    "ventiv": "VEN",  # {{\sc ven}}
+    "ELAT": "ELAT",
+    "ATTRs": "ATTR",  # {{\Sc{attr}}}%shortcut for ATTR in small caps
+    "PREDs": "PRED",  # {{\Sc{pred}}}%shortcut for PRED in small caps
+    "SGs": "SG",  # {{\Sc{sg}}}%shortcut for SG in small caps
+    "DUs": "DU",  # {{\Sc{du}}}%shortcut for DU in small caps
+    "PLs": "PL",  # {{\Sc{pl}}}%shortcut for PL in small caps
+    "NOMs": "NOM",  # {{\Sc{nom}}}%shortcut for NOM in small caps
+    "ACCs": "ACC",  # {{\Sc{acc}}}%shortcut for ACC in small caps
+    "GENs": "GEN",  # {{\Sc{gen}}}%shortcut for GEN in small caps
+    "ILLs": "ILL",  # {{\Sc{ill}}}%shortcut for ILL in small caps
+    "INESSs": "INESS",  # {{\Sc{iness}}}%shortcut for INESS in small caps
+    "ELATs": "ELAT",  # {{\Sc{elat}}}%shortcut for ELAT in small caps
+    "COMs": "COM",  # {{\Sc{com}}}%shortcut for COM in small caps
+    "ABESSs": "ABESS",  # {{\Sc{abess}}}%shortcut for ABESS in small caps
+    "ESSs": "ESS",  # {{\Sc{ess}}}%shortcut for ESS in small caps
+    "PROXs": "PROX",  # {{\Sc{prox}}}%shortcut for PROX in small caps
+    "DISTs": "DIST",  # {{\Sc{dist}}}%shortcut for DIST in small caps
+    "RMTs": "RMT",  # {{\Sc{rmt}}}%shortcut for RMT in small caps
+    "REFLs": "REFL",  # {{\Sc{refl}}}%shortcut for REFL in small caps
+    "PRSs": "PRS",  # {{\Sc{prs}}}%shortcut for PRS in small caps
+    "PSTs": "PST",  # {{\Sc{pst}}}%shortcut for PST in small caps
+    "IMPs": "IMP",  # {{\Sc{imp}}}%shortcut for IMP in small caps
+    "POTs": "POT",  # {{\Sc{pot}}}%shortcut for POT in small caps
+    "PROGs": "PROG",  # {{\Sc{prog}}}%shortcut for PROG in small caps
+    "PRFs": "PRF",  # {{\Sc{prf}}}%shortcut for PRF in small caps
+    "INFs": "INF",  # {{\Sc{inf}}}%shortcut for INF in small caps
+    "NEGs": "NEG",  # {{\Sc{neg}}}%shortcut for NEG in small caps
+    "CONNEGs": "CONNEG",  # {{\Sc{conneg}}}%shortcut for CONNEG in small caps
+    "BS": "<backslash>",
 }
 
 logging.getLogger('pylatexenc.latexwalker').setLevel(logging.WARNING)
@@ -240,6 +657,11 @@ logging.getLogger('pylatexenc.latexwalker').setLevel(logging.WARNING)
 # Define macros, environments, specials for the *parser*
 #
 # FIMXE: parse citations!
+# \citealt[\page 108]{Borsley:05}
+# citep>--873>----`\{The children / *Shaking around in the box\} broke the glasses to bits.' \hfill \citep[20]{doron03}}>-("`{The children / *Shaking around in the box} broke the glasses to bits.' <cit.>", None)
+# citet>--97>-----\citet[\page 69]{BC2010a} found this example in the \emph{Deutsches Referenzkorpus} (DeReKo), hosted at Institut>-------('<cit.> found this example in the Deutsches Referenzkorpus (DeReKo), hosted at Institut', None)
+#citealp>82>-----`\ldots{} İdris saw that his daughter-in-law was not well \ldots{}' (\citealp[159]{Kapaev1962} cited in \citealp[33]{Karakoc2001})>-----("`… İdris saw that his daughter-in-law was not well …' ( cited in )", None)
+#citew>--17>-----224]{Neumann69a-u}. See also \citew[\page 162]{Benes71}.>-------('224]Neumann69a-u. See also [162]Benes71.', None)
 #
 macros = [
     macrospec.MacroSpec("footnotetext", "{"),
@@ -250,6 +672,7 @@ macros = [
     macrospec.MacroSpec("ili", "{"),
     macrospec.MacroSpec("llap", "{"),
     macrospec.MacroSpec("textsc", "{"),
+    macrospec.MacroSpec("Sc", "{"),
     macrospec.MacroSpec("tsc", "{"),
     macrospec.MacroSpec("gsc", "{"),
     macrospec.MacroSpec("ig", "{"),
@@ -260,17 +683,25 @@ macros = [
     macrospec.MacroSpec("mc", "{"),
     macrospec.MacroSpec("particle", "{"),
     macrospec.MacroSpec("jambox", "[{"),
+    macrospec.MacroSpec("cite", "[{"),
+    macrospec.MacroSpec("citep", "[{"),
+    macrospec.MacroSpec("citet", "[{"),
+    macrospec.MacroSpec("citealp", "[{"),
+    macrospec.MacroSpec("citew", "[{"),
+    macrospec.MacroSpec("href", "{{")
+    # FIXME: 17 Corpus and CorpusE
 ]
 for k in SIMPLE_MACROS:
     macros.append(macrospec.MacroSpec(k, ""))
 for abbr in lgr.ABBRS:
     if abbr:
-        macros.extend([
-            macrospec.MacroSpec(abbr, ""),
-            macrospec.MacroSpec(abbr.lower(), ""),
-        ])
+        if abbr not in SIMPLE_MACROS:
+            macros.append(macrospec.MacroSpec(abbr, ""))
+        if abbr.lower() not in SIMPLE_MACROS:
+            macros.append(macrospec.MacroSpec(abbr.lower(), ""))
         if len(abbr) > 1:
-            macros.append(macrospec.MacroSpec(abbr.capitalize(), ""))
+            if abbr.capitalize() not in SIMPLE_MACROS:
+                macros.append(macrospec.MacroSpec(abbr.capitalize(), ""))
 
 lw_context_db = latexwalker.get_default_latex_context_db()
 lw_context_db.add_context_category('gll', prepend=True, macros=macros[:])
@@ -311,6 +742,32 @@ def japhug(n, l2tobj):
     )
 
 
+def href(n, l2tobj):
+    return "[{}]({})".format(
+        l2tobj.nodelist_to_text([n.nodeargd.argnlist[1]]),
+        l2tobj.nodelist_to_text([n.nodeargd.argnlist[0]]),
+    )
+
+
+def _get_optional_arg(node, default, l2tobj):
+    """Helper that returns the `node` converted to text, or `default`
+    if the node is `None` (e.g. an optional argument that was not
+    specified)"""
+    if node is None:
+        return default
+    return l2tobj.nodelist_to_text([node])
+
+def cite(n, l2tobj):
+    """Get the text replacement for the macro \cite...[page]{bibkey}"""
+    if not n.nodeargd:
+        # n.nodeargd can be empty if e.g. \putinquotes was a single
+        # token passed as an argument to a macro,
+        # e.g. \newcommand\putinquotes...
+        return ''
+    page = _get_optional_arg(n.nodeargd.argnlist[0], '', l2tobj)
+    return '<cit page="{}">{}</cit>'.format(page, l2tobj.nodelist_to_text([n.nodeargd.argnlist[1]]))
+
+
 macros = [
     latex2text.MacroTextSpec("footnote", simplify_repl=footnote),
     latex2text.MacroTextSpec("footnotetext", simplify_repl=footnote),
@@ -319,6 +776,7 @@ macros = [
     latex2text.MacroTextSpec("textup", simplify_repl=firstarg),
     latex2text.MacroTextSpec("ulp", simplify_repl=firstarg),
     latex2text.MacroTextSpec("textsc", simplify_repl=uppercase_arg),
+    latex2text.MacroTextSpec("Sc", simplify_repl=uppercase_arg),
     latex2text.MacroTextSpec("tsc", simplify_repl=uppercase_arg),
     latex2text.MacroTextSpec("tss", simplify_repl=dot_uppercase_arg),
     latex2text.MacroTextSpec("gsc", simplify_repl=uppercase_arg),
@@ -331,6 +789,12 @@ macros = [
     latex2text.MacroTextSpec("REF", simplify_repl=lambda *args: ''),
     latex2text.MacroTextSpec("particle", simplify_repl='PARTICLE'),
     latex2text.MacroTextSpec("jambox", simplify_repl=''),
+    latex2text.MacroTextSpec("cite", simplify_repl=cite),
+    latex2text.MacroTextSpec("citep", simplify_repl=cite),
+    latex2text.MacroTextSpec("citet", simplify_repl=cite),
+    latex2text.MacroTextSpec("citew", simplify_repl=cite),
+    latex2text.MacroTextSpec("citealp", simplify_repl=cite),
+    latex2text.MacroTextSpec("href", simplify_repl=href),
 ]
 for k, v in SIMPLE_MACROS.items():
     macros.append(latex2text.MacroTextSpec(k, simplify_repl=functools.partial(repl, v)),)
@@ -367,10 +831,11 @@ def custom_latex_to_text(input_latex):
         return input_latex
 
 
-def to_text(latex, mode='primary_text'):
+def to_text(latex):
     latex = latex.replace(r'{\sc ', r'\textsc{')
     latex = latex.replace(r'{\scshape ', r'\textsc{')
-    text, comment = custom_latex_to_text(latex), None
+    text, comment, refs = custom_latex_to_text(latex), None, []
+    text = text.replace('<backslash>', '\\')
     text = text.strip()
     # extract footnotes:
     fn_pattern = re.compile(r'<fn>([^<]+)</fn>')
@@ -378,6 +843,13 @@ def to_text(latex, mode='primary_text'):
     if m:
         comment = m.groups()[0]
         text = fn_pattern.sub('', text).strip()
+    # extract citations:
+    pattern = re.compile(r'<cit page="([^"]*)">([^<]+)</cit>')
+    for m in pattern.finditer(text):
+        if m.groups()[1] != '[':
+            refs.append((m.groups()[1], m.groups()[0]))
+    if refs:
+        text = pattern.sub('', text).strip()
 
     #
     # FIXME: handle *\textit commands
@@ -386,15 +858,4 @@ def to_text(latex, mode='primary_text'):
     #text = re.sub(r'\s+\[\s+', ' [', text)
     #text = re.sub(r'\s+]\s+', '] ', text)
 
-    if mode == 'primary_text':
-        return text, comment
-    if mode == 'gloss':
-        return text, comment
-    if mode == 'translation':
-        #
-        # FIXME:
-        # - extract \footnote into comment!
-        # - remove <cit.> added for citations
-        # - remove quotes
-        #
-        return text, comment
+    return text, comment, refs
