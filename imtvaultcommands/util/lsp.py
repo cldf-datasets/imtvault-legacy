@@ -22,6 +22,10 @@ class Record:
         return self.license == 'CC-BY-4.0'
 
     @property
+    def bibtex_key(self):
+        return 'lsp{}'.format(self.id)
+
+    @property
     def published(self):
         return self.status == 'published'
 
@@ -39,4 +43,4 @@ class Record:
                 res.append(line)
             return '\n'.join(res)
 
-        fix_bibtex(d.joinpath('{}.bib'.format(self.id)).read_text(encoding='utf8'))
+        return fix_bibtex(d.joinpath('{}.bib'.format(self.id)).read_text(encoding='utf8'))

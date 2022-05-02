@@ -27,6 +27,8 @@ def clean_translation(trs):
             trs = trs[1:]
         if trs[-1] in ENDINGQUOTE:
             trs = trs[:-1]
+        if len(trs) > 1 and (trs[-2] in ENDINGQUOTE) and (trs[-1] == '.'):
+            trs = trs[:-2]
         trs = trs.replace("()", "")
     except IndexError:  # s is  ''
         pass
@@ -283,13 +285,13 @@ def lines_and_comment(lines):
             # Comments in square brackets appended to the example.
             m = re.fullmatch(r'\[([\w ]+)]', to_text(res[-1].split('\n')[0])[0].strip())
             if m:
-                comment = m.groups()[0]
+                comment.append(m.groups()[0])
                 res = res[:-1]
             else:
                 # A single word: Considered a comment.
                 m = re.fullmatch(r'([\w]+)', to_text(res[-1].split('\n')[0])[0].strip())
                 if m:
-                    comment = m.groups()[0]
+                    comment.append(m.groups()[0])
                     res = res[:-1]
                 else:
                     # Language names appended as special comment in parentheses to the example.
@@ -298,7 +300,7 @@ def lines_and_comment(lines):
                         if m.groups()[0][0].isalpha() and m.groups()[0][0].islower():
                             linfo = (m.groups()[0], '', '')
                         else:
-                            comment = m.groups()[0]
+                            comment.append(m.groups()[0])
                         res = res[:-1]
     return [r.replace('\n', ' ') for r in res], '; '.join(comment), linfo
 
@@ -440,7 +442,7 @@ def make_example(record, book, linfo, gll, prevline, filelanguage, gl_by_name, u
         Language_ID=glang,
         Language_Name=lname,
         Comment=comment,
-        Source=refs,
+        Source=nrefs,
     )
 
 
@@ -454,7 +456,7 @@ class Example:
     Translated_Text = attr.ib(converter=clean_translation)
     Language_ID = attr.ib()
     Language_Name = attr.ib()
-    Comment = attr.ib()
+    Comment = attr.ib(converter=lambda s: '; '.join(s) or None)
     Source = attr.ib(validator=attr.validators.instance_of(list))
     IGT = attr.ib(default=None)
     ID = attr.ib(default=None)
