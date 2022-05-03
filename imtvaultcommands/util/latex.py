@@ -287,6 +287,7 @@ SIMPLE_MACROS = {
     'Lv': 'LV',
     'Lat': 'LAT',
     'Tns': 'TNS',
+    'Etc': 'ETC',
     'Cmpr': 'CMPR',
     'AUTOCAUS': 'AUTOCAUS',
     'HAB': 'HAB',
@@ -334,6 +335,7 @@ SIMPLE_MACROS = {
     'polite': 'POL',
     'h': "'",
     'eer': 'ε',
+    "textrtaild": "ɖ",
     "D": "ɖ",  #\textrtaild} %for retroflex d
     "F": "ʄ",  #\texthtbardotlessj}
     "oor": "ɔ",  #\textopeno}  % for ooor
@@ -697,6 +699,10 @@ SIMPLE_MACROS = {
     "daab": "ầ",
     "daeb": "ề",
     'ts': "ts",
+    'textdownstep': 'ꜜ',
+    'Simil': 'SIMIL',  # similative
+    'SSS': '3S',
+    'ingr': 'INGR',
 }
 
 logging.getLogger('pylatexenc.latexwalker').setLevel(logging.WARNING)
@@ -710,10 +716,13 @@ macros = [
     macrospec.MacroSpec("japhdoi", "{"),
     macrospec.MacroSpec("textup", "{"),
     macrospec.MacroSpec("textupsc", "{"),
+    macrospec.MacroSpec("glossfeat", "{"),
     macrospec.MacroSpec("tss", "{"),
     macrospec.MacroSpec("ili", "{"),
     macrospec.MacroSpec("ilt", "{"),
     macrospec.MacroSpec("is", "{"),
+    macrospec.MacroSpec("ist", "{"),
+    macrospec.MacroSpec("ia", "{"),
     macrospec.MacroSpec("ix", "{"),
     macrospec.MacroSpec("ux", "{"),
     macrospec.MacroSpec("llap", "{"),
@@ -731,14 +740,18 @@ macros = [
     macrospec.MacroSpec("mc", "{"),
     macrospec.MacroSpec("particle", "{"),
     macrospec.MacroSpec("jambox", "[{"),
+    macrospec.MacroSpec("fatcit", "{{"),
     macrospec.MacroSpec("cite", "[{"),
+    macrospec.MacroSpec("citeyear", "[{"),
+    macrospec.MacroSpec("parencite", "[{"),
     macrospec.MacroSpec("citep", "[{"),
     macrospec.MacroSpec("citet", "[{"),
     macrospec.MacroSpec("Citep", "[{"),
     macrospec.MacroSpec("Citet", "[{"),
     macrospec.MacroSpec("citealp", "[{"),
     macrospec.MacroSpec("citew", "[{"),
-    macrospec.MacroSpec("href", "{{")
+    macrospec.MacroSpec("href", "{{"),
+    macrospec.MacroSpec("dline", "{{{"),
     # FIXME: 17 Corpus and CorpusE
 ]
 for k in SIMPLE_MACROS:
@@ -803,6 +816,10 @@ def href(n, l2tobj):
     )
 
 
+def fatcit(n, l2tobj):
+    return '<cit page="{}">{}</cit>'.format(l2tobj.nodelist_to_text([n.nodeargd.argnlist[1]]), l2tobj.nodelist_to_text([n.nodeargd.argnlist[0]]))
+
+
 def _get_optional_arg(node, default, l2tobj):
     """Helper that returns the `node` converted to text, or `default`
     if the node is `None` (e.g. an optional argument that was not
@@ -819,7 +836,10 @@ def cite(n, l2tobj):
         # e.g. \newcommand\putinquotes...
         return ''
     page = _get_optional_arg(n.nodeargd.argnlist[0], '', l2tobj)
-    return '<cit page="{}">{}</cit>'.format(page, l2tobj.nodelist_to_text([n.nodeargd.argnlist[1]]))
+    key = l2tobj.nodelist_to_text([n.nodeargd.argnlist[0]]).strip()
+    if key:
+        return '<cit page="{}">{}</cit>'.format(page.replace('"', ''), key)
+    return ''
 
 
 macros = [
@@ -829,6 +849,7 @@ macros = [
     latex2text.MacroTextSpec("japhug", simplify_repl=japhug),
     latex2text.MacroTextSpec("textup", simplify_repl=firstarg),
     latex2text.MacroTextSpec("textupsc", simplify_repl=uppercase_arg),
+    latex2text.MacroTextSpec("glossfeat", simplify_repl=uppercase_arg),
     latex2text.MacroTextSpec("linieb", simplify_repl=secondarg),
     latex2text.MacroTextSpec("ulp", simplify_repl=firstarg),
     latex2text.MacroTextSpec("ulg", simplify_repl=firstarg),
@@ -843,14 +864,20 @@ macros = [
     latex2text.MacroTextSpec("llap", simplify_repl=lambda *args: ''),
     latex2text.MacroTextSpec("ilt", simplify_repl=lambda *args: ''),
     latex2text.MacroTextSpec("is", simplify_repl=lambda *args: ''),
+    latex2text.MacroTextSpec("ist", simplify_repl=lambda *args: ''),
+    latex2text.MacroTextSpec("ia", simplify_repl=lambda *args: ''),
     latex2text.MacroTextSpec("ix", simplify_repl=lambda *args: ''),
     latex2text.MacroTextSpec("ux", simplify_repl=lambda *args: ''),
+    latex2text.MacroTextSpec("dline", simplify_repl=lambda *args: ''),
     #latex2text.MacroTextSpec("ili", simplify_repl=lambda *args: ''),
     latex2text.MacroTextSpec("ili", simplify_repl=firstarg),
     latex2text.MacroTextSpec("REF", simplify_repl=lambda *args: ''),
     latex2text.MacroTextSpec("particle", simplify_repl='PARTICLE'),
     latex2text.MacroTextSpec("jambox", simplify_repl=''),
+    latex2text.MacroTextSpec("fatcit", simplify_repl=fatcit),
     latex2text.MacroTextSpec("cite", simplify_repl=cite),
+    latex2text.MacroTextSpec("citeyear", simplify_repl=cite),
+    latex2text.MacroTextSpec("parencite", simplify_repl=cite),
     latex2text.MacroTextSpec("citep", simplify_repl=cite),
     latex2text.MacroTextSpec("citet", simplify_repl=cite),
     latex2text.MacroTextSpec("Citep", simplify_repl=cite),
