@@ -2,128 +2,840 @@
 
 Distribution of examples in IMT Vault across the languages of the world:
 
-![](map.jpg?pacific-centered&language-properties=Examples_Count_Log&language-properties-colormaps=viridis&width=20&height=10&padding-left=5&padding-right=5&padding-top=5&padding-bottom=5&markersize=12&language-labels#cldfviz.map)
+![](map.jpg?pacific-centered&language-properties=Examples_Count_Log&language-properties-colormaps=viridis&width=20&height=10&padding-left=5&padding-right=5&padding-top=5&padding-bottom=5&markersize=12#cldfviz.map)
 
 
 ## Sources
 
-- Cangemi, Francesco. 2014. Prosodic detail in {Neapolitan} {Italian}. (Studies in Laboratory Phonology.) Berlin: Language Science Press. [DOI: 10.17169/FUDOCS_document_000000020994](https://doi.org/10.17169/FUDOCS_document_000000020994)
+- Cangemi, Francesco. 2014. Prosodic detail in Neapolitan Italian. (Studies in Laboratory Phonology.) Berlin: Language Science Press. [DOI: 10.17169/FUDOCS_document_000000020994](https://doi.org/10.17169/FUDOCS_document_000000020994)
+- Wilbur, Joshua. 2014. A grammar of Pite Saami. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b17.34](https://doi.org/10.17169/langsci.b17.34)
 - Handschuh, Corinna. 2014. A typology of marked-S languages. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.17169/FUDOCS_document_000000019858](https://doi.org/10.17169/FUDOCS_document_000000019858)
+- Brown, Lea. 2001. A Grammar of Nias Selatan. (Doctoral dissertation, University of Sydney).
+- Hayward, Dick. 1984. The Arbore Language. A first Investigation. (Cushitic Language Studies, 2.) Köln: Köppe.
+- Owens, Jonathan. 1982. Case in the Booran Dialect of Oromo. Afrika und Übersee 65. 43–74.
+- Hompó, Éva. 1990. Grammatical Relations in Gamo: A Pilot Sketch. In Omotic Language Studies, 356–405.
+- Lamberti, Marcello and Sottile, Roberto. 1997. The Wolaytta Language. (Studia Linguarum Africae Orientalis, 6.) Köln: Köppe.
+- Hayward, Richard J. 1990. Notes on the Zayse Language. In, 210–355.
+- Munro, Pamela. 1976. Mojave Syntax. New York, London: Garland Publishing Inc.
+- Kozlowski, Edwin Louis. 1972. Havasupai Simple Sentences. (Doctoral dissertation, Indiana University).
+- Shipley, William F. 1964. Maidu Grammar. Berkeley, Los Angeles: University of California Press.
+- Wegener, Claudia. 2008. A grammar of Savosavo, a Papuan language of the Solomon Islands. (Doctoral dissertation, Radboud Universiteit Nijmegen).
+- Crass, Joachim. 2005. Das K'abeena. Deskriptive Grammatik einer hochlandkuschitischen Sprache. (Cushitic Language Studies, 23.) Köln: Köppe.
+- Creider, Chet A. and Creider, Jane Tapsubei. 1989. A Grammar of Nandi. Hamburg: Buske.
+- Owens, Jonathan. 1985. A Grammar of Harar Oromo. (Cushitic Language Studies, 4.) Köln: Köppe.
+- Dixon, Roland B. 1911. Maidu. In Handbook of the American Indian Languages, 679–734.
+- Miller, Amy Whitmore. 1990. A Grammar of Jamul Diegueño. (Doctoral dissertation, University of California).
+- Andersen, Torben. 1991. Subject and Topic in Dinka. Studies in Language 15. 265–294.
+- Stroomer, Harry. 1995. A Grammar of Boraana Oromao (Kenya). (Cushitic Language Studies, 11.) Köln: Köppe.
+- Crawford, James. 1966. The Cocopa Language. (Doctoral dissertation, University of California).
+- Randal, Scott. 1998. A grammatical sketch of Tennet. In Surmic Languages and Cultures, 219–272.
+- Arensen, Jon. 1982. Murle Grammar. (Occasional Papers in the Study of Sudanese Languages, 2.) Juba: Summer Institute of Linguistics.
+- Kasarhérou (née de la Fontinelle), Jacqueline. 1961. Prosodèmes de la langue mélanésienne de Houaïlou (Nouvelle-Calédonie). Bulletin de la Société de Linguistique 56. 181–201.
+- Gorbet, Larry Paul. 1976. A Grammar of Diegueño Nominals. New York, London: Garland.
+- Miller, Amy. 2001. A grammar of Jamul Tiipay. Berlin, New York: Mouton de Gruyter.
+- Watahomigie, Lucille J. and Bender, Jorigine and Watagomigie, Sr. Philbert and Yamamoto, Akira Y. 2001. Hualapai Reference Grammar. Revised and Expanded Edition. (Endangered Languages of the Pacific Rim Publications Series, A2-003.) Osaka: ELPR.
+- Merlan, Francesca. 1989. Mangarayi. London, New York: Routledge.
+- Thompson, Sandra A. and Park, Joseph Sung-Jul and Li, Charles N. 2006. A Reference Grammar of Wappo. (University of California Publications in Linguistics, 138.) Berkeley, Los Angeles, London: University of California Press.
+- Gordon, Lynn. 1986. Maricopa Morphology and Syntax. Berkeley, Los Angeles, London: University of California Press.
+- Tucker, Archibald N. and Tompo ole Mpaayei, John. 1955. A Maasai Grammar with Vocabulary. (Publications of the African Institute, Leiden, 2.) London, New York, Toronto: Longmans, Green and Co.
+- Dimmendaal, Gerrit Jan. 1982. The Turkana Language. Leiden: Rijksuniversiteit te Leiden.
 - Rießler, Michael. 2016. Adjective attribution. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b19.294](https://doi.org/10.17169/langsci.b19.294)
+- Winkler, Eberhard. 2001. Udmurt. (Languages of the World/Materials.) München: LINCOM Europa.
+- Georg, Ralf-Stefan and Volodin, Alexander P. 1999. Die itelmenische Sprache. (Tunguso Sibirica.) Wiesbaden: Harrassowitz.
+- Zevachina, Tat'jana S. 2001. Funkcional'no-grammatičeskaja parametrizacija prilagatel'nogo (po dannym polevogo issledovanija dunganskogo jazyka). Jazyk, soznanie, kommunikacija 20. 69-86.
+- Benzing, Johannes. 1993. Das Possessivsuffix der dritten Person. In Schönig, Claus (ed.), Bolgarisch-tschuwaschische Studien, 1-17. Wiesbaden: Harrassowitz.
+- Nikolaeva, Irina and Tolskaya, Maria. 2001. A grammar of Udihe. (Mouton Grammar Library, 22.) Berlin: Mouton de Gruyter.
+- Maslova, Elena. 2003. Tundra Yukaghir. (Languages of the World/Materials.) München: LINCOM Europa.
+- Aquilina, Joseph. 1959. The structure of Maltese. Malta: The Royal University.
+- Csúcs, Sándor. 1990. Chrestomathia votiacica. Budapest: Tankönyvkiadó.
+- Ajello, Roberto. n.d. Armenian. In, 197-227.
+- Bechert, Johannes. 1993. Definiteness and article systems. (Eurotyp Working Papers I/4.) [Strasbourg]: ESF.
+- Beyer, Arthur and Bochmann, Klaus and Bronsert, Siegfried. 1987. Grammatik der rumänischen Sprache der Gegenwart. Leipzig: Enzyklopädie.
+- Marušič, Franc and Žaucer, Rok. 2007. O določnem ta v pogovorni slovenščini (z navezavo na določno obliko pridevnika). Slavistična revija 55. 223-247.
+- Saltarelli, Mario. 1988. Basque. (Croom Helm Descriptive Grammars.) London: Croom Helm.
 - Bîlbîie, Gabriela. 2017. Grammaire des constructions elliptiques. (Empirically Oriented Theoretical Morphology and Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.573753](https://doi.org/10.5281/zenodo.573753)
 - Enfield, N.J. 2014. Natural causes of language. (Conceptual Foundations of Language Science.) Berlin: Language Science Press. [DOI: 10.17169/FUDOCS_document_000000021399](https://doi.org/10.17169/FUDOCS_document_000000021399)
 - Spranger, Michael. 2016. The evolution of grounded spatial language. (Computational Models of Language Evolution.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b53.183](https://doi.org/10.17169/langsci.b53.183)
-- Berghäll, Liisa. 2015. A grammar of {Mauwake}. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b67.96](https://doi.org/10.17169/langsci.b67.96)
-- Dahl, Östen. 2015. Grammaticalization in the {North}. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b73.17](https://doi.org/10.17169/langsci.b73.17)
-- Brindle, Jonathan. 2017. A dictionary and grammatical outline of {Chakali}. (African Language Grammars and Dictionaries.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.344813](https://doi.org/10.5281/zenodo.344813)
+- Schackow, Diana. 2015. A grammar of Yakkha. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b66.106](https://doi.org/10.17169/langsci.b66.106)
+- Berghäll, Liisa. 2015. A grammar of Mauwake. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b67.96](https://doi.org/10.17169/langsci.b67.96)
+- Dahl, Östen. 2015. Grammaticalization in the North. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b73.17](https://doi.org/10.17169/langsci.b73.17)
+- Koptjevskaja-Tamm, Maria. 2003. Possessive noun phrases in the languages of Europe. In Plank, Frans (ed.), Noun Phrase Structure in the Languages of Europe, 621–722. Berlin: Mouton de Gruyter.
+- Brindle, Jonathan. 2017. A dictionary and grammatical outline of Chakali. (African Language Grammars and Dictionaries.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.344813](https://doi.org/10.5281/zenodo.344813)
 - Drager, Katie K. 2015. Linguistic variation, identity construction and cognition. (Studies in Laboratory Phonology.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b75.22](https://doi.org/10.17169/langsci.b75.22)
-- Kluge, Angela. 2017. A grammar of {Papuan} {Malay}. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.376415](https://doi.org/10.5281/zenodo.376415)
-- Forbes-Barnett, Marsha. 2018. Dual aspectual forms and event structure in {Caribbean} {English} {Creoles}. (Studies in Caribbean Languages.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1476426](https://doi.org/10.5281/zenodo.1476426)
+- Kluge, Angela. 2017. A grammar of Papuan Malay. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.376415](https://doi.org/10.5281/zenodo.376415)
+- Forbes-Barnett, Marsha. 2018. Dual aspectual forms and event structure in Caribbean English Creoles. (Studies in Caribbean Languages.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1476426](https://doi.org/10.5281/zenodo.1476426)
+- Sidnell, Jack. 2002. Habitual and Imperfective in Guyanese Creole. Journal of Pidgin and Creole Languages 17. 151-189.
 -  Côté, Marie-Hélène and Knooihuizen, Remco and Nerbonne, John (eds.) 2016. The future of dialects. (Language Variation.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b81.78](https://doi.org/10.17169/langsci.b81.78)
-- Liljegren, Henrik. 2016. A grammar of {Palula}. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b82.85](https://doi.org/10.17169/langsci.b82.85)
-- Yakpo, Kofi. 2019. A grammar of {Pichi}. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.2546450](https://doi.org/10.5281/zenodo.2546450)
+- Liljegren, Henrik. 2016. A grammar of Palula. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b82.85](https://doi.org/10.17169/langsci.b82.85)
+- Yakpo, Kofi. 2019. A grammar of Pichi. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.2546450](https://doi.org/10.5281/zenodo.2546450)
+- Yillah, Mohamed Sorie and Corcoran, Chris. n.d. Krio (Creole English). In Holm, John and Patrick, Peter L. (eds.), Comparative Creole Syntax: Parallel Outlines of 18 Creole Grammars. Battlebridge Publications.
+- Finney, Malcolm Awadajin. n.d. Tone Assignment on Lexical Items of English and African Origin in Krio. In Escure, Geneviève and Schwegler, Armin (eds.), Creoles, Contact and Language Change: Linguistics and Social Implications, 221 – 236. John Benjamins.
 - Lehmann, Christian. 2015. Thoughts on grammaticalization. (Classics in Linguistics.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b88.98](https://doi.org/10.17169/langsci.b88.98)
+- Hewitt, B. George. 1979. Abkhaz. (LDS.) Amsterdam: North-Holland.
+- Cole, Peter. 1982. Imbabura Quechua. (LDS.) Amsterdam: North-Holland.
+- Mosel, Ulrike. 1980. Tolai and Tok Pisin. The influence of the substratum on the development of New Guinea Pidgin. (Pacific Linguistics, Series B.) Canberra: Australian National University.
+- Sankoff, Gillian. 1977. Variability and explanation in language and culture: cliticization in New Guinea Tok Pisin. In Saville-Troike, Muriel (ed.), Linguistics and anthropology, 59-73. Washington: Georgetown University Press (GURTLL 1977).
+- Wendt, Heinz F. 1972. Langenscheidts Praktisches Lehrbuch Türkisch. Berlin etc: Langenscheidt.
+- Merlan, Francesca. 1982. Mangarayi. (LDS.) Amsterdam: North Holland.
+- Misteli, Franz. 1893. Charakeristik der hauptsächlichsten Typen des Sprachbaues: Neubearbeitung des Werkes von Prof. H. Steinthal (1861). Berlin: F. Dümmler.
+- Bossong, Georg. 1979. Typologie der Hypotaxe. Folia Linguistica 13. 33-54.
+- Lord, Carol. 1976. Evidence for syntactic reanalysis: from verb to complementizer in Kwa. In Steever, Sanford B. and Walker, Carol A. and Mufwene, Salikoko S. (eds.), Papers from the parasession on diachronic syntax. April 22, 1976, 179-191. Chicago: CLS.
+- Cole, Desmond T. 1955. An introduction to Tswana grammar. London etc: Longmans, Green & Co.
+- Jorden, Eleanor Harz. 1962. Beginning Japanese. New Haven & London: Yale University Press.
+- Hale, Kenneth L. 1976. The adjoined relative clause in Australia. In Dixon, R.M.W. (ed.), Grammatical categories in Australian languages, 78-105. Canberra: Australian Institute of Aboriginal Studies.
+- Dixon, Robert M.W. 1972. The Dyirbal language of North Queensland. (Cambridge Studies in Linguistics.) Cambridge & London: Cambridge University Press.
+- Mallinson, Graham and Blake, Barry J. 1981. Language typology. Cross-linguistic studies in syntax. (North-Holland Linguistic Series.) Amsterdam etc: North-Holland.
+- Reid, Aileen A. and others. 1968. Totonac: From clause to discourse. Norman: SIL of the University of Oklahoma.
+- Welmers, William E. 1973. African language structures. Berkeley etc: University of California Press.
+- Kölver, Ulrike. 1985. Kasusrelationen im Birmanischen. In Plank, F. (ed.), Relational typology, 195-212. Berlin and New York: Mouton.
+- Kuno, Susumu. 1973. The structure of the Japanese language. Current Studies in Linguistics Series. Cambridge, Mass: MIT Press.
+- Kahr, Joan Casper. 1975. Adpositions and locationals: typology and diachronic development. Working Papers on Language Universals 19. 21-54.
+- Starke, Frank. 1977. Die Funktionen der dimensionalen Kasus und Adverbien im Althethitischen. Wiesbaden: O. Harrassowitz.
+- Clark, Marybeth. 1979. Coverbs: evidence for the derivation of prepositions from verbs — New Evidence from Hmong. Working Papers in Linguistic 11. 1-12. University of Hawaii.
 - Bickerton, Derek. 2016. Roots of language. (Classics in Linguistics.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b91.109](https://doi.org/10.17169/langsci.b91.109)
--  Rudin, Catherine and Gordon, Bryan James (eds.) 2016. Advances in the study of {Siouan} languages and linguistics. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b94.118](https://doi.org/10.17169/langsci.b94.118)
+-  Rudin, Catherine and Gordon, Bryan James (eds.) 2016. Advances in the study of Siouan languages and linguistics. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b94.118](https://doi.org/10.17169/langsci.b94.118)
+- Marsh, Gordon H. 1936. Materials for a study of the Ioway language. Manuscript 4178.
+- Goldberg, Lotus Madelyn. 2005. Verb-stranding VP ellipsis: A cross-linguistic study. Montréal: McGill University (Doctoral dissertation).
+- Hartmann, Iren. 2012. Hoocąk Lexique Pro database.
+- Boyle, John P. 2007. Hidatsa morphosyntax and clause structure. Chicago: University of Chicago (Doctoral dissertation).
+- Graczyk, Randolph Jan. 1991. Incorporation and cliticization in Crow morphosyntax. Chicago: University of Chicago (Doctoral dissertation).
+- West, Shannon Louise. 2003. Subjects and objects in Assiniboine Nakoda. Victoria: University of Victoria (Master's thesis).
+- Johnson, Meredith. 2013. Verb-phrase ellipsis and v: Evidence from Hocąk. Paper presented at the 87th annual meeting of the Linguistic Society of America, Boston.
 -  Enfield, N. J. (ed.) 2017. Dependencies in language. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.573773](https://doi.org/10.5281/zenodo.573773)
-- Schrock, Terrill. 2017. The {Ik} language. (African Language Grammars and Dictionaries.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.344792](https://doi.org/10.5281/zenodo.344792)
--  Rehm, Georg and Stein, Daniel and Sasaki, Felix and Witt, Andreas (eds.) 2016. Language technologies for a multilingual {Europe}. (Translation and Multilingual Natural Language Processing.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1291947](https://doi.org/10.5281/zenodo.1291947)
--  Hansen-Schirra, Silvia and Grucza, Sambor (eds.) 2016. Eyetracking and {Applied} {Linguistics}. (Translation and Multilingual Natural Language Processing.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b108.230](https://doi.org/10.17169/langsci.b108.230)
-- Michaud, Alexis. 2017. Tone in {Yongning} {Na}. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.439004](https://doi.org/10.5281/zenodo.439004)
+- Cyffer, Norbert. 1998. A sketch of Kanuri. Köln: Rüdiger Köppe.
+- Kutsch Lojenga, Constance. 1994. Ngiti: A central-Sudanic language of Zaire. Köln: Rüdiger Köppe.
+- Sapir, Edward. 1930. The Southern Paiute Language. Boston: American Academy of Arts and Sciences.
+- Seiler, Walter. 1985. Imonda, a Papuan language. Pacific Linguistics. Series B- 93. 1-236.
+- Leslau, Wolf. 1995. Reference grammar of Amharic. Wiesbaden: Harassowitz.
+- Schrock, Terrill. 2017. The Ik language. (African Language Grammars and Dictionaries.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.344792](https://doi.org/10.5281/zenodo.344792)
+-  Rehm, Georg and Stein, Daniel and Sasaki, Felix and Witt, Andreas (eds.) 2016. Language technologies for a multilingual Europe. (Translation and Multilingual Natural Language Processing.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1291947](https://doi.org/10.5281/zenodo.1291947)
+-  Hansen-Schirra, Silvia and Grucza, Sambor (eds.) 2016. Eyetracking and Applied Linguistics. (Translation and Multilingual Natural Language Processing.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b108.230](https://doi.org/10.17169/langsci.b108.230)
+- Michaud, Alexis. 2017. Tone in Yongning Na. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.439004](https://doi.org/10.5281/zenodo.439004)
 -  Sheehan, Michelle and Bailey, Laura R. (eds.) 2017. Order and structure in syntax II. (Open Generative Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1115573](https://doi.org/10.5281/zenodo.1115573)
-- Friesen, Dianne. 2017. A grammar of {Moloko}. (African Language Grammars and Dictionaries.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.824016](https://doi.org/10.5281/zenodo.824016)
+- Holmberg, Anders and Platzack, Christer. 1995. The Role of Inflection in the Syntax of the Scandinavian Languages. Oxford: Oxford University Press.
+- Falk, Cecilia. 1990. On Double Object Constructions. Working Papers in Scandinavian Syntax 46. 53–100.
+- Holmberg, Anders and Nikanne, Urpo. 2002. Expletives, Subjects, and Topics in Finnish. In Svenonius, Peter (ed.), Subjects, Expletives, and the EPP, 71–105. Oxford: Oxford University Press.
+- Andrews, Avery. 1982. The representation of case in Modern Icelandic. In Bresnan, Joan (ed.), The Mental Representation of Grammatical Relations, 424–503. Cambridge, Mass: MIT Press.
+- Høysgaard, Jens. 1752[1979]. Metodisk Forsøg til en fuldstændig Dansk Syntax. In Danske Grammatikere. København: Det Danske Sprog- og Litteraturselskab.
+- Holmberg, Anders and Nikanne, Urpo. 2002. Expletives, subjects, and topics in Finnish. In Svenonius, Peter (ed.), Subjects, expletives, and the EPP, 71–106. Oxford: Oxford University Press.
+- Muñoz Pérez, Carlos. 2014. Dominican ello as a non-deleted null expletive. An International Journal of Hispanic Linguistics 3. 155–161.
+- Bullock, Barbara and Toribio, Almeida Jacqueline. 2009. Reconsidering Dominican Spanish: Data from the rural Cibao. Revista Internacional de Linguistica Iberoamericana 14. 49–73.
+- Martínez Sanz, Cristina. 2011. Null and overt subjects in a variable system: The case of Dominican Spanish. (Doctoral dissertation, University of Ottawa).
+- Hinzelin, Marc-Oliver and Kaiser, Georg. 2007. El pronombre ello en el léxico del español dominicano. In Mihatsch, Wiltrud and Sokol, Monika (eds.), Language Contact and Language Change in the Caribbean and beyond / Lenguas en contacto y cambio lingüístico en el Caribe y más allá, 171–188. Frankfurt am Main: Peter Lang.
+- D’Alessandro, Roberta. 2007. Impersonal Si Constructions. Agreement and interpretation. Berlin: Mouton de Gruyter.
+- Huang, C. T. James and Li, Y.-H. Audrey and Li, Yafei. 2009. The syntax of Chinese. Cambridge: Cambridge University Press.
+- Ssekiryango, Jackson. 2006. Observations on double object construction in Luganda. In Arasanyin, Olaoba F. and Pemberton, Michael A. (eds.), Selected Proceedings of the 36th Annual Conference on African Linguistics. Somerville, MA: Cascadilla Proceedings Project.
+- Friesen, Dianne. 2017. A grammar of Moloko. (African Language Grammars and Dictionaries.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.824016](https://doi.org/10.5281/zenodo.824016)
 -  Kandybowicz, Jason and Major, Travis and Torrence, Harold (eds.) 2018. African linguistics on the prairie. (Contemporary African Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1219141](https://doi.org/10.5281/zenodo.1219141)
--  Payne, Doris L. and Pacchiarotti, Sara and Bosire, Mokaya (eds.) 2017. Diversity in {African} languages. (Contemporary African Linguistics.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b121.280](https://doi.org/10.17169/langsci.b121.280)
-- Kieviet, Paulus. 2017. A grammar of {Rapa} {Nui}. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.235525](https://doi.org/10.5281/zenodo.235525)
+- Jakobi, Angelika. 2006. Focus in an active/agentive alignment system – the case of Beria (Saharan). ZAS Papers in Linguistics 46. 129–42.
+-  Payne, Doris L. and Pacchiarotti, Sara and Bosire, Mokaya (eds.) 2017. Diversity in African languages. (Contemporary African Linguistics.) Berlin: Language Science Press. [DOI: 10.17169/langsci.b121.280](https://doi.org/10.17169/langsci.b121.280)
+- Sibomana, Leo. 1981/1982. Tarok III: Das Verbalsystem und der Satz. Afrika und Übersee 64. 237–247.
+- Gravina, Richard. 2007. The verb phrase in Merey. (Ministère de la recherche scientifique et de l’innovation. Yaoundé: SIL).
+- Tucker, Archibald N. and Bryan, Margaret A. 1966. Linguistic analyses: The non-Bantu languages of north-eastern Africa. London: Oxford University Press.
+- Bendor-Samuel, John and Skitch, Donna and Cressman, Esther. 1973. Duka sentence, clause and phrase. (Studies in Nigerian Languages.) Zaria: Institute of Linguistics and Centre for the Study of Nigerian Languages, Abdullahi Bayero College, Ahmadu Bello University, Kano.
+- Vydrine, Valentin F. 2009. Negation in southern Mande. In Cyffer, Norbert and Ebermann, Erwin and Ziegelmeyer, Georg (eds.), Negation Patterns in West African Languages, 223–260. Amsterdam/Philadelphia: John Benjamins.
+- Cook, Thomas L. 1972/1980. Kohumono. In Kropp Dakubu, Mary Esther (ed.), West African language data sheets volume 1, 350–356. Accra: West African Linguistic Society. (1977).
+- Nettle, Daniel. 1998. Materials from the southeastern Plateau languages of Nigeria. Afrika und Übersee 81. 253–279.
+- Caron, Bernard. 2001. Dott, aka Zoɗi, (Chadic, West-B, South Bauchi): Grammatical notes and vocabulary. Afrika und Übersee 84. 1–60.
+- Jungraithmayr, Herrmann. 1968/1969. The class languages of the Tangale-Waja district. Afrika und Übersee 52. 161–204.
+- Arnott, David W. 1958. The classification of verbs in Tiv. Bulletin of the School of Oriental and African Studies 21. 111–133.
+- Pichl, Walter J. 1973/1980. Ndut-Falor. In Kropp Dakubu, Mary Esther (ed.), West African language data sheets volume 2, 8 pp. Accra: West African Linguistic Society.
+- Kropp Dakubu, Mary Esther. 1988. The languages of Ghana. London: Kegan Paul International for the International African Institute.
+- Frajzyngier, Zygmunt. 2008. A Grammar of Gidar. (Research in African studies.) Frankfurt: Peter Lang.
+- Caron, Bernard. 2008. La structure énonciative des subordonnées conditonnelles. In Caron, Bernard (ed.), Subordination, dependence et parataxe dans les langues africaines, 145–158. Louvain/Paris: Peeters.
+- Pohlig, James N. 1992. An account of Mofu-Gudur verb infixes and suffixes. ((Ministry of Scientific and Technical Research). Yaoundé: SIL).
+- Wilkendorf, Patricia. 2001. Sketch grammar of Nɔmaándɛ́: Sections 1-4. (Yaoundé: SIL).
+- Caron, Bernard. 2002. Guus, aka Sigidi (Chadic, West-B, South Bauchi): Grammatical notes, vocabulary and text. Afrika und Übersee 85. 161–248.
+- Moñino, Yves. 1995. Le Proto-Gbaya. Essai de linguistique comparative sur vingt-et-une langues d’Afrique centrale. Paris: Peeters.
+- Price, Norman. 1975/1980. Nchumuru. In Kropp Dakubu, Mary Esther (ed.), West African language data sheets volume 2, 11 pp. Accra: West African Linguistic Society.
+- Cleal, Alizon M. 1973/1980. Nchumuru. In Kropp Dakubu, Mary Esther (ed.), West African language data sheets volume 2, 11 pp. Accra: West African Linguistic Society.
+- Burquest, Donald. 1973/1980. Angas. In Kropp-Dakubu, Mary Esther (ed.), West African language data sheets volume 1, 35–43. Accra: West African Linguistic Society.
+- Kinnaird, William J. 2006. The Vamé verbal system. (Yaoundé: SIL).
+- Pawlak, Nina. 2001. Diachronic typology of locative phrases in Chadic. Sprache und Geschichte in Afrika 16/17. 355–386.
+- Lukas, Johannes. 1939. Die Sprache der Buduma im Zentral Sudan. Auf Grund eigener Studien und des Nachlasses von Gustav Nachtigal. Leipzig: F. A. Brockhaus.
+- Moser, Rosemarie. 2004. Kabba: A Nilo-Saharan language of the Central African Republic. (LINCOM studies in African linguistics.) München: LINCOM.
+- Neukom, Lukas. 2010. Description grammaticale du kenga (langue nilo-saharienne du Tchad). Köln: Rüdiger Köppe.
+- Boyeldieu, Pascal. 1990. Furu et Bagiro: L'extension oubanguienne des langues <<sara>>. Journal des Africanistes 60. 77–106.
+- Larochette, Joe. 1958. Grammaire des dialects mangbetu et medje, suivie d’un manuel de conversation et d’un lexique. (Sciences de L’homme.) Tervuren: Annales du Musée Royal du Congo Belge.
+- Marchese, Lynell. 1982. Basic aspectual categories in Proto-Kru. Journal of West African Languages 12. 3–23.
+- Kim, Hae-Kyung. 2002. Aspect, temps et modes en jowulu. (Bamako: SIL Mali).
+- Lenaka, Ngoran Loveline. 1999. A sketch outline of the phonology of Ndemli. Yaoundé: University of Yaoundé (Master's Thesis.)
+- Bond, Oliver. 2009. Multiple analytical perspectives of the Eleme anterior-perfective. Current issues in unity and diversity of languages: Papers selected from the 18th International Congress of Linguistics, July 21-26, 2008. 1480–1496. Seoul: Linguistic Society of Korea.
+- Bond, Oliver. 2010. Intra-paradigmatic variation in Eleme verbal agreement. Studies in Language 34. 1–35.
+- Bouquiaux, Luc. 1970. La langue Birom (Nigeria septentrional) – phonologie, morphologie, syntaxe. Paris: Les Belles Lettres.
+- Arnott, David W. 1967/1980. Tiv. In Kropp-Dakubu, Mary Esther (ed.), West African language data sheets volume 2, 8 pp. Accra: West African Linguistic Society.
+- Marten, Lutz. 2003. The Dynamics of Bantu Applied Verbs: An Analysis at the Syntax-Pragmatics Interface. In Lébikaza, Kézié K. (ed.), Acts du 3e Congrès mondial de Linguistique Africaine Lomé 2000, 207–221. Köln: Köppe.
+- Schaefer, Ronald. 1985. Motion in Tswana and its Characteristic Lexicalization. Studies in African Linguistics 16(1). 57–87.
+- Saah, Kofi K. 2010. Relative clauses in Akan. In Aboh, Enoch O. and Essegbey, James (eds.), Topics in Kwa syntax, 91–107. London: Springer.
+- Krampah, D. E. K. 1970. Mbofra mfa adwen. Accra: Bureau of Ghana Languages.
+- Martin, Henry James. 1936. Ekumfi Benada. Accra: Bureau of Ghana Languages.
+- Kari, Ethelbert E. 2004. A reference grammar of Degema. Köln: Rüdiger Köppe Verlag.
+- Kari, Ethelbert E. 1997. Degema. München: Lincom Europa.
+- Kari, Ethelbert E. 2003a. Serial verb constructions in Degema, Nigeria. African Study Monographs 24. 271–289.
+- Collins, Chris. 1997. Argument sharing in serial verb constructions. Linguistic Inquiry 28. 461–497.
+- Collins, Chris. 2002. Multiple verb movement in ǂHoan. Linguistic Inquiry 33. 1–29.
+- Sasse, Hans-Jürgen. 1987. The thetic/categorial distinction revisited. Linguistics 25. 511–580.
+- Schwarz, Anne. 2009. To be or not to be? About the copula system in Buli (Gur). In Petter, Margarida and Beline Mendes, Ronald (eds.), Proceedings of the Special World Congress of African Linguistics – São Paulo 2008: Exploring the African language connection in the Americas, 263–278. São Paulo: Humanitas.
+- Schwarz, Anne. 2007. Aspekte der Morphosyntax und Tonologie im Buli – Mit Schwerpunkt auf dem Buli von Wiaga. Berlin: Humboldt-Universität zu Berlin. (Doctoral dissertation.) [www:urn:nbn:de:kobv:11-10085362](www:urn:nbn:de:kobv:11-10085362)
+- Fiedler, Ines and Hartmann, Katharina and Reineke, Brigitte and Schwarz, Anne and Zimmermann, Malte. 2010. Subject focus in West African languages. In Zimmermann, Malte and Féry, Caroline (eds.), Information structure: Theoretical, typological, and experimental perspectives, 234–257. Oxford: Oxford University Press.
+- Kieviet, Paulus. 2017. A grammar of Rapa Nui. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.235525](https://doi.org/10.5281/zenodo.235525)
 -  Hansen-Schirra, Silvia and Czulo, Oliver and Hofmann, Sascha (eds.) 2017. Empirical modelling of translation and interpreting. (Translation and Multilingual Natural Language Processing.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1089335](https://doi.org/10.5281/zenodo.1089335)
-- Roettger, Timo B. 2017. Tonal placement in {Tashlhiyt}. (Studies in Laboratory Phonology.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.814472](https://doi.org/10.5281/zenodo.814472)
+- Roettger, Timo B. 2017. Tonal placement in Tashlhiyt. (Studies in Laboratory Phonology.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.814472](https://doi.org/10.5281/zenodo.814472)
 - Roussarie, Laurent. 2017. Sémantique formelle. (Textbooks in Language Sciences.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1000504](https://doi.org/10.5281/zenodo.1000504)
 - Zinova, Yulia. 2021. Russian verbal prefixation. (Empirically Oriented Theoretical Morphology and Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4446717](https://doi.org/10.5281/zenodo.4446717)
+- Schoorlemmer, Maaike. 1995. Participial passive and aspect in Russian. Utrecht: LEd.
+- Romanova, Eugenia. 2006. Constructing Perfectivity in Russian. (Doctoral dissertation, University of Tromsø).
+- Mikaeljan, Irina and Šmelev, Aleksej and Zaliznjak, Anna. 2007. Imperfectivization in Russian. In  Gerdes, Kim and Reuther, Tilmann and Wanner, Leo (eds.) Proceedings of the 3rd International Conference on Meaning-Text Theory. 20–24. München - Wien: Gesellschaft zur Förderung slawistischer Studien.
+- Zinova, Yulia and Filip, Hana. 2013. Biaspectual Verbs: A Marginal Category?. In Aher, Martin and Hole, Daniel and Jeřábek, Emil and Kupke, Clemens (eds.), 10th International Tbilisi Symposium on Logic, Language, and Computation, 310–332. Gudauri, Georgia: Springer. (Paper presented at TbiLLC 2013).
+- Tatevosov, Sergei. 2009. Množestvennaja prefiksacija i anatomija russkogo glagola [Multiple prefixation and the anatomy of Russian verb]. In Kisseleva, Xenia and Plungian, Vladimir and Rakhilina, Ekaterina and Tatevosov, Sergei (eds.), Korpusnye issledovanija po russkoj grammatike [Corpus-based Studies in the Grammar of Russian], 92–156. Moscow: Probel.
+- Tatevosov, Sergei. 2007. Intermediate prefixes in Russian. In Proceedings of the annual workshop on formal approaches to Slavic linguistics.
+- Kagan, Olga. 2015. Scalarity in the Verbal Domain: The Case of Verbal Prefixation in Russian. Cambridge: Cambridge University Press.
 -  Bowern, Claire and Horn, Laurence and Zanuttini, Raffaella (eds.) 2017. On looking into words (and beyond). (Empirically Oriented Theoretical Morphology and Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.495467](https://doi.org/10.5281/zenodo.495467)
+- Laughlin, Robert. 1977. Of cabbages and kings. Washington, D.C.: Smithsonian Institution Press.
+- Laughlin, Robert. 1980. Of shoes and ships and sealing wax. Washington, D.C.: Smithsonian Institution Press.
+- Henderson, Robert. 2012. Morphological alternations at the intonational phrase edge: The case of K'ichee. Natural Language & Linguistic Theory 30. 741–787.
+- Franks, Steven L. n.d. The monosyllabic head effect. Natural Language and Linguistic Theory 7. 551–563.
 -  Bisang, Walter and Malchukov, Andrej (eds.) 2017. Unity and diversity in grammaticalization scenarios. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.823224](https://doi.org/10.5281/zenodo.823224)
-- Schäfer, Martin. 2017. The semantic transparency of {English} compound nouns. (Morphological Investigations.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1134595](https://doi.org/10.5281/zenodo.1134595)
+- Vedder, Heinz. 1910–1911. Grundriß einer Grammatik der Buschmannsprache vom Stamm der !Ku-Buschmänner. Zeitschrift für Kolonialsprachen 1. 106–117.
+- Eschenberg, Ardis. 2005. The Article System of Umoⁿhoⁿ (Omaha). (Doctoral dissertation, University of Buffalo).
+- Rose, Sharon. 2013. The morphological structure of the Moro verb. In Schadeberg, Thilo C. and Blench, Roger (eds.), Nuba mountain language studies, 83–104. Köln: Rüdiger Köppe Verlag.
+- Caroompas, Jordan. 2014. The dative alternation in Medumba. (Ms., Boston University).
+- Satre, Scott A. 2010. The consecutive morpheme in Bamileke-Ngomba. Studies in African Linguistics 39. 35–76.
+- San Buenaventura, Gabriel de. 1684. Arte de la lengua maya. México D.F.: Viuda de B. Calderón.
+- Beltrán de Santa Rosa, Pedro. 1746. Arte del idioma maya, reducido a sucinctas reglas, y semilexicon yucateco. México D.F.: Viuda de d.J. Bernardo de Hogal.
+- Coronel, Juan. 1998. Arte en lengua de maya. México D.F.: D. Garrido. 2–55pp. (Repr.: Martínez Hernández (ed.) 1929: 2–55).
+- Bruce S., Roberto D. 1974. El libro de Chan K'in. (Colección Científica Lingüística.) México D.F.: Instituto Nacional de Antropologia e Historia, Departamento de Lingüística.
+- Bruce S., Roberto D. 1968. Gramática del lacandón. (Departamento de Investigaciones Antropológicas.) México D.F.: Instituto Nacional de Antropología e Historia.
+- Danziger, Eve. 2011. Once more with feeling: A forbidden performance of the Great Speech of the Mopan Maya. Anthropological Quarterly 84. 121–140.
+- Monforte, Jorge and Dzul, Lázaro and Gutiérrez Bravo, Rodrigo. 2011. Narraciones mayas. México D.F.: Instituto Nacional de Lenguas Indígenas.
+- Bergqvist, Henrik. 2011. Agentivity and status in Yukatekan languages. In Avelino, Heriberto (ed.), New perspectives in Mayan linguistics, 242–257. Cambridge Scholars.
+- Briceño Chel, Fidencio. 1998. La gramaticalización del verbo bin (“ir”) en el maya yucateco. In Estrada Fernández, Zarina (ed.), Memorias del IV encuentro internacional de lingüística en el noroeste. 4 volúmenes, 69–93. México D.F.: Instituto Nacional de Antropología e Historia.
+- Briceño Chel, Fidencio. 2000. La gramaticalización del verbo “ir” en las lenguas mayas de la rama yukateka. In Estrada Fernández, Zarina (ed.), Memorias del V encuentro internacional de lingüística en el noroeste. 3 volúmenes, 85–101. Hermosillo, México: UniSon.
+- Hofling, Charles A. 2011. Voice and auxiliaries in Mopan Maya. In Avelino, Heriberto (ed.), New perspectives in Mayan linguistics, 144–159. Newcastle upon Tyne: Cambridge Scholars.
+- Tessitori, Luigi. 1914–1916. Notes on the grammar of the Old Western Rajasthani, with special reference to Apabhramsha and to Gujarati and Marwari. Indian Antiquary 42–44.
+- Mistry, P. J. 1997. Objecthood and specificity in Gujarati. In Hill, Jane and Mistry, P. J. and Campbell, Lyle (eds.), The life of language, 425–442. Berlin: Mouton de Gruyter.
+- Desai, Mohan. 1926. Jain Gurjar Kavyo. Bombay: Jain Svetambar Conference Office.
+- Renou, Louis. 1952. Grammaire de la langue védique. Lyon: IAC.
+- Chatterji, Suniti Kumar. 1926. The evolution of Bengali language. Delhi: Rupa.
+- Chatterji, Suniti Kumar. 1986. The evolution of Bengali language. Vol. 3: Revision and additions. Delhi: Rupa.
+- Saxena, Ram Baburam. 1937. Evolution of Awadhi. Delhi [1971 reprint]. Delhi: Motilal Banarsidass.
+- Bubenik, Vit. 1998. A historical syntax of Late Indo-Aryan (Apabhram̥śa). Amsterdam: Benjamins.
+- Dave, Trimbaklal N. 1935. A study of the Gujarāti language in the 16th century (v. S.) with special reference to MS Balavabodha to Upadeśmala (Suri). London: Royal Asiatic Society. [http://www.sudoc.abes.fr/DB=2.1/SET=3/TTL=1/CLK?IKT=1016/ TRM](http://www.sudoc.abes.fr/DB=2.1/SET=3/TTL=1/CLK?IKT=1016/ TRM)
+- Khokhlova, Liudmila. 2013. Obligational constructions in New Indo-Aryan languages of Western India. Lingua Posnianiensis IV. 91–107.
+- Cardona, George and Suthar, Babu. 2003. Gujarati. In Cardona, George and Jain, Danesh (eds.), The Indo-Aryan languages, 658–697. London: Routledge.
+- Jaiswal, Mahesh Prasad. 1962. A linguistic study of Bundeli. Leiden: Brill.
+- Jha, Subhadra. 1958. The formation of the Maithili language. Delhi: Manoharlal.
+- Goswami, Golokchandra C. and Tamuli, Jyotiprakash. 2003. Assamese. In Cardona, George and Jain, Danesh (eds.), The Indo-Aryan Languages, 411–443. London: Routledge.
+- Schäfer, Martin. 2017. The semantic transparency of English compound nouns. (Morphological Investigations.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1134595](https://doi.org/10.5281/zenodo.1134595)
 -  Trips, Carola and Kornfilt, Jaklin (eds.) 2017. Further investigations into the nature of phrasal compounding. (Morphological Investigations.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.885113](https://doi.org/10.5281/zenodo.885113)
--  Klamer, Marian (ed.) 2017. The {Alor} {Pantar} languages. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.437098](https://doi.org/10.5281/zenodo.437098)
+- Kageyama, Taro. 2009. Isolate: Japanese. In Lieber, Rochelle and Štekauer, Pavol (eds.), The Oxford Handbook of Compounding, 512–526. Oxford: Oxford University Press.
+- Kageyama, Taro. 1993. Bumpoo to gokeesee [Grammar and word formation]. Tokyo: Hituzi Syobo.
+- Sugioka, Yoko. 2005. Multiple mechanisms underlying morphological productivity. In Mufwene, Salikoko S. and Francis, Elaine J. and Wheeler, Rebecca S. (eds.), Polymorphous linguistics: Jim McCawley's legacy, 203–223. Cambridge: MIT Press.
+- Kageyama, Taro. 2001. Word Plus: The Intersection of Words and Phrases. In van de Weijer, Jeroen and Nishihara, Tetsuo (eds.), Issues in Japanese Phonology and Morphology, 245–276. Berlin: de Gruyter.
+- Kullmann, Rita and Tserenpil, Dandii-Yadamyn. 1996. Mongolian Grammar. Hong Kong: Jensco Ltd.
+-  Klamer, Marian (ed.) 2017. The Alor Pantar languages. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.437098](https://doi.org/10.5281/zenodo.437098)
+- Klamer, Marian. 2010. A Grammar of Teiwa. (Mouton Grammar Library.) Berlin: Mouton de Gruyter.
+- Klamer, Marian. 2014. Kaera. In, 97–146.
+- Kratochvíl, František. 2007. A grammar of Abui: A Papuan language of Alor. Utrecht: LOT.
+- Holton, Gary. 2010. Person-marking, verb classes and the notion of grammatical alignment in Western Pantar (Lamma). In Ewing, Michael and Klamer, Marian (eds.), Typological and areal analyses: contributions from east Nusantara, 97–117. Canberra: Pacific Linguistics.
+- Kratochvíl, František. 2011. Transitivity in Abui. Studies in Language 35. 589–636.
+- Klamer, Marian. 2014. The history of numeral classifiers in Teiwa (Papuan). In Dimmendaal, Gerrit J. and Storch, Anne (eds.), Number: Constructions and Semantics. Case studies from Africa, India, Amazonia & Oceania, 135–166. Amsterdam: Benjamins.
+- Schapper, Antoinette and Hendery, Rachel. 2014. Wersing. In, 439–504.
+- Holton, Gary. 2012. Number in the Papuan outliers of East Nusantara. Paper presented at the International Conference on Austronesian Linguistics, Bali, 5 July 2012.
 -  Bailey, Laura R. and Sheehan, Michelle (eds.) 2017. Order and structure in syntax I. (Open Generative Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1117686](https://doi.org/10.5281/zenodo.1117686)
+- Bayer, Josef. 2001. Two grammars in one: Sentential complements and complementizers in Bengali and other South-Asian languages. In Bhaskararao, Peri and Subbarao, Karumuri Venkata (eds.), The Yearbook of South Asian Languages 2001, 11–36. New Delhi: Sage Publications.
+- Haider, Hubert. 2013. Symmetry Breaking in Syntax. Cambridge: Cambridge University Press.
+- Cognola, Federica. 2012. Syntactic Variation and Verb Second: A German dialect in Northern Italy. Amsterdam: John Benjamins.
+- Anderson, Torben. 1988. Ergativity in Päri, a Nilotic OVS language. Lingua 75. 289–324.
+- Mous, Marten. 1993. A Grammar of Iraqw. Hamburg: Buske.
+- Carlson, Robert. 1994. A Grammar of Supyire. Berlin: Mouton.
+- Heath, Jeffrey. 1999. A Grammar of Koyraboro (Koroboro) Senni. Köln: Rüdiger Köppe.
+- Aboh, Enoch. 2010. The P-route. In Guglielmo, Cinque and Rizzi, Luigi (eds.), Mapping Spatial PPs. The Cartography of Syntactic Structures, 225–260. New York: Oxford University Press.
+- Teleman, Ulf and Andersson, Erik and Hellberg, Staffan. 1999. Svenska Akademiens grammatik. Stockholm: Norstedts.
+- Reis, Marga. 2003. On the Form and Interpretation of German Wh-Infinitives. Journal of Germanic Linguistics 15. 155–201.
+- Sitaridou, Ioanna. 2012. A comparative study of word order in Old Romance. Folia Linguistica 46. 553–604.
+- Bittner, Maria. 1994. Case, scope, and binding. Dordrecht: Kluwer.
 -  Freitas, Maria João and Santos, Ana Lúcia (eds.) 2017. A aquisição de língua materna e não materna. (Textbooks in Language Sciences.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.889261](https://doi.org/10.5281/zenodo.889261)
 -  Bonami, Olivier and Boyé, Gilles and Dal, Georgette and Giraudo, Hélène and Namer, Fiammetta (eds.) 2018. The lexeme in descriptive and theoretical morphology. (Empirically Oriented Theoretical Morphology and Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1402520](https://doi.org/10.5281/zenodo.1402520)
 -  Stenzel, Kristine and Franchetto, Bruna (eds.) 2017. On this and other worlds. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.892102](https://doi.org/10.5281/zenodo.892102)
 -  Seržant, Ilja A. and Witzlack-Makarevich, Alena (eds.) 2018. Diachrony of differential argument marking. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1219168](https://doi.org/10.5281/zenodo.1219168)
-- Hölzl, Andreas. 2017. A typology of questions in {Northeast} {Asia} and beyond. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1344467](https://doi.org/10.5281/zenodo.1344467)
-- Müller, Sonja. 2017. Distribution und {Interpretation} von {Modalpartikel} {Kombinationen}. (Topics at the Grammar-Discourse Interface.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1244028](https://doi.org/10.5281/zenodo.1244028)
+- von Heusinger, Klaus and Kaiser, Georg A. 2003. The interaction of animacy, definiteness and specificity in Spanish. In von Heusinger, Klaus and Kaiser, Georg A. (eds.), Proceedings of the Workshop “Semantic and Syntactic Aspects of Specificity in Romance Languages”, 41–65. Universität Konstanz: Fachbereich Sprachwissenschaft (Arbeitspapier 113).
+- Tiwari, Udaya N. 1955. Hindī bhāṣā kā udgatan aur uskī vibhinn boliyã̄. Allahabad: Bharti.
+- Singh, Jag Deva. 1970. A descriptive grammar of Banguru. Kurukshetra: Kurukshetra University.
+- Ikola, Osmo. 1972. Partitiivi subjektin, objektin ja predikatiivin sijana. Kielikello 5. 5-12.
+- Hölzl, Andreas. 2017. A typology of questions in Northeast Asia and beyond. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1344467](https://doi.org/10.5281/zenodo.1344467)
+- Rice, Karen. 1989. A grammar of Slave. (Mouton Grammar Library.) Berlin: Mouton de Gruyter.
+- Bowern, Claire L. 2012. A grammar of Bardi. (Mouton Grammar Library.) Berlin: De Gruyter Mouton.
+- Hellenthal, Anne-Christie. 2010. A grammar of Sheko. (LOT.) Utrecht: LOT.
+- Levinson, Stephen C. 2010. Questions and responses in Yélî Dnye, the Papuan language of Rossel Island. Journal of Pragmatics 42. 2741–2755.
+- Thompson, Hanne-Ruth. 2012. Bengali. (London Oriental and African Language Library.) Amsterdam: Benjamins.
+- Miestamo, Matti. 2011. Polar interrogatives in Uralic languages. A typopogical perspective. Linguistica Uralica 47. 1–21.
+- Clark, Marybeth. 1985. Asking questions in Hmong and other Southeast Asian languages. Linguistics of the Tibeto-Burman Area 8. 60–67.
+- Liljegren, Henrik. 2016. A grammar of Palula. (Studies in Diversity Linguistics.) Berlin: Language Science Press.
+- Khalilova, Zaira. 2009. A grammar of Khwarshi. (LOT.) Utrecht: LOT.
+- Andvik, Erik E. 2010. A grammar of Tshangla. (Brill’s Tibetan studies library. Languages of the Greater Himalayan region.) Leiden: Brill.
+- Hoymann, Gertie. 2010. Questions and responses in ǂAkhoe Haiǀǀom. Journal of Pragmatics 42. 2726–2740.
+- Doornenbal, Marius A. 2009. A grammar of Bantawa. Grammar, paradigm tables, glossary and texts of a Rai language of Eastern Nepal. (LOT.) Utrecht: LOT.
+- Ebina, Daisuke. 2011. Cusco Quechua. In Yamakoshi, Yasuhiro (ed.), Grammatical sketches from the field, 1–39. Tōkyō: Research Institute for Languages and Cultures of Asia and Africa.
+- Dienst, Stefan. 2014. A grammar of Kulina. (Mouton Grammar Library.) Berlin: Mouton de Gruyter.
+- Watters, David E. 2006. Notes on Kusunda grammar. A language isolate of Nepal. Himalayan Linguistic Archive 3. 1-182.
+- Nedjalkov, Igor. 1997. Evenki. (Descriptive Grammars.) London: Routledge.
+- Yamakoshi, Yasuhiro. 2015. Mongoru-go horuchin hōgen tekisuto: Nichijō kaiwa o daizai ni shita kihon bunrei-shū. Hoppō gengo kenkyū 5. 281–317.
+- Klamer, Marian. 2010. A grammar of Teiwa. (Mouton Grammar Library.) Berlin: De Gruyter Mouton.
+- Miyaoka, Osahito. 2012. A grammar of Central Alaskan Yupik (CAY). (Mouton Grammar Library.) Berlin: De Gruyter Mouton.
+- Bugaeva, Anna. 2012. Southern Hokkaido Ainu. In Tranter, Nicolas (ed.), The languages of Japan and Korea, 461–509. London: Routledge.
+- Tamura, Suzuko. 2000. The Ainu language. (ICHEL Linguistic Studies.) Tōkyō: Sanseido.
+- Bugaeva, Anna. 2004. Grammar and folklore texts of the Chitose dialect of Ainu (idiolect of Ito Oda). Kyōto: Nakanishi.
+- Refsing, Kirsten. 1986. The Ainu language. The morphosyntax of the Shizunai dialect. Århus: Aarhus University Press.
+- Shibatani, Masayoshi. 1990. The languages of Japan. (Cambridge Language Surveys.) Cambridge: Cambridge University Press.
+- Tittel, Hans (transl.) 1922. Die Sprache der Ainus von Sachalin. Mitteilungen der Deutschen Gesellschaft für Natur- und Völkerkunde Ostasiens 17. 70–89.
+- Vovin, Alexander. 1993. A reconstruction of Proto-Ainu. (Brill’s Japanese Studies Library.) Leiden: Brill.
+- Gruzdeva, Ekaterina. 1998. Nivkh. (Languages of the World/Materials.) Munich: Lincom Europa.
+- Gruzdeva, Ekaterina. 2008. How to orient oneself on Sakhalin: A guide to Nivkh locational terms. Studies in Slavic and General Linguistics 33. 169–188.
+- Zhukova, A. N. 1997. Korjakskij jazyk. In Zhdanova, T. Ju. and Gorova, N. V. and Romanova, O. I. (eds.), Jazyki mira. paleoaziatskie jazyki, 39–53. Moscow: Indrik.
+- Dunn, Michael. 1999. A grammar of Chukchi. Canberra: The Australian National University. ((Doctoral dissertation)).
+- Volodin, Aleksandr P. 2001. Imperative in Kerek. In Khrakovski, Viktor S. (ed.), Typology of imperative constructions, 145–158. Munich: Lincom Europa.
+- Nagayama, Yukari. 2011. Alutor. In Yamakoshi, Yasuhiro (ed.), Grammatical sketches from the field, 257–302. Tōkyō: Research Institute for Languages and Cultures of Asia and Africa.
+- Bogoras, Waldemar. 1922. Chukchee. In Boas, Franz (ed.), Handbook of American Indian languages, vol. 2, 631–903. Washington: Government Printing Office.
+- Nagayama, Yukari. 2016. Nominalization in Alutor. Studia Orientalia 117. 119–136.
+- Vakhtin, Nikolai. 1998. Copper Island Aleut: A case of language “resurrection”. In Grenoble, Lenore A. and Whaley, Lindsay J. (eds.), Endangered languages. Current issues and further prospects, 317–327. Cambridge: Cambridge University Press.
+- Jacobson, Steven. 1979. A grammatical sketch of Siberian Yupik Eskimo. Fairbanks: Alaska Native Language Center.
+- Jedig, Hugo H. 2014. Lepel, Laumptje, Lostichkeit. Gesammelte Beiträge zu deutschen Mundarten in der Sowjetunion. Mannheim: Institut für deutsche Sprache.
+- Shevelov, George Y. 1993. Ukrainian. In Comrie, Bernard and Corbett, Greville G. (eds.), The Slavonic languages, 947–998. London: Routledge.
+- Comrie, Bernard. 1984. Russian. In Chisolm, Williams S. (ed.), Interrogativity. A colloquium on the grammar, typology and pragmatics of questions in seven diverse languages, Cleveland, Ohio, October 5th 1981-May 3rd 1982, 7–46. Amsterdam: Benjamins.
+- Stern, Dieter. 2005. Taimyr Pidgin Russian (Govorka). Russian Linguistics 29. 289–318.
+- Stern, Dieter. 2012. Tajmyr-Pidgin-Russisch. Kolonialer Sprachkontakt in Nordsibirien. (Studies on language and culture in Central and Eastern Europe.) Munich: Otto Sagner.
+- Emmerick, Ronald E. 2009. Khotanese and Tumshuquese. In Windfuhr, Gernot (ed.), The Iranian languages, 377–415. London: Routledge.
+- Yoshida, Yukata. 2009. Sogdian. In Windfuhr, Gernot (ed.), The Iranian languages, 279–335. London: Routledge.
+- Hackstein, Olav. 2013. Polar questions and non-headed conditionals in cross-linguistic and historical perspective. In Slade, Benjamin and Shu-Fen, Chen (eds.), Grammatica et verba. Glamor and verve. Studies in South Asian, historical, and Indo-European linguistics in Honor of Hans Henrich Hock on the occasion of his seventy-fifth birthday, 99–116. Ann Arbor: Beech Stave Press.
+- Hasegawa, Yoko. 2015. Japanese. A linguistic introduction. Cambridge: Cambridge University Press.
+- Hinds, John. 1984. Japanese. In Chisolm, Williams S. (ed.), Interrogativity. A colloquiumon the grammar, typology and pragmatics of questions in seven diverse languages, Cleveland, Ohio, October 5th 1981-May 3rd 1982, 145–188. Amsterdam: Benjamins.
+- Vovin, Alexander. 2009. A descriptive comparative grammar of Western Old Japanese, vol. 2: Adjectives, verbs, conjunctions, particles, postpositions, indexes. (Languages of Asia.) Folkestone: Global Oriental.
+- Kupchik, John E. 2011. A grammar of the eastern old Japanese dialect. Honolulu: University of Hawai’i. ((Doctoral dissertation.)).
+- Shigeno, Hirumi. 2010. Ura (Amami Ryukyuan). In Pellard, Thomas and Shimoji, Michinori (eds.), An introduction to Ryukyuan languages, 15–34. Tōkyō: Research Institute for Languages and Cultures of Asia and Africa.
+- Niinaga, Yuto. 2015. Amami grammar. In Patrick, Heinrich and Miyara, Shinsho and Shimoji, Michinori (eds.), Handbook of the Ryukyuan languages. History, structure, and use, 323–343. Berlin: De Gruyter Mouton.
+- Niinaga, Yuto. 2010. Yuwan (Amami Ryukyuan). In Pellard, Thomas and Shimoji, Michinori (eds.), An introduction to Ryukyuan languages, 35–88. Tōkyō: Research Institute for Languages and Cultures of Asia and Africa.
+- Miyara, Shinsho. 2015. Shuri Okinawan grammar. In Patrick, Heinrich and Miyara, Shinsho and Shimoji, Michinori (eds.), Handbook of the Ryukyuan languages. History, structure, and use, 379–404. Berlin: De Gruyter Mouton.
+- Arakaki, Tomoko. 2003. A grammatical study of Luchuan. Focusing upon the verb forms in Shuri dialect. In Izuyama, Atsuko (ed.), Studies on Luchuan grammar, 163–216. Kyōto: Nakanishi Printing.
+- Matayoshi, Satomi. 2010. Tsuken (Okinawan). In Pellard, Thomas and Shimoji, Michinori (eds.), An introduction to Ryukyuan languages, 89–111. Tōkyō: Research Institute for Languages and Cultures of Asia and Africa.
+- Aoi, Hayato. 2015. Tarama Miyako grammar. In Patrick, Heinrich and Miyara, Shinsho and Shimoji, Michinori (eds.), Handbook of the Ryukyuan languages. History, structure, and use, 405–421. Berlin: de Gruyter Mouton.
+- Pellard, Thomas. 2009. Ōgami. Éléments de description d’un parler du Sud des Ryūkyū. Paris: École des Hautes Etudes en Sciences Sociales. ((Doctoral dissertation.)).
+- Shimoji, Michinori. 2011. Irabu Ryukyuan. In Yamakoshi, Yasuhiro (ed.), Grammatical sketches from the field, 79–136. Tōkyō: Research Institute for Languages and Cultures of Asia and Africa.
+- Matayoshi, Satomi. 2010. Hateruma (Yaeyama Ryukyuan). In Pellard, Thomas and Shimoji, Michinori (eds.), An introduction to Ryukyuan languages, 189-227. Tōkyō: Research Institute for Languages and Cultures of Asia and Africa.
+- Lawrence, Wayne P. 2012. Southern Ryukyuan. In Tranter, Nicolas (ed.), The languages of Japan and Korea, 381–411. London: Routledge.
+- Shimoji, Michinori. 2011. Quasi-kakari musubi in Irabu. Japanese/Korean linguistics 18. 114–125.
+- Qiu, Peng. 2015. A preliminary investigation of Yilan Creole in Taiwan: Discussing predicate position in Yilan Creole. Edmonton: University of Alberta. ((Master’s thesis.)).
+- Huang, Lillian M. 1996. Interrogative constructions in Mayrinax Atayal. Bulletin of National Taiwan Normal University 41. 263–296.
+- Song, Jae Jung. 2005. The Korean language. Structure, use and context. London: Routledge.
+- Sohn, Ho-Min. 1994. Korean. (Descriptive grammars.) London: Routledge.
+- Sohn, Ho-Min. 1999. The Korean language. (Cambridge Language Surveys.) Cambridge: Cambridge University Press.
+- Yoon, Kyung-Eun. 2010. Questions and responses in Korean conversation. Journal of Pragmatics 42. 2782–2798.
+- King, Ross J. 1987. An introduction to Soviet Korean. Language Research 23. 233–271.
+- Sohn, Ho-Min. 2012. Middle Korean. In Tranter, Nicolas (ed.), The languages of Japan and Korea, 73–122. London: Routledge.
+- Yamakoshi, Yasuhiro. 2007. Shinehen buriyatogo no clitic. Asian and African Languages and Linguistics 2. 1–15.
+- Rybatzki, Volker. 2003. Middle Mongol. In Janhunen, Juha (ed.), The Mongolic languages, 57–82. London: Routledge.
+- Janhunen, Juha. 2012. Mongolian. (London Oriental and African Language Library.) Amsterdam: Benjamins.
+- Janhunen, Juha. 2003. Khamnigan Mongol. In Janhunen, Juha (ed.), The Mongolic languages, 83–101. London: Routledge.
+- Svantesson, Jan-Olof. 2003. Khalkha. In Janhunen, Juha (ed.), The Mongolic languages, 154–176. London: Routledge.
+- Ragagnin, Elisabetta. 2011. Dukhan, a Turkic variety of northern Mongolia. Description and analysis. Wiesbaden: Harrassowitz.
+- Chaganhada. 1991. Mengguyu ke’erqin tuyude yuqici. Minzu yuwen 2. 71–73.
+- Brosig, Benjamin. 2014. The tense-aspect system of Khorchin Mongolian. In Suihkonen, Pirkko and Whaley, Lindsay J. (eds.), On diversity and complexity of languages spoken in Europe and North and Central Asia, 3–65. Amsterdam: Benjamins.
+- Georg, Stefan. 2003. Ordos. In Janhunen, Juha (ed.), The Mongolic languages, 193–209. London: Routledge.
+- Birtalan, Ágnes. 2003. Oirat. In Janhunen, Juha (ed.), The Mongolic languages, 210–228. London: Routledge.
+- Zhaonasitu. 1981. Dongbu yuguyu jianzhi. Peking: Minzu chubanshe.
+- Nugteren, Hans. 2003. Shira Yughur. In Janhunen, Juha (ed.), The Mongolic languages, 265–285. London: Routledge.
+- Fried, Robert Wayne. 2010. A grammar of Bao’an Tu, a Mongolic language of northwest China. Buffalo: University of Buffalo. ((Doctoral dissertation.)).
+- Siqinchaoketu. 1999. Kangjiayu. Shanghai: Shanghai yuandong chubanshe.
+- Field, Kenneth L. 1997. A grammatical overview of Santa Mongolian. Oakland: University of California. ((Doctoral dissertation.)).
+- Napoli, Mateus Froes. 2014. Studies on the verb complex of Santa Mongolian. Chiang Mai: Payap University. ((Master’s thesis.)).
+- Slater, Keith W. 2003. A grammar of Mangghuer. (Routledge Studies in Asian Linguistics.) London: Routledge Curzon.
+- Pulleyblank, Edwin G. 1995. Outline of Classical Chinese grammar. Vancouver: UBC Press.
+- Dwyer, Arienne M. 1995. From the northwest China sprachbund: Xúnhuà Chinese dialect data. Yuen Ren Society Treasury of Chinese Dialect Data 1. 143–182.
+- A., Yibulaheimai. 1985. Gansu jingnei tangwanghua jilüe. Minzu yuwen 6. 33–47.
+- Ebihara, Shiho. 2011. Amdo Tibetan. In Yamakoshi, Yasuhiro (ed.), Grammatical sketches from the field, 41–78. Tōkyō: Research Institute for Languages and Cultures of Asia and Africa.
+- Ebihara, Shiho. 2013. Preliminary field report on dPa’ris dialect of Amdo Tibetan. Journal of Research Institute 49. 149–161.
+- Hwang-Cherng, Gong. 2003. Tangut. In Thurgood, Graham and LaPolla, Randy L. (eds.), The Sino-Tibetan languages, 602–620. London: Routledge.
+- Jacques, Guillaume. 2011. The structure of the Tangut verb. Journal of Chinese Linguistics 39. 419–441.
+- Prins, Marielle. 2017. A grammar of rGyalrong, Jiăomùzú (Kyom-kyo) dialects. A web of relations. (Brill’s Tibetan Studies Library. Languages of the Greater Himalayan Region.) Leiden: Brill.
+- Malchukov, Andrej L. 2001. Imperative constructions in Even. In Xrakovskij, Victor S. (ed.), Typology of imperative constructions, 159–180. Munich: Lincom Europa.
+- Benzing, Johannes. 1955. Lamutische Grammatik. Mit Bibliographie, Sprachproben und Glossar. (Akademie der Wissenschaften der Literatur. Veröffentlichungen der orientalischen Kommission.) Wiesbaden: Harrassowitz.
+- Malchukov, Andrej L. 1995. Even. (Languages of the World/Materials.) Munich: Lincom Europa.
+- Tsumagari, Toshiro. 2009. A sketch of Solon grammar. Journal of the Center for Northern Humanities 2. 1–21.
+- O., Chaoke D. 2009. Ewenkeyu cankao yufa. Peking: Zhongguo shehui kexue chubanshe.
+- Kazama, Shinjirō. 2002. Negidarugo tekisuto to bunpō gaisetsu. (Publications on Tungus Languages and Cultures.) Kyōto: Nakanishi.
+- Girfanova, Albina H. 2002. Udeghe. (Languages of the World/Materials.) Munich: Lincom Europa.
+- Tsumagari, Toshiro. 2009. Grammatical outline of Uilta (revised). Journal of the Graduate School of Letters 4. 1–21.
+- Funk, Dimitrij A. 2000. Materialien zur gegenwärtigen Situation der Uilta-Sprache. Zentralasiatische Studien 30. 143–152.
+- Ikegami, Jirō. 1997. Uirutago jiten. Sapporo: Hokkaidō University Press.
+- Ikegami, Jirō. 1958. Orok texts. Memoirs of the Research Department of the Toyo Bunko 17. 85–95.
+- Nakanome, Akira. 1928. Grammatik der Orokko-Sprache. Osaka: The Osaka Asiatic Society.
+- Enhebatu, Merden. 1995. Manyu kouyu yanjiu. Hohot: Neimonggu daxue chubanshe.
+- Poppe, Nicholas. 1963. Tatar manual: Descriptive grammar and texts with a Tatar-English glossary. (Indiana University Uralic and Altaic series.) Bloomington: Indiana University.
+- Muhamedowa, Raihan. 2016. Kazakh. A comprehensive grammar. (Routledge Comprehensive Grammars.) London: Routledge.
+- Kara, Dávid Somfai. 2003. Kyrgyz. (Languages of the World/Materials.) Munich: Lincom Europa.
+- Shaw, Robert B. S. 1878. A sketch of the Turki language of Eastern Turkestan (Kàshgar and Yarkand). Calcutta: Baptist Mission Press.
+- Wurm, Stephen A. 1997. Two Turkic-based hybrid languages in northwestern China. Turkic Languages 1. 241–253.
+- Hahn, Reinhard F. 1991. An annotated sample of Ili Turki. Acta Orientalia Academiae Scientiorum Hungaricae 45. 31–53.
+- Boeschoten, Hendrik. 1998. Uzbek. In Johanson, Lars and Csató, Éva Á. (eds.), The Turkic languages, 357–378. London: Routledge.
+- Anderson, Gregory D. S. 2001. Subject version and object version in Tofa auxiliary constructions. Turkic Languages 5. 245–269.
+- Anderson, Gregory D. S. 1998. Xakas. (Languages of the World/Materials.) Munich: Lincom Europa.
+- Roos, Martina Erica. 2000. The Western Yugur (Yellow Yugur) language: Grammar, texts, vocabulary. Leiden: University of Leiden. ((Doctoral dissertation.)).
+- Donidze, G. I. 1997. Shorskij jazyk. In Jarceva, Viktorija N. and Kazanskij, Nikolaj Nikolaevich and Kibrik, Andrej Aleksandrovich (eds.), Jazyki mira, vol. 2: Tjurkskiejazyki, 497–506. Moskva: Nauka.
+- Nevskaja, Irina. 2014. Locational and directional relations and tense and aspect marking in Chalkan, a South Siberian Turkic language. In Suihkonen, Pirkko and Whaley, Lindsay J. (eds.), On diversity and complexity of languages spoken in Europe and North and Central Asia, 67–90. Amsterdam: Benjamins.
+- Birjukovich, R. M. 1997. Chulymsko-tjorskij jazyk. In Jarceva, Viktorija N. and Kazanskij, Nikolaj Nikolaevich and Kibrik, Andrej Aleksandrovich (eds.), Jazyki mira, vol. 2: Tjurkskie jazyki, 491–497. Moskva: Nauka.
+- Ebata, Fuyuki. 2011. Sakha (Yakut). In Yamakoshi, Yasuhiro (ed.), Grammatical sketches from the field, 179–212. Tōkyō: Research Institute for Languages and Cultures of Asia and Africa.
+- Stachowski, Marek. 1993. Dolganischer Wortzschatz. Krakow: Nakladem Uniw. Jagielloriskiego.
+- Clark, Larry V. 1998. Chuvash. In Johanson, Lars and Csató, Éva Á. (eds.), The Turkic languages, 434–452. London: Routledge.
+- Gusev, Valentin. 2015. Negation in Nganasan. In Miestamo, Matti and Tamm, Anne and Wagner-Nagy, Beáta (eds.), Negation in Uralic languages, 102–132. Amsterdam: Benjamins.
+- Siegl, Florian. 2012. Yes/no questions and the interrogative mood in Forest Enets. Mémoires de la Société Finno-Ougrienne 264. 399–408.
+- Siegl, Florian. 2013. Materials of Forest Enets. An indigenous language of northern Siberia. (Mémoires de la Société Finno-Ougrienne.) Tartu: Tartu University Press.
+- Mikola, Tibor. 2004. Studien zur Geschichte der samojedischen Sprachen. (Studia Uralo-Altaica.) Szeged: SzTE Finnisch-Ugrisches Institut.
+- Nikolaeva, Irina A. 2014. A grammar of Tundra Nenets. (Mouton Grammar Library.) Berlin: Walter de Gruyter.
+- Werner, Heinrich. 1995. Zur Typologie der Jenissej-Sprachen. (Veröffentlichungen der Societas Uralo-Altaica.) Wiesbaden: Harrassowitz.
+- Vajda, Edward J. 2004. Ket. (Languages of the World/Materials.) Munich: Lincom Europa.
+- Werner, Heinrich. 1997. Das Jugische (Sym-Ketische). (Veröffentlichungen der Societas Uralo-Altaica.) Wiesbaden: Harrassowitz.
+- Cable, Seth. 2007. The grammar of Q: Q-particles and the nature of wh-fronting, as revealed by the wh-questions of Tlingit. Cambridge: MIT. ((Doctoral dissertation.)).
+- Fountain, Amy. 2008. Introduction to Navajo language studies. Coyote Papers 16. 9–34.
+- Schiefner, Anton. 1871. Über Baron Gerhard von Maydell’s jukagirische Sprachproben. Bulletin de l'Académie Impériale des Sciences de St Pétersbourg 15. 86–103.
+- Schmalz, Mark. 2012. Towards a full description of the focus system in Tundra Yukaghir. Linguistic Discovery 10. 53–108.
+- Müller, Sonja. 2017. Distribution und Interpretation von Modalpartikel Kombinationen. (Topics at the Grammar-Discourse Interface.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1244028](https://doi.org/10.5281/zenodo.1244028)
 - Müller, Stefan. 2020. 语法理论. (Textbooks in Language Sciences.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3950146](https://doi.org/10.5281/zenodo.3950146)
-- Nakagawa, Natsuko. 2017. Information structure in spoken {Japanese}. (Topics at the Grammar-Discourse Interface.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4291753](https://doi.org/10.5281/zenodo.4291753)
--  Paggio, Patrizia and Gatt, Albert (eds.) 2017. The languages of {Malta}. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1181783](https://doi.org/10.5281/zenodo.1181783)
+- Nakagawa, Natsuko. 2017. Information structure in spoken Japanese. (Topics at the Grammar-Discourse Interface.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4291753](https://doi.org/10.5281/zenodo.4291753)
+-  Paggio, Patrizia and Gatt, Albert (eds.) 2017. The languages of Malta. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1181783](https://doi.org/10.5281/zenodo.1181783)
+- Camilleri, Maris. 2016. Temporal and aspectual auxiliaries in Maltese. (Doctoral dissertation, University of Essex).
+- Alotaibi, Yasir and Alzaidi, Muhammad and Camilleri, Maris and ElSadek, Shaimaa and Sadler, Louisa. 2013. Psychological predicates and verbal complementation in African. In Butt, Miriam and King, Tracy Holloway (eds.), Proceedings of the LFG 2013 Conference. Stanford, CA: CSLI Publications.
+- Borg, Albert and Azzopardi-Alexan­der, Marie. 2009. Topicalisation in Maltese. In Comrie, Bernard (ed.), Introducing Maltese Linguistics, 71–81. Amsterdam: John Benjamins.
 -  Feldhausen, Ingo and Fliessbach, Jan and Vanrell, Maria del Mar (eds.) 2018. Methods in prosody. (Studies in Laboratory Phonology.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1471564](https://doi.org/10.5281/zenodo.1471564)
 -  Sailer, Manfred and Markantonatou, Stella (eds.) 2017. Multiword expressions. (Phraseology and Multiword Expressions.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1182583](https://doi.org/10.5281/zenodo.1182583)
 - Guzmán Naranjo, Matías. 2018. Analogical classification in formal grammar. (Empirically Oriented Theoretical Morphology and Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3191825](https://doi.org/10.5281/zenodo.3191825)
--  Lenertová, Denisa and Meyer, Roland and Šimík, Radek and Szucsich, Luka (eds.) 2018. Advances in formal {Slavic} linguistics 2016. (Open Slavic Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.2546440](https://doi.org/10.5281/zenodo.2546440)
--  Watters, John R. (ed.) 2017. East {Benue} {Congo}. (Niger-Congo Comparative Studies.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1314306](https://doi.org/10.5281/zenodo.1314306)
+-  Lenertová, Denisa and Meyer, Roland and Šimík, Radek and Szucsich, Luka (eds.) 2018. Advances in formal Slavic linguistics 2016. (Open Slavic Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.2546440](https://doi.org/10.5281/zenodo.2546440)
+- Mezhevich, Ilana. 2006. Featuring Russian Tense: A Feature-Theoretic Account of the Russian Tense System. (Doctoral dissertation).
+- Harrison, William and Le Fleming, Stephen. 2000. Intermediate Russian Grammar. Cardiff: University of Wales Press.
+- Spencer, Andrew. 2001. The paradigm-based model of morphosyntax. Manuscript, University of Essex, Colchester.
+- Asarina, Alya. 2006. The Subjunctive and Tense in Russian. Manuscript, MIT, Cambridge, MA. [http://citeseerx.ist.psu.edu/viewdoc/download?rep=rep1 type=pdf doi=10.1.1.207.6932](http://citeseerx.ist.psu.edu/viewdoc/download?rep=rep1 type=pdf doi=10.1.1.207.6932)
+- Wiltschko, Martina. 2017. The essence of a category: Evidence from the subjunctive. In Błaszczak, Joanna and Giannakidou, Anastasia and Klimek-Jankowska, Dorota and Migdalski, Krzysztof (eds.), Mood, aspect, modality revisited: New answers to old questions, 218–254. Chicago, IL: University of Chicago Press. [DOI: 10.7208/chicago/9780226363660.003.0006](https://doi.org/10.7208/chicago/9780226363660.003.0006)
+- Hacking, Jane F. 1998. Coding the hypothetical: A comparative typology of Russian and Macedonian conditionals. Amsterdam: John Benjamins.
+- Corbett, Greville. 2006. Agreement. Cambridge: Cambridge University Press.
+-  Watters, John R. (ed.) 2017. East Benue Congo. (Niger-Congo Comparative Studies.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1314306](https://doi.org/10.5281/zenodo.1314306)
 - Bacskai-Atkari, Julia. 2018. Deletion phenomena in comparative constructions. (Open Generative Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1211896](https://doi.org/10.5281/zenodo.1211896)
--  Riesberg, Sonja and Shiohara, Asako and Utsumi, Atsuko (eds.) 2018. Perspectives on information structure in {Austronesian} languages. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1402571](https://doi.org/10.5281/zenodo.1402571)
+-  Riesberg, Sonja and Shiohara, Asako and Utsumi, Atsuko (eds.) 2018. Perspectives on information structure in Austronesian languages. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1402571](https://doi.org/10.5281/zenodo.1402571)
+- Sedeng, I Nyoman. 2007. Morfosintaksis bahasa Bali dialek Sembiran: Analisis tatabahasa peran dan acuan [The morphosyntax of Sembiran Balinese: A Role and Reference Grammar Analysis]. (Doctoral dissertation, Universitas Udayana).
+- Comrie, Bernard. 1987. Russian. In Shopen, Timothy (ed.), Languages and their Status, 91–151. Philadelphia: University of Pennsylvania Press.
+- Nuranindya, Dyan. 2009. Canting cantiq. Jakarta: Gramedia Pustaka Utama.
+- Krisna, Asbari-Nurpatria. 1977. Kondektur ibu kota. Jakarta: UP Kresno.
+- Kumalasari, Ade. 2006. Dengerin dong, Troy. Jakarta: Gramedia Pustaka Utama.
+- Kurniawan, Eka. 2004. Lelaki harimau. Jakarta: Gramedia Pustaka Utama.
+- Karina, Sitta. 2008. Circa. Jakarta: Gramedia Pustaka Utama.
+- Kurniawan, Eka. 2002. Cantik itu luka. Yogyakarta: AKY Press and Penerbit Jendela.
+- Kaufman, Daniel. 2005. Aspects of pragmatic focus in Tagalog. In Arka, I Wayan and Ross, Malcolm (eds.), The many faces of Austronesian voice systems: Some new empirical studies, 175–196. Canberra: Research School of Pacific and Asian Studies, ANU.
+- Nagaya, Naonori. 2007. Information structure and constituent order in Tagalog. Language and Linguistics 8. 343–372.
+- Kähler, Hans. 1974. Relative clause formation in some Austronesian languages. Oceanic Linguistics 13. 257–277.
+- Adriani, Nicolaus and Esser, Samuel Jonathan. 1939. Koelawische taalstudien: Overzicht der spraakkunst, gesprekken en verhalen met vertaling. (1.) Bandoeng: Nix.
+- van den Berg, René and Busenitz, Robert I. 2012. A Grammar of Balantak: A language of Eastern Sulawesi. (SIL eBook, 40.) In  Steinhauer, Hein (ed.) SIL International.
 -  Parmentier, Yannick and Waszczuk, Jakub (eds.) 2019. Representation and parsing of multiword expressions. (Phraseology and Multiword Expressions.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.2579017](https://doi.org/10.5281/zenodo.2579017)
 -  Markantonatou, Stella and Ramisch, Carlos and Savary, Agata and Vincze, Veronika (eds.) 2018. Multiword expressions at length and in depth. (Phraseology and Multiword Expressions.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1469527](https://doi.org/10.5281/zenodo.1469527)
-- Döhler, Christian. 2018. A grammar of {Komnzo}. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1477799](https://doi.org/10.5281/zenodo.1477799)
-- Unterladstetter, Volker. 2019. Multi-verb constructions in {Eastern} {Indonesia}. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3546018](https://doi.org/10.5281/zenodo.3546018)
+- Döhler, Christian. 2018. A grammar of Komnzo. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1477799](https://doi.org/10.5281/zenodo.1477799)
+- Unterladstetter, Volker. 2019. Multi-verb constructions in Eastern Indonesia. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3546018](https://doi.org/10.5281/zenodo.3546018)
 -  Franco, Ludovico and Marchis Moreno, Mihaela and Reeve, Matthew (eds.) 2019. Agreement, case and locality in the nominal and verbal domains. (Open Generative Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.2640704](https://doi.org/10.5281/zenodo.2640704)
+- Schütze, Carson T. 2003. Syncretism and double agreement with Icelandic nominative objects. In Delsing, Lars-Olof and Falk, Cecilia and Josefsson, Gunlög and Sigurðsson, Halldór Ármann (eds.), Grammatik i focus/Grammar in focus: Festschrift for Christer Platzack, 295–303. Lund: Department of Scandinavian Languages.
+- López, Luis. 2007. Locality and the architecture of syntactic dependencies. New York: Palgrave.
+- Manzini, M. Rita and Savoia, Leonardo M. and Franco, Ludovico. 2015. Ergative case, aspect and person splits: Two case studies. Acta Linguistica Hungarica 62. 297–351.
+- Ledgeway, Adam. 1997. Asyndetic complementation in Neapolitan dialect. The Italianist 17. 231–273.
+- Di Caro, Vincenzo and Giusti, Giuliana. 2015. A protocol for the inflected construction in Sicilian dialects. Annali di Ca’ Foscari. Serie occidentale 49. 393–421.
+- Laka, Itziar. 2006. Deriving split-ergativity in the progressive: The case of Basque. In Johns, Alana and Massam, Diane and Ndayiragije, Juvénal (eds.), Ergativity: Emerging issues, 173–195. Dordrecht and Berlin: Springer.
+- McKenzie, David N. 1961. Kurdish dialect studies, I. Oxford: Oxford University Press.
+- Philip, Joy Naomi. 2012. Subordinating and coordinating linkers. (Doctoral dissertation, UCL).
+- Payne, John R. 1995. Inflecting postpositions in Indic and Kashmiri. In Plank, Frans (ed.), Double case: Agreement by Suffixaufnahme, 283–298. Oxford: Oxford University Press.
+- Farrell, Patrick. 1995. Backward control in Brazilian Portuguese. In Fuller, Janet and Han, Ho and Parkinson, David (eds.), Proceedings of ESCOL 11, 116–127. Ithaca, NY: Cornell University.
+- Tellier, Christine. 1991. Licensing theory and French parasitic gaps. Dordrecht: Kluwer.
+- Sportiche, Dominique. 1981. Bounding nodes in French. The Linguistic Review 1. 219–246.
 -  Guérin, Valérie (ed.) 2018. Bridging constructions. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.2563698](https://doi.org/10.5281/zenodo.2563698)
-- Bueno Holle, Juan José. 2019. Information structure in {Isthmus} {Zapotec} narrative and conversation. (Topics at the Grammar-Discourse Interface.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.2538324](https://doi.org/10.5281/zenodo.2538324)
+- Bueno Holle, Juan José. 2019. Information structure in Isthmus Zapotec narrative and conversation. (Topics at the Grammar-Discourse Interface.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.2538324](https://doi.org/10.5281/zenodo.2538324)
+- Pickett, Velma and Black, Cheryl and Marcial Cerqueda, Vicente. 1998. Gramática popular del zapoteco del Istmo. Oaxaca: Centro de Investigación y Desarrollo Binnizá; Instituto Lingüístico de Verano.
 -  Schmidtke-Bode, Karsten and Levshina, Natalia and Michaelis, Susanne Maria and Seržant, Ilja (eds.) 2018. Explanation in typology. (Conceptual Foundations of Language Science.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.2583788](https://doi.org/10.5281/zenodo.2583788)
+- Fattier, Dominique. 2013. Haitian structure data set. In Michaelis, Susanne Maria and Maurer, Philippe and Haspelmath, Martin and Huber, Magnus (eds.), Atlas of pidgin and creole language structures online. Leipzig: Max Planck Institute for Evolutionary Anthropology. [http://apics-online.info/contributions/49](http://apics-online.info/contributions/49)
 -  Di Garbo, Francesca and Olsson, Bruno and Wälchli, Bernhard (eds.) 2019. Grammatical gender and linguistic complexity I. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3446224](https://doi.org/10.5281/zenodo.3446224)
-- Schäfer, Roland. 2018. Einführung in die grammatische {Beschreibung} des {Deutschen}. (Textbooks in Language Sciences.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1421660](https://doi.org/10.5281/zenodo.1421660)
--  Daniel, Michael and Dobrushina, Nina and Ganenkov, Dmitry (eds.) 2018. The {Mehweb} language. (Languages of the Caucasus.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3374730](https://doi.org/10.5281/zenodo.3374730)
+- Wegener, Claudia. 2012. A Grammar of Savosavo. Berlin: Mouton de Gruyter.
+- Beam, Mary S. and Cridland, Elizabeth A. 1970. Uduk-English Dictionary. Khartoum: Sudan Research Unit, University of Khartoum.
+- Frowein, Friedel Martin. 2011. A grammar of Siar: An Oceanic language of New Ireland province, Papua New Guinea. (Doctoral dissertation, La Trobe University).
+- Willson, Stephen R. 1996. Verb agreement and case marking in Burushaski. Work Papers of the Summer Institute of Linguistics, University of North Dakota 40. 1–71.
+- Schäfer, Roland. 2018. Einführung in die grammatische Beschreibung des Deutschen. (Textbooks in Language Sciences.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.1421660](https://doi.org/10.5281/zenodo.1421660)
+-  Daniel, Michael and Dobrushina, Nina and Ganenkov, Dmitry (eds.) 2018. The Mehweb language. (Languages of the Caucasus.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3374730](https://doi.org/10.5281/zenodo.3374730)
+- Dobrushina, Nina. 2019. Moods in Mehweb. In Daniel, Michael and Dobrushina, Nina and Ganenkov, Dmitry (eds.), The Mehweb language: Essays on phonology, morphology and syntax, 117–165. Berlin: Language Science Press.
+- Magometov, Aleksandr. 1982. Megebskij dialekt darginskogo jazyka: Issledovanie i teksty [Mehweb Dargwa: Grammar survey and texts]. Tbilisi: Mecniereba.
 -  Lotven, Samson and Bongiovanni, Silvina and Weirich, Phillip and Botne, Robert and Obeng, Samuel Gyasi (eds.) 2018. African linguistics across the disciplines. (Contemporary African Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3520612](https://doi.org/10.5281/zenodo.3520612)
+- Torrence, Harold. 2012. The clause structure of Wolof: Insights into the left periphery. Amsterdam: John Benjamins.
+- Koopman, Hilda and Sportiche, Dominique. n.d. Pronouns, Logical Variables, and Logophoricity in Abe. 20. 555–588.
+- Clements, George N. 1975. The logophoric pronoun in Ewe: Its role in discourse. Journal of West African Languages 10. 141–177.
+- Anand, Pranav and Nevins, Andrew. 2004. Shifty operators in changing contexts. In Young, Robert B. (ed.), Proceedings of SALT 14, 20–37. Ithaca, NY: Cornell University.
 -  Aguilar-Guevara, Ana and Pozas Loyo, Julia and Vázquez-Rojas Maldonado, Violeta (eds.) 2019. Definiteness across languages. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3265959](https://doi.org/10.5281/zenodo.3265959)
-- Flick, Johanna. 2020. Die {Entwicklung} des {Definitartikels} im {Althochdeutschen}. (Empirically Oriented Theoretical Morphology and Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3932780](https://doi.org/10.5281/zenodo.3932780)
+- Dobrovie-Sorin, Carmen and Giurgea, Ion. 2015. Quantity superlatives vs. proportional quantifiers: A comparative perspective. ((Abstract for the 25th Colloquium on Generative Grammar, Bayonne)).
+- Dobrovie-Sorin, Carmen. 2015. Two types of most. Proceedings of SALT 25. 394–412.
+- de Boer, Minne Gerben. 1986. Il superlativo italiano. Revue Romane 21. 53-64.
+- Rohena-Madrazo, Marcos. 2007. Superlative Movement in Puerto Rican Spanish and General Spanish. NYU Working Papers in Linguistics 1. 1–32. New York: NYU.
+- Fujisawa, Shuhei. 1992. Zenshū. (11, heisei 5.) Tōkyō: Bungei Shunjū.
+- Kolliakou, Dimitra. 2004. Monadic definites and polydefinites: Their form, meaning and use. Journal of Linguistics 40. 263–323.
+- Campos, Héctor and Stavrou, Melita. 2004. Polydefinites in Modern Greek and Aromanian. In Tomić, Olga Mišeska (ed.), Balkan syntax and semantics, 137–173. Amsterdam: John Benjamins.
+- Schwarz, Florian. 2009. Two types of definites in natural language. ((Doctoral dissertation)).
+- Knowles-Berry, Susan Marie. 1984. A descriptive grammar of Chontal Maya (San Carlos dialect) (Mesoamerica, Tabasco, Mexico).
+- Schumann Gálvez, Otto. 2012. Introducción al chontal de Tabasco. Mexico City: Universidad Nacional Autónoma de México, Instituto de Investigaciones Antropológicas, Programa de Investigaciones Multidisciplinarias sobre Mesoamérica y el Sureste.
+- Alexiadou, Artemis. 2014. Multiple Determiners and the Structure of DPs. (Linguistik Aktuell/Linguistics Today.) Amsterdam: John Benjamins.
+- Ingason, Anton. 2016. Realizing morphemes in the Icelandic noun phrase. ((Doctoral dissertation)).
+- Arkoh, Ruby and Matthewson, Lisa. 2013. A familiar definite article in Akan. Lingua 123. 1–30. Elsevier.
+- Jenks, Peter. 2015. Two kinds of definites in numeral classifier languages. Proceedings of SALT 25. 103–124.
+- Gillon, Carrie and Armoskaite, Solveiga. 2015. The illusion of the NP/DP divide: Evidence from Lithuanian. Linguistic Variation 15. 69–115.
+- Edwards, Owen. 2020. Metathesis and unmetathesis in Amarasi. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3700413](https://doi.org/10.5281/zenodo.3700413)
+- Flick, Johanna. 2020. Die Entwicklung des Definitartikels im Althochdeutschen. (Empirically Oriented Theoretical Morphology and Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3932780](https://doi.org/10.5281/zenodo.3932780)
 - Kroeger, Paul R. 2019. Analyzing meaning. (Textbooks in Language Sciences.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.2538330](https://doi.org/10.5281/zenodo.2538330)
+- Barnes, Janet. 1984. Evidentials in the Tuyuca verb. International Journal of American Linguistics 50. 255–271.
+- Faller, Martina. 2002. Semantics and pragmatics of evidentials in Cuzco Quechua. (Doctoral dissertation, Department of Linguistics, Stanford University).
 -  Lucas, Christopher and Manfredi, Stefano (eds.) 2019. Arabic and contact-induced change. (Contact and Multilingualism.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3744565](https://doi.org/10.5281/zenodo.3744565)
--  Sánchez Moreano, Santiago and Blestel, Élodie (eds.) 2021. {Pr}ácticas lingüísticas heterogéneas. (Contact and Multilingualism.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5636761](https://doi.org/10.5281/zenodo.5636761)
+- Lahdo, Ablahad. 2009. The Arabic Dialect of Tillo in the Region of Siirt (south-eastern Turkey). Uppsala: Uppsala University.
+- Luffin, Xavier. 2013. Some new information about Bongor Arabic. In Lafkioui, Mena (ed.), African Arabic: Approaches to dialectology, 161–183. Berlin: De Gruyter Mouton.
+- Luffin, Xavier. 2005. Un créole arabe: Le kinubi de Mombassa, Kenya.
+- Luffin, Xavier. 2014. The influence of Swahili on Kinubi. Journal of Pidgin and Creole Languages 29. 299–318.
+- Nakao, Shuichiro. 2012. Revising the Substratal/Adstratal Influence on Arabic. In Hieda, Osamu (ed.), Challenges in Nilotic linguistics: Phonology, , and syntax, 127–49. Tokyo: ILCAA.
+- Nebel, Arthur. 1979. Dinka–English, English–Dinka dictionary. Bologna: Editrice Missionaria Italiana.
+- Wellens, Inneke. 2003. The Nubi Language of Uganda: An Arabic creole in Africa. (Doctoral dissertation, Catholic University of Nijmegen).
+- Miller, Catherine. 2001. Grammaticalisation du verbe ‘dire’ et subordination en Juba Arabic. In Nicolaï, Robert (ed.), Leçons d’Afrique: Filiation, rupture et reconstitution des langues. Un hommage à G. Manessy, 455–482. Leuven: Peeters.
+- Avram, Andrei A. 2017. Sources of Gulf Pidgin Arabic features. In Bettega, Simone and Gasparini, Fabio (eds.), Linguistic studies in the Arabian Gulf, 131–151. Turin: Università di Torino.
+- Bizri, Fida. 2010. Pidgin Madame: Une grammaire de la servitude. Paris: Geuthner.
+- Avram, Andrei A. 2014. Immigrant workers and language formation: Gulf Pidgin Arabic. Lengua y Migración 6. 7–40.
+- Gasparini, Fabio. 2018. The Baṭḥari language of Oman: Towards a descriptive grammar. (Doctoral dissertation, Università degli studi di Napoli “L’Orientale”).
+- Watson, Janet C. E. and Al-Mahri, Abdullah Musallam and Al-Mahri, Ali. n.d. Taghamk afyat: A course in Mehri. Wiesbaden: Harrasowitz.
+- Taine-Cheikh, Catherine. 2008. Arabe(s) et berbère En Contact: Le Cas. In Lafkioui, Mena and Brugnatelli, Vermondo (eds.), Berber in contact: Linguistic and sociolinguistic perspectives, 113–38. Cologne: Rüdiger Köppe.
+- Owens, Jonathan. 2016. The Lexical Nature of Idioms. Language Sciences 57. 49–69.
+- Ritt-Benmimoun, Veronika and Grigore, Smaranda and Owens, Jocelyne and Owens, Jonathan. 2017. Three Idioms, Three Dialects, One History: Egyptian, Nigerian and Tunisian. In Ritt-Benmimoun, Veronika (ed.), Tunisian and Libyan Dialects: Common Trends – Recent Developments – Diachronic Aspects, 43-84. Zaragoza: Prensas de la Universidad de Zaragoza.
+- Mettouchi, Amina. 2012. Kabyle Corpus. Corpus Recorded, Transcribed and Annotated by A. Mettouchi. In Mettouchi, Amina and Christian (eds.), The CorpAfroAs corpus of spoken AfroAsiatic languages. (doi.org/10.1075/scl.68.website).
+- Manfredi, Stefano. 2010. A Grammatical Description of Kordofanian Baggara. (Doctoral dissertation, Università degli Studi di Napoli “L’Orientale”).
+- Alamin, Suzan. 2015. The Tagoi Pronominal System. Occasional Papers in the Study of Sudanese Languages 11. 17–30.
+- Borg, Albert and Azzopardi-Alexander, Marie. 1997. Maltese. London: Routledge.
+- Chyet, Michael L. 1995. Neo-Aramaic and Kurdish: An Interdisciplinary Consideration of Their Influence on Each Other. In Izre'el, Shlomo and Drory, Rina (eds.), Language and culture in the Near East, 219–252. Leiden: Brill.
+- Segal, Judah B. 1955. Neo-Aramaic Proverbs of the Jews of Zakho. Journal of Near Eastern Studies 14. 251–270.
+- Albirini, Abdulkafi and Benmamoun, Elabbas. 2015. Factors affecting the retention of sentential negation in heritage Egyptian Arabic. Bilingualism: Language and Cognition 18. 470–489.
+- Albirini, Abdulkafi. 2014. Toward understanding the variability in the language proficiencies of Arabic heritage speakers. International Journal of Bilingualism 18. 730–765.
+- Boumans, Louis. 2001. Moroccan Arabic and Dutch: Languages of Moroccan youth in the Netherlands. Langues et Linguistique: Revue Internationale de 8. 97–120.
+- Ratcliffe, Robert R. 2005. Bukhara Arabic: A Metatypized Dialect of Arabic in Asia. In Csató, Éva Ágnes and Isaksson, Bo and Jahani, Carina (eds.), convergence and areal diffusion: Case studies from Iranian, Semitic and Turkic, 141–51. London: Routledge.
+- Hansen, Maj-Britt Mosegaard. 2013. Negation in the history of French. In Willis, David and Lucas, Christopher and Breitbarth, Anne (eds.), The history of negation in the languages of Europe and the Mediterranean, 51–76. Oxford: Oxford University Press.
+- Cowell, Mark W. 1964. A reference grammar of Syrian Arabic. Washington, DC: Georgetown University Press.
+- Seeger, Ulrich. 2013. Der arabische Dialekt der Dörfer um Ramallah. (3: Grammatik.) Wiesbaden: Harrassowitz.
+- Eades, Domenyk. 2009. The Arabic dialect of a Šawāwī community of northern Oman. In Al-Wer, Enam and Jong, Rudolf De (eds.), Arabic dialectology in honour of Clive Holes on the occasion of his sixtieth birthday, 77–98. Leiden: Brill.
+- Watson, Janet C. E. 2011. South Arabian and Yemeni dialects. Salford Working Papers in Linguistics and Applied Linguistics 1. 27–40.
+- Johnstone, T. M. 1987. Mehri lexicon and English–Mehri word-list.
+- Bernabela, Roy S. 2011. A phonology and morphology sketch of the Šiħħi Arabic dialect of əlǦēdih, Musandam (Oman). (Doctoral dissertation, Leiden University).
+- van der Wal Anonby, Christina. n.d. A grammar of Kumzari: A mixed Perso-Arabian language of Oman. Berlin: De Gruyter Mouton.
+- Chaker, Salem. 1996. Remarques préliminaires sur la négation en berbère. In Chaker, Salem and Caubet, Dominique (eds.), La négation en berbère et en arabe maghrébin, 9–22. Paris: L’Harmattan.
+- Rabhi, Allaoua. 1996. De la négation en berbère: Les donnés algériennes. In Chaker, Salem and Caubet, Dominique (eds.), La négation en berbère et en arabe maghrébin, 23–34. Paris: L’Harmattan.
+- Paradisi, Umberto. 1961. Testi berberi di Augila (Cirenaïca). Annali dell’Istituto Orientale di Napoli 10. 79–91.
+- Souag, Lameen. 2009. Siwa and its significance for Arabic dialectology. Zeitschrift für Arabische Linguistik 51. 51–75.
+- Matras, Yaron. 2012. A grammar of Domari. Berlin: De Gruyter Mouton.
+- Lucas, Christopher. 2013. Negation in the history of Arabic and Afro-Asiatic. In Willis, David and Lucas, Christopher and Breitbarth, Anne (eds.), The development of negation in the languages of Europe and the Mediterranean, 399–452. Oxford: Oxford University Press.
+- Tsabolov, Ruslan. 1994. Notes on the influence of Arabic on Kurdish. Acta Kurdica 1. 121–124.
+- Berlinches, Carmen. 2016. El dialecto árabe de Damasco (Siria): Estudio gramatical y textos. Zaragoza: Prensas de la Universidad de Zaragoza.
+- Rubin, Aaron D. 2005. Studies in Semitic grammaticalization. Winona Lake, IN: Eisenbrauns.
+- Hopkins, Simon. 1997. On the construction šmēh l-gabrā ‘the name of the man’ in Aramaic. Journal of Semitic Studies 42. 23–32.
+- Jastrow, Otto. 1990. Die arabischen Dialekte der irakischen Juden. In Diem, Werner and Falaturi, Abdoldjavad (eds.), XXIV. Deutscher Orientalistentag vom 26. bis 30. September 1988 in Köln: Ausgewählte Vorträge, 199–205. Wiesbaden: Steiner.
+- Procházka, Stephan. 2002. Die arabischen Dialekte der Çukurova (Südtürkei). Wiesbaden.
+- Paradisi, Umberto. 1960. Il berbero di Augila: Materiale lessicale. Rivista degli Studi Orientali 35. 157–177.
+-  Sánchez Moreano, Santiago and Blestel, Élodie (eds.) 2021. Prácticas lingüísticas heterogéneas. (Contact and Multilingualism.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5636761](https://doi.org/10.5281/zenodo.5636761)
 -  Di Garbo, Francesca and Olsson, Bruno and Wälchli, Bernhard (eds.) 2019. Grammatical gender and linguistic complexity II. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3446230](https://doi.org/10.5281/zenodo.3446230)
 -  Schulte im Walde, Sabine and Smolka, Eva (eds.) 2019. The role of constituents in multiword expressions. (Phraseology and Multiword Expressions.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3598577](https://doi.org/10.5281/zenodo.3598577)
-- Kahane, Sylvain and Gerdes, Kim. Forthcoming. Forthcoming: {Forthcoming}: {Syntaxe} théorique et formelle. (Textbooks in Language Sciences.) Berlin: Language Science Press.
-- Ali, Mark and Grimm, Scott and Bodomo, Adams. 2021. A dictionary and grammatical sketch of {Dagaare}. (African Language Grammars and Dictionaries.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5154710](https://doi.org/10.5281/zenodo.5154710)
+- Kahane, Sylvain and Gerdes, Kim. Forthcoming. Forthcoming: Forthcoming: Syntaxe théorique et formelle. (Textbooks in Language Sciences.) Berlin: Language Science Press.
+- Ali, Mark and Grimm, Scott and Bodomo, Adams. 2021. A dictionary and grammatical sketch of Dagaare. (African Language Grammars and Dictionaries.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5154710](https://doi.org/10.5281/zenodo.5154710)
 - Easterday, Shelece. 2019. Highly complex syllable structure. (Studies in Laboratory Phonology.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3268721](https://doi.org/10.5281/zenodo.3268721)
-- Forker, Diana. 2019. A grammar of {Sanzhi} {Dargwa}. (Languages of the Caucasus.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3339225](https://doi.org/10.5281/zenodo.3339225)
+- Fernández Garay, Ana and Hernández, Graciela. 2006. Textos tehuelches (aonek’o ʔaʔjen). Muenchen: Lincom Europa.
+- Dorvlo, Kofi. 2008. A grammar of Logba (Ikpana). (Doctoral dissertation, University of Leiden).
+- Lidz, Liberty A. 2010. A descriptive grammar of Yongning Na (Mosuo). (Doctoral dissertation, University of Texas at Austin).
+- Hahn, Reinhard F. 1991. Spoken Uyghur. Seattle: University of Washington Press.
+- Forker, Diana. 2019. A grammar of Sanzhi Dargwa. (Languages of the Caucasus.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3339225](https://doi.org/10.5281/zenodo.3339225)
 -  Gergel, Remus and Watkins, Jonathan (eds.) 2019. Quantification and scales in change. (Topics at the Grammar-Discourse Interface.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3929261](https://doi.org/10.5281/zenodo.3929261)
--  Smith, Peter W. and Mursell, Johannes and Hartmann, Katharina (eds.) 2020. Agree to {Agree}. (Open Generative Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3528036](https://doi.org/10.5281/zenodo.3528036)
-- Bross, Fabian. 2019. The clausal syntax of {German} {Sign} {Language}. (Open Generative Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3560718](https://doi.org/10.5281/zenodo.3560718)
--  Pineda, Anna and Mateu, Jaume (eds.) 2020. Dative constructions in {Romance} and beyond. (Open Generative Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3744254](https://doi.org/10.5281/zenodo.3744254)
--  Müller, Stefan and Abeillé, Anne and Borsley, Robert D. and Koenig, Jean-Pierre (eds.) 2021. {Head} {Driven} {Phrase} {Structure} {Grammar}. (Empirically Oriented Theoretical Morphology and Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5543318](https://doi.org/10.5281/zenodo.5543318)
--  Marušič, Franc and Mišmaš, Petra and Žaucer, Rok (eds.) 2019. Advances in formal {Slavic} linguistics 2017. (Open Slavic Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3763740](https://doi.org/10.5281/zenodo.3763740)
+-  Smith, Peter W. and Mursell, Johannes and Hartmann, Katharina (eds.) 2020. Agree to Agree. (Open Generative Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3528036](https://doi.org/10.5281/zenodo.3528036)
+- Zeijlstra, Hedde. 2004. Sentential negation and negative concord. (Doctoral dissertation, University of Amsterdam).
+- Baker, Mark C. 2003. Agreement, dislocation, and partial configurationality. In Carnie, Andrew and Harley, Heidi and Willie, Mary Ann (eds.), Formal approaches to function in grammar, 107–134. Amsterdam: John Benjamins.
+- López, Luis. 2018. Case and the Event structure of Nominals. Linguistic Inquiry 49. 85–121.
+- Chung, Sandra. 1982. On extending the null subject parameter to NPs. In Flickinger, Daniel P. and Macken, Marlys and Wiegand, Nancy (eds.), Proceedings of the First West Coast Conference on Formal Linguistics, 125–136. Stanford: Linguistics Department, Stanford University.
+- Marušič, Franc Lanko and Nevins, Andrew and Badecker, William. 2015. The Grammars of Conjunction Agreement in Slovenian. Syntax 18. 39–77. [DOI: 10.1111/synt.12025](https://doi.org/10.1111/synt.12025)
+- Ledgeway, Adam. 2012. From Latin to Romance: Morphosyntactic Typology and Change. Oxford: Oxford University Press.
+- Rossi, Alfredo. 2008. Dizionario del dialetto ripano.
+- Miyagawa, Shigeru. 2017. Agreement Beyond Phi. Cambridge, MA: MIT Press.
+- Lambertelli, Giulio. 2003. Elementi di fonetica, ortografia e grammatica della parlata ripana con doppia versione di “J'sè d lu Rrotì”. Ripatransone: Giulio Lambertelli Editore.
+- Nevins, Andrew. 2007. The representation of third person and its consequence for person-case effects. Natural Language & Linguistic Theory 25. 273–313.
+- Bross, Fabian. 2019. The clausal syntax of German Sign Language. (Open Generative Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3560718](https://doi.org/10.5281/zenodo.3560718)
+- Fortescue, Michael. 2003. Evidentiality in West Greenlandic: A case of scattered coding. In Aikhenvald, Alexandra Yurievna and Dixon, Robert M. W. (eds.), Studies in evidentiality, 291–306. Amsterdam & Philadelphia: John Benjamins.
+- Aboh, Enoch Oladé. 2004. The morphosyntax of complement-head sequences: Clause structure and word order patterns in Kwa. Oxford: Oxford University Press.
+- Rizzi, Luigi. 2013. Notes on cartography and further explanation. Probus. International Journal of Latin and Romance Linguistics 25. 197–226. De Gruyter Mouton.
+- van Craenenbroeck, Jeroen. 2012. How do you sluice when there is more than one CP?. In Simpson, Andrew and Merchant, Jason (eds.), Sluicing: Cross-Linguistic Perspectives, 40–67. Oxford: Oxford University Press.
+- Rupp, Laura. 2002. The syntax of imperatives in English and Germanic: Word order variation in the Minimalist framework. New York: Palgrave Macmillan.
+- Cinque, Guglielmo. 1999. Adverbs and functional heads: A cross-linguistic perspective. New York & Oxford: Oxford University Press.
+-  Pineda, Anna and Mateu, Jaume (eds.) 2020. Dative constructions in Romance and beyond. (Open Generative Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3744254](https://doi.org/10.5281/zenodo.3744254)
+- Tatevosov, Sergei. 2010. Building intensive resultatives. In Browne, Wayles (ed.), Formal Approaches to Slavic Linguistics (FASL) #18: The Cornell Meeting 2009, 289–302. Ann Arbor, MI: Michigan Slavic Publications.
+- Diaconescu, Rodica and Rivero, María Luisa. 2007. An applicative analysis of double object constructions in Romanian. Probus 19. 209–233.
+- Torres Morais, Maria Aparecida. 2007. Dativos [Datives].
+- Cuervo, María Cristina. 2003. Datives at Large. (Doctoral dissertation, Massachusetts Institute of Technology). [https://dspace.mit.edu/handle/1721.1/7991](https://dspace.mit.edu/handle/1721.1/7991)
+- Carvalho, Janayna and Calindro, Ana Regina. 2018. A unified account for the loss of third person clitics in Brazilian Portuguese. In Carvalho, Danniel and Brito, Dorothy (eds.), Pronomes: Morfossintaxe e semântica, 91–110. Salvador: Edufba.
+- Cornilescu, Alexandra and Dinu, Anca and Tigău, Alina. 2017. Experimental data on Romanian double object constructions. Revue Roumaine de Linguistique 62. 157–177.
+- Hill, Virginia and Mardale, Alexandru. 2017. On the interaction of differential object marking and clitic doubling in Romanian. Revue Roumaine de Linguistique 62. 393–409.
+- Kim, Kyumin. 2012. Affectees in subject position and applicative theory. The Canadian Journal of Linguistics / La Revue Canadienne de Linguistique 57. 77–107. [DOI: 10.1353/cjl.2012.0002](https://doi.org/10.1353/cjl.2012.0002)
+- Babrakzai, Farooq. 1999. Topics in the syntax of Pashto. (Doctoral dissertation, University of Hawaii).
+- Rohlfs, Gerhard. 1969. Grammatica storica della lingua italiana e dei suoi dialetti. (3, Sintassi e formazione delle parole.) Torino: Einaudi.
+- Ledgeway, Adam. 2016. The dialects of southern Italy. In Ledgeway, Adam and Maiden, Martin (eds.), The Oxford Guide to Romance Languages, 246–269. Oxford: Oxford University Press.
+- Torrego, Esther. 2010. Variability in the case patterns of causative formation in Romance and its implications. Linguistic Inquiry 41. 445–470.
+- Khokhlova, Ludmila. 2002. Syntactic peculiarities of Rajasthani. (Paper presented at the 17th European Conference on Modern South Asian Studies).
+- Manzini, M. Rita and Savoia, Leonardo M. 2005. I dialetti italiani e romanci: Morfosintassi generativa. Alessandria: dell'Orso.
+- Ormazabal, Javier and Romero, Juan. 2013. Object agreement, clitics and dialectal variation. Probus 25. 301–344.
+- Kayne, Richard S. 1975. French syntax: The transformational cycle. Cambridge, MA: MIT Press.
+- Ormazabal, Javier and Romero, Juan. 2007. The object agreement constraint. Natural Language and Linguistic Theory 25. 315–347. [DOI: 10.1007/s11049-006-9010-9](https://doi.org/10.1007/s11049-006-9010-9)
+- Bonet, Eulàlia. 1991. Morphology after syntax: Pronominal clitics in Romance. (Doctoral dissertation, MIT).
+- Burzio, Luigi. 1986. Italian syntax: A Government-Binding approach. Dordrecht: Reidel.
+- Tsedryk, Egor. 2018. Dative-infinitive constructions in Russian: Are they really biclausal?. In Browne, Wayles and Despic, Miloje and Enzinna, Naomi and Lemos, Simone Harmath-de and Karlin, Robin and Zec, Draga (eds.), Formal Approaches to Slavic Linguistics (FASL) #25: The Third Cornell Meeting 2016, 298–317. Ann Arbor, MI: Michigan Slavic Publications.
+- Pylkkänen, Liina. 2008. Introducing arguments. (Linguistic Inquiry Monographs.) Cambridge, MA: MIT Press.
+-  Müller, Stefan and Abeillé, Anne and Borsley, Robert D. and Koenig, Jean-Pierre (eds.) 2021. Head Driven Phrase Structure Grammar. (Empirically Oriented Theoretical Morphology and Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5543318](https://doi.org/10.5281/zenodo.5543318)
+- Levy, Roger. 2001. Feature Indeterminacy and the Coordination of Unlikes in a Totally Well-Typed HPSG. (Ms.) [http://www.mit.edu/ rplevy/papers/feature-indet.pdf](http://www.mit.edu/ rplevy/papers/feature-indet.pdf)
+- Laka, Itziar. 1996. A Brief Grammar of Euskara, the Basque language. Ms., University of the Basque Country. [http://www.ehu.es/grammar](http://www.ehu.es/grammar)
+- Haspelmath, Martin. 1993. A Grammar of Lezgian. (Mouton Grammar Library.) Berlin: Mouton de Gruyter. [DOI: 10.1515/9783110884210](https://doi.org/10.1515/9783110884210)
+- Kroeger, Paul R. 2010. The Grammar of hitting, breaking, and cutting in Kimaragang Dusun. Oceanic Linguistics 49. 1–20.
+-  Marušič, Franc and Mišmaš, Petra and Žaucer, Rok (eds.) 2019. Advances in formal Slavic linguistics 2017. (Open Slavic Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3763740](https://doi.org/10.5281/zenodo.3763740)
+- Dagnac, Anne. 2008. L’ellipse modale en français: Arguments pour ellipse du TP. In Durand, Jacques and Habert, Benoît and Laks, Bernard (eds.), Actes du CMLF'08, 2453–2465. Paris: ILF. [DOI: 10.1051/cmlf08211](https://doi.org/10.1051/cmlf08211)
+- Ljutikova, Ekaterina. 2016. Sintaksis imennoj gruppy v bezartikevom jazyke. (Doctoral dissertation, MGU).
+- Gerasimova, Anastasija. 2016. Parametričeskij podxod k vnutrijazykovomu var'irovaniju: Problemy i metody. Rhema.Rema 3. 63–74.
+- Revzin, Isaak I. 1973. Transformacionnoe issledovanie konstrukcij s sub”ektnym i ob”ektnym priimennym dopolneniem (genitivus subjectivus i genitivus objectivus). In Zaliznjak, Andrej A. (ed.), Problemy grammatičeskogo modelirovanija, 88–96. Moskva: Nauka.
 -  Bergqvist, Henrik and Kittilä, Seppo (eds.) 2019. Evidentiality, egophoricity and engagement. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3968344](https://doi.org/10.5281/zenodo.3968344)
+- Faller, Martina T. 2007. The Cuzco Quechua Conjectural. Epistemic modal or evidential? Or both?. (Universidade de Sao Paulo USP).
+- Creissels, Denis. 2008. Remarks on so-called “conjunct/disjunct” systems. Syntax of the World's Languages III. [http://www.deniscreissels.fr/public/Creissels-conj.disj.pdf](http://www.deniscreissels.fr/public/Creissels-conj.disj.pdf)
 -  Crysmann, Berthold and Sailer, Manfred (eds.) 2021. One-to-many-relations in morphology, syntax, and semantics. (Empirically Oriented Theoretical Morphology and Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4638824](https://doi.org/10.5281/zenodo.4638824)
+- Harris, Alice C. n.d. Exuberant exponence in Batsbi. 27. 267–303. [DOI: 10.1007/s11049-009-9070-8](https://doi.org/10.1007/s11049-009-9070-8)
+- Jespersen, Otto. n.d. Negation in English and Other Languages. A.F. Høst & Søn.
+- Jaggar, Philip. n.d. Hausa. John Benjamins.
+- Goldberg, Adele E. n.d. Words by Default: Optimizing Constraints and the Persian Complex Predicate. In Proceedings of the 22nd Annual Meeting of Berkeley Linguistic Society, 132–146. Linguistic Society of America.
+- Mohammad, Jan and Karimi, Simin. n.d. Light verbs are taking over: Complex verbs in Persian. In Proceedings of the Western Conference on Linguistics (WECOL) 5, 195–212. Fresno, CA: California State University.
 - Floyd, Simeon and Rossi, Giovanni and Enfield, N. J. and Kendrick, Kobin H. and Blythe, Joe and Zinken, Jörg and Baranova, Julija and Dingemanse, Mark. 2020. Getting others to do things. (Studies in Diversity Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4017493](https://doi.org/10.5281/zenodo.4017493)
 - Saturno, Jacopo. 2020. Utterance structure in initial L2 acquisition. (EuroSLA Studies.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3889998](https://doi.org/10.5281/zenodo.3889998)
 -  Bardel, Camilla and Sánchez, Laura (eds.) 2020. Third language acquisition. (EuroSLA Studies.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4138753](https://doi.org/10.5281/zenodo.4138753)
-- Wackernagel, Jacob and Walkden, George and Sevdali, Christina and Macleod, Morgan. 2020. On a law of {Indo} {European} word order. (Classics in Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3978908](https://doi.org/10.5281/zenodo.3978908)
+- Wackernagel, Jacob and Walkden, George and Sevdali, Christina and Macleod, Morgan. 2020. On a law of Indo European word order. (Classics in Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3978908](https://doi.org/10.5281/zenodo.3978908)
+- Bergk, Theodor. 1882. Poetas melicos continens. (Poetae lyrici Graeci.) 4th edn. Leipzig: Teubner.
+-  Lobel, Edgar and Page, Denys (eds.) 1968. Poetarum lesbiorum fragmenta. 3rd edn. Oxford: Clarendon.
+- Graux, Charles. 1886. Textes grecs. (Oeuvres de Charles Graux.) Paris: Vieweg.
+- Wackernagel, Jacob. 1887. Miscellen zur griechischen grammatik. Zeitschrift für vergleichende Sprachforschung auf dem Gebiete der indogermanischen Sprachen 28. 109–145.
+- Hiller, Eduard. 1890. Anthologia lyrica. 4th edn. Leipzig: Teubner.
+- Deecke, Wilhelm. 1884. Die griechisch-kyprischen Inschriften in epichorischer Schrift. In Collitz, Hermann (ed.), Sammlung der griechischen Dialekt-Inschriften, 1–80. Göttingen: Vandenhoeck & Ruprecht.
+- Kaibel, Georg. 1878. Epigrammata graeca ex lapidibus conlecta. Berlin: Reimer.
+- Klein, Wilhelm. 1887. Die griechischen Vasen mit Meistersignaturen. 2nd edn. Leipzig: Gerold.
+- Kaibel, Georg and Lebègue, Albert. 1890. Inscriptiones graecae siciliae et italiae. Berlin: Reimer.
+- Pottier, Edmond. 1888. Études sur la céramique Greque. Gazette archéologique: revue des Musées Nationaux 13(7–8). 167–181.
+- Kenyon, Frederic George. 1891. Aristotle on the constitution of Athens. 2nd edn. Oxford: Clarendon.
+- Kock, Theodor. 1884. Novae comoediae fragmenta, pars I. (Comicorum atticorum fragmenta.) Leipzig: Teubner.
+- Wilamowitz-Moellendorff, Ulrich von. 1882. Callimachi hymna et epigrammata. Berlin: Weidmann.
+- Kock, Theodor. 1864. Die Vögel. (Ausgewählte Komödien des Aristophanes.) Berlin: Weidmann.
+- Gomperz, Theodor. 1890. Die Apologie der Heilkunst: Eine griechische Sophistenrede des 5. Vorchristlichen Jahrhunderts. Sitzungsberichte der philosophisch-historischen Classe der Kaiserlichen Akademie der Wissenschaften 120(9). 1–196.
+- Kock, Theodor. 1880. Antiquae comoediae fragmenta. (Comicorum atticorum fragmenta.) Leipzig: Teubner.
+- Kock, Theodor. 1888. Novae comoediae fragmenta, pars II. (Comicorum atticorum fragmenta.) Leipzig: Teubner.
+- Cauer, Paul. 1883. Delectus inscriptionum Graecarum propter dialectum memorabilium. 2nd edn. Leipzig: Hirzel.
+- Dittenberger, Wilhelm. 1883. Sylloge inscriptionum graecarum. Leipzig: Hirzel.
+- Prellwitz, Walther. 1889. Die argivischen Inschriften. In Collitz, Hermann and Bechtel, Fritz (eds.), Sammlung der griechischen Dialekt-Inschriften, 117–190. Göttingen: Vandenhoeck & Ruprecht.
+- Lorenz, August Otto Friedrich. 1864. Leben und Schriften des Koers Epicharmos: Nebst einer Fragmentensammlung. Berlin: Weidmann.
+- Blass, Friedrich. 1888. Die Inschriften von Korinthos, Kleonai, Sikyon, Phleius und den korinthischen Colonieen. In Collitz, Hermann and Bechtel, Fritz (eds.), Sammlung der griechischen Dialekt-Inschriften, 60–115. Göttingen: Vandenhoeck & Ruprecht.
+- Hoffmann, Otto. 1890. Die Orakelinschriften aus Dodona. In Collitz, Hermann and Bechtel, Fritz (eds.), Sammlung der griechischen Dialekt-Inschriften, 91–132. Göttingen: Vandenhoeck & Ruprecht.
+- Meister, Richard C. 1884. Die böotischen Inschriften. In Collitz, Hermann (ed.), Sammlung der griechischen Dialekt-Inschriften, 144–309. Göttingen: Vandenhoeck & Ruprecht.
+- Köhler, Ulrich. 1877. Inscriptiones Atticae aetatis quae est inter Euclidis annum et Augusti tempora. (Corpus inscriptionum atticarum (CIA).) Berlin: Reimer. (Part 1).
+- Dindorf, Wilhelm and Blass, Friedrich. 1888. Orationes XX–XL. (Demosthenis Orationes.) 4th edn. Leipzig: Teubner.
+- Blass, Friedrich. 1877. Demosthenes. (Die attische Beredsamkeit.) Leipzig: Teubner.
+- Nauck, Augustus. 1889. Tragicorum graecorum fragmenta. 2nd edn. Leipzig: Teubner.
+- Elmsley, Peter. 1821. Euripidis Heraclidae. Leipzig: Hartmann.
+- Poppo, Ernest Friedrich and Stahl, Johann Matthias. 1889. Thucydidis De Bello Peloponnesiaco libri octo. (1, part 2.) 3rd edn. Leipzig: Teubner.
+- Littré, Émile. 1839. Oeuvres complètes d'Hippocrate. (1.) Paris: Baillière.
+- Schanz, Martin. 1882. Phaedrus. (Platonis Opera quae feruntur omnia.) Leipzig: Tauchnitz.
+- Vahlen, Johannes. 1865. Beiträge zu Aristoteles' Poetik. Vienna: Gerold's Sohn. (Special printing of vol. LVI of the Sitzungsberichte der Philosophisch-Historischen Klasse der Kaiserlichen Akademie der Wissenschaften (published 1867)).
+- Brix, Julius and Niemeyer, Max. 1888. Trinummus. (Ausgewählte Komödien des T. Maccius Plautus für den Schulgebrauch.) 4th edn. Leipzig: Teubner.
+- Klein, Wilhelm. 1890. Die griechischen Vasen mit Lieblingsinschriften. 1st edn. Vienna: Tempsky.
 - Kastner, Itamar. 2020. Voice at the interfaces. (Open Generative Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.3865067](https://doi.org/10.5281/zenodo.3865067)
-- Niinaga, Yuto. Forthcoming. Forthcoming: A grammar of {Yuwan}. (Comprehensive Grammar Library.) Berlin: Language Science Press.
+- Borer, Hagit. 1998. Deriving Passive without Theta Roles. In Lapointe, Steven G. and Brentari, Diane K. and Farrell, Patrick M. (eds.), Morphology and its relations to phonology and syntax, 60–99. Stanford, CA: CSLI Publications.
+- Doron, Edit. 2003. Agency and Voice: The Semantics of the Semitic Templates. Natural Language Semantics 11. 1–67. [DOI: 10.1023/A:1023021423453](https://doi.org/10.1023/A:1023021423453)
+- Shlonsky, Ur. 1987. Null and displaced pronouns. (Doctoral dissertation, Massachusetts Institute of Technology).
+- Burzio, Luigi. 1986. Italian Syntax. Dordrecht: Reidel.
+- Reinhart, Tanya and Siloni, Tal. 2005. The Lexicon-Syntax Parameter: Reflexivization and Other Arity Operations. Linguistic Inquiry 36. 389–436.
+- Labelle, Marie. 2008. The French reflexive and reciprocal se. Natural Language & Linguistic Theory 26. 833–876.
+- Meltzer-Asscher, Aya. 2011. Adjectival passives in Hebrew: Evidence for parallelism between the adjectival and verbal systems. Natural Language & Linguistic Theory 29. 815–855.
+- Teng, Stacy Fang-Ching. 2007. A Reference Grammar of Puyuma, an Austronesian language of Taiwan. (Doctoral dissertation, Australian National University).
+- Chen, Victoria and Fukuda, Shin. 2017. Re-labeling “ergative”: Evidence from Formosan. In Proceedings of AFLA 23, 50–64.
+- Niinaga, Yuto. Forthcoming. Forthcoming: A grammar of Yuwan. (Comprehensive Grammar Library.) Berlin: Language Science Press.
 -  Bárány, András and Biberauer, Theresa and Douglas, Jamie and Vikner, Sten (eds.) 2020. Syntactic architecture and its consequences I. (Open Generative Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4041229](https://doi.org/10.5281/zenodo.4041229)
 -  Bárány, András and Biberauer, Theresa and Douglas, Jamie and Vikner, Sten (eds.) 2020. Syntactic architecture and its consequences II. (Open Generative Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4081038](https://doi.org/10.5281/zenodo.4081038)
+- Caponigro, Ivano. n.d. Free not to ask.
+- Wiese, Heike. n.d. Grammatical innovation in multiethnic urban Europe. 119. 782–806. Elsevier. [DOI: 10.1016/j.lingua.2008.11.002](https://doi.org/10.1016/j.lingua.2008.11.002)
+- Opsahl, Toril. n.d. “Egentlig alle kan bidra!”.
+- Quist, Pia. n.d. Sociolinguistic approaches to multiethnolect: Language variety and stylistic practice. 12. 43–61. SAGE Publications Sage UK.
+- Ganuza, Natalia. n.d. Syntactic variation in the Swedish of adolescents in multilingual urban settings: subject-verb order in declaratives, questions and subordinate clauses.
+- Appel, René. n.d. Immigrant children learning Dutch. Foris.
+- Thurneysen, Rudolf. n.d. A Grammar of Old Irish. Dublin Institute for Advanced Studies.
+- Bošković, Željko. n.d. On the locality of left branch extraction and the structure of NP. 59. 1–45. [DOI: 10.1111/j.1467-9582.2005.00118.x](https://doi.org/10.1111/j.1467-9582.2005.00118.x)
+- Ursini, Flavia. n.d. Varietà venete in Friuli – Venezia Giulia. In Holtus, Günter and Metzeltin, Michael and Schmitt, Christian (eds.), Lexikon der Romanistischen Linguistik, 538–550. Niemeyer.
+- Khokhlova, Ludmila. n.d. Syntactic peculiarities of Rajasthani. (Paper presented at the 17th European Conference on Modern South Asian Studies, Heidelberg, September 2002).
+- Sigurðsson, Halldór Ármann. n.d. Context-linked grammar. 46. 175–188.
+- de la Llingua Asturiana, Academia. n.d. Gramática de la llingua asturiana. Academia Llingua Asturiana.
+- Bartoli, Mario. n.d. Das Dalmatische. Hölder.
+- Arnaud, François and Morin, Gabriel. n.d. Le langage de la Vallée de Barcelonnette. Champion.
+- Forner, Werner. n.d. Liguria. In Maiden, Martin and Parry, M. Mair (eds.), The dialects of Italy, 245–252. Routledge.
+- Foresti, Fabio. n.d. Aree linguistiche V. Emilia e Romagna. In Holtus, Günter and Metzeltin, Michael and Schmitt, Christian (eds.), Lexikon der romanistischen Linguistik, 569–593. Niemeyer.
+- Azaretti, Emilio. n.d. L'evoluzione dei dialetti liguri. Casabianca.
+- Vanelli, Laura. n.d. Personal pronouns and demonstratives. In Maiden, Martin and Parry, M. Mair (eds.), The dialects of Italy, 106–113. Routledge.
+- Jungbluth, Konstanze. n.d. Deictics in the conversational dyad. In Lenz, Friedrich (ed.), Deictic conceptualisation of space, time and person, 13–40. John Benjamins.
+- Finamore, Gennaro. n.d. Vocabolario dell'uso abruzzese. 2. ed edn. Tip. dello stabilimento S. Lapi.
+- Vincelli, Antonio. n.d. Grammatica descrittiva del dialetto di Casacalenda. (2.) 1. ed edn. Edizioni Enne.
+- Rohlfs, Gerhard. n.d. Le gascon. (Beihefte zur Zeitschrift für romanische Philologie, 85. Heft.) Second edition edn. Niemeyer.
+- Daugé, Césaire. 2000. Grammaire élémentaire de la langue Gasconne (dialecte d'Aire). Princi Réguer.
+- Mancarella, Giovan Battista. n.d. Salento. Edizioni del Grifo.
+- Kutsch Lojenga, Constance. n.d. Ngiti. Köppe.
+- Döhler, Christian. n.d. Komnzo.
+- Klamer, Marian. n.d. Kaera. In Schapper, Antoinette (ed.), The Papuan languages of Timor, Alor and Pantar, 97–146. De Gruyter. [DOI: 10.1515/9781614515241.97](https://doi.org/10.1515/9781614515241.97)
+- Hamel, Patricia J. n.d. A grammar and lexicon of Loniu, Papua New Guinea. Pacific Linguistics.
+- Davies, William D. n.d. A grammar of Madurese. De Gruyter.
+- Eades, Domenyk. n.d. A grammar of Gayo. Pacific Linguistics.
+- Brown, Lea. n.d. Nias. In Adelaar, Alexander and Himmelmann, Nikolaus P. (eds.), The Austronesian languages of Asia and Madagascar, 562–589. Routledge.
+- Fabre, Gwenaëlle. n.d. Le samba leko, langue Adamawa du Cameroun. Lincom Europa.
+- Paluku, André Mbula. n.d. Description grammaticale du Kitalinga (Langue bantu du Nord-Est du Zaïre). Lincom Europa.
+- Kratochvíl, František. n.d. A grammar of Abui.
+- Heath, Jeffrey. n.d. A grammar of Jamsay. De Gruyter.
+- Fisch, Maria. n.d. Thimbukushu grammar. Out of Africa Publishers.
 -  Bárány, András and Biberauer, Theresa and Douglas, Jamie and Vikner, Sten (eds.) 2021. Syntactic architecture and its consequences III. (Open Generative Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4680264](https://doi.org/10.5281/zenodo.4680264)
+- Barrett-Keach, Camillia N. n.d. The syntax and interpretation of the relative clause construction in Swahili.
+- Leonetti, Manuel. n.d. Specificity and Differential Object Marking in Spanish. 3. 75–114. [DOI: 10.5565/rev/catjl.106](https://doi.org/10.5565/rev/catjl.106)
+- Chapman, Shirley and Derbyshire, Desmond C. n.d. Paumarí. In Derbyshire, Desmond C. and Pullum, Geoffrey K. (eds.), Handbook of Amazonian languages, 161–352. De Gruyter.
+- Bittner, Maria. n.d. Case, scope, and binding. Kluwer.
+- Otsuka, Yuko. n.d. Syntactic ergativity in Tongan. In Johns, Alana and Massam, Diane and Ndayiragije, Juvenal (eds.), Ergativity, 79–107. Springer. [DOI: 10.1007/1-4020-4188-8_4](https://doi.org/10.1007/1-4020-4188-8_4)
+- Stachowski, Marek and Menz, Astrid. n.d. Yakut. In Johanson, Lars and Csató, Éva Ágnes (eds.), The Turkic Languages, 417–433. Routledge.
+- Baker, Mark C. n.d. Case. Cambridge University Press.
+- Alexiadou, Artemis and Anagnostopoulou, Elena and Iordăchioaia, Gianina and Marchis, Mihaela. n.d. In support of long distance Agree. In Alexiadou, Artemis and Kiss, Tibor and Müller, Gereon (eds.), Local modelling of nonlocal dependencies in syntax, 55–81. De Gruyter.
+- Alboiu, Gabriela. n.d. Null expletives and Case. In  Masullo, Pascual José and O'Rourke, Erin and Huang, Chia-Hui (eds.) 1–18pp. [DOI: 10.1075/cilt.304.02alb](https://doi.org/10.1075/cilt.304.02alb)
+- Marten, Lutz. 2006. Locative inversion in Otjiherero. In Downing, Laura J. and Zerbian, Sabine and Marten, Lutz (eds.), Papers in Bantu grammar and description, 97–122. ZAS.
+- Avelar, Juanito and Galves, Charlotte. n.d. From European to Brazilian Portuguese. 58. 237–256. [DOI: 10.20396/cel.v58i2.8647153](https://doi.org/10.20396/cel.v58i2.8647153)
+- Simango, Silvester Ron. n.d. Enlarged arguments in Bantu. 117. 928–949. [DOI: 10.1016/j.lingua.2006.05.003](https://doi.org/10.1016/j.lingua.2006.05.003)
+- Keach, Camillia N. and Rochemont, Michael. n.d. On the syntax of possessor raising in Swahili. 23. 81–106.
+- Carstens, Vicki. n.d. Hyperactivity and hyperagreement in Bantu. 121. 721–741. [DOI: 10.1016/j.lingua.2010.11.001](https://doi.org/10.1016/j.lingua.2010.11.001)
+- van Urk, Coppe. n.d. Visser's Generalization. 44. 168–178. [DOI: 10.1162/LING_a_00124](https://doi.org/10.1162/LING_a_00124)
+- Landau, Idan. n.d. Two routes of control. 26. 877–924. [DOI: 10.1007/s11049-008-9054-0](https://doi.org/10.1007/s11049-008-9054-0)
+- Sheehan, Michelle. n.d. On the difference between exhaustive and partial control. In Cognola, Federica and Casalicchio, Jan (eds.), Null subjects in generative grammar, 141–170. Oxford University Press.
+- Landau, Idan. n.d. Elements of control. Kluwer.
+- Varlokosta, Spyridoula. n.d. Issues on Modern Greek sentential complementation.
+- Alboiu, Gabriela. n.d. Moving forward with Romanian backward control and raising. In Davies, William D. and Dubinsky, Stanley (eds.), New horizons in the analysis of control and raising, 187–211. Springer.
+- Spyropoulos, Vassilios. n.d. Finiteness and control in Greek. In Davies, William D. and Dubinsky, Stanley (eds.), New horizons in the analysis of control and raising, 159–183. Springer.
+- Pană Dindelegan, Gabriela. n.d. The direct object. In Pană Dindelegan, Gabriela (ed.), The grammar of Romanian, 125–143. Oxford University Press.
+- Jónsson, Jóhannes Gísli. n.d. Clausal architecture and case in Icelandic.
+- Bickel, Balthasar. n.d. Hidden syntax in Belhare. In Saxena, Anju (ed.), Himalayan languages, 141–190. De Gruyter. [DOI: 10.1515/9783110898873.141](https://doi.org/10.1515/9783110898873.141)
+- Bliss, Heather. n.d. Argument structure, applicatives, and animacy in Blackfoot. 13. 58–69.
 -  Edmonds, Amanda and Leclercq, Pascale and Gudmestad, Aarnes (eds.) 2020. Interpreting language-learning data. (EuroSLA Studies.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4032298](https://doi.org/10.5281/zenodo.4032298)
--  van Gijn, Rik and Ruch, Hanna and Wahlström, Max and Hasse, Anja (eds.) Forthcoming. Forthcoming: {Forthcoming}: {Language} contact. (Language Variation.) Berlin: Language Science Press.
--  Blümel, Andreas and Gajić, Jovana and Geist, Ljudmila and Junghanns, Uwe and Pitsch, Hagen (eds.) 2021. Advances in formal {Slavic} linguistics 2018. (Open Slavic Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5155544](https://doi.org/10.5281/zenodo.5155544)
+-  van Gijn, Rik and Ruch, Hanna and Wahlström, Max and Hasse, Anja (eds.) Forthcoming. Forthcoming: Forthcoming: Language contact. (Language Variation.) Berlin: Language Science Press.
+-  Blümel, Andreas and Gajić, Jovana and Geist, Ljudmila and Junghanns, Uwe and Pitsch, Hagen (eds.) 2021. Advances in formal Slavic linguistics 2018. (Open Slavic Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5155544](https://doi.org/10.5281/zenodo.5155544)
+- Babyonyshev, Maria. 1997. The Possessive Construction in Russian: A Crosslinguistic Perspective. Journal of Slavic Linguistics 5. 193-233. [https://www.jstor.org/stable/24599711](https://www.jstor.org/stable/24599711)
+- Koneski, Blaže. 1967. Gramatika na makedonskiot literaturen jazik. Skopje: Kultura.
+- Rudin, Catherine and Kramer, Christina and Billings, Loren and Baerman, Matthew. 1999. Macedonian and Bulgarian li questions: Beyond syntax. Natural Language & Linguistic Theory 17. 541-586. [DOI: 10.1023/A:1006223423256](https://doi.org/10.1023/A:1006223423256)
+- Simeonova, Vesela. 2015. On the semantics of mirativity. In Vīnerte, Santa (ed.), 2015 CLA Conference Proceedings. Ottawa: University of Ottawa. [http://cla-acl.ca/wp-content/uploads/Simeonova-2015.pdf](http://cla-acl.ca/wp-content/uploads/Simeonova-2015.pdf)
+- Smirnova, Anastasia. 2013. Evidentiality in Bulgarian: Temporality, Epistemic Modality, and Information Source. Journal of Semantics 30. 479-532. [DOI: 10.1093/jos/ffs017](https://doi.org/10.1093/jos/ffs017)
+- Levin-Steinmann, Anke. 2004. Die Legende vom bulgarischen Renarrativ: Bedeutung und Funktionen der kopulalosen l-Periphrase. (Slavistische Beiträge 437.) München: Otto Sagner. [DOI: 10.3726/b12716](https://doi.org/10.3726/b12716)
+- Koev, Todor. 2017. Evidentiality, Learning Events and Spatiotemporal Distance: The View from Bulgarian. Journal of Semantics 34. 1-41. [DOI: 10.1093/jos/ffv014](https://doi.org/10.1093/jos/ffv014)
+- Partee, Barbara H. and Borschev, Vladimir. 2012. Sortal, Relational, and Functional Interpretations of Nouns and Russian Container Constructions. Journal of Semantics 29. 445-486. [DOI: 10.1093/jos/ffs009](https://doi.org/10.1093/jos/ffs009)
+- Khrizman, Keren and Landman, Fred and Lima, Suzi and Rothstein, Susan and Schvarcz, Brigitta R. 2015. Portion readings are count readings, not measure readings. In Brochhagen, Thomas and Roelofsen, Floris and Theiler, Nadine (eds.), Proceedings of the 20th Amsterdam Colloquium, 197-206. [https://semanticsarchive.net/Archive/mVkOTk2N/AC2015-proceedings.pdf](https://semanticsarchive.net/Archive/mVkOTk2N/AC2015-proceedings.pdf)
+- Kagan, Olga and Pereltsvaig, Asya. 2012. Motivating the DP projection in languages without articles. MIT Working Papers in Linguistics 68. 167-178. [http://www.iatl.org.il/wp-content/uploads/2014/11/IATL28Pereltsvaig_and_Kagan.pdf](http://www.iatl.org.il/wp-content/uploads/2014/11/IATL28Pereltsvaig_and_Kagan.pdf)
+- Babby, Leonard H. 1987. Case prequantifiers and discontinuous agreement in Russian. Natural Language & Linguistic Theory 5. 91-138. [DOI: 10.1007/BF00161869](https://doi.org/10.1007/BF00161869)
+- Zinova, Yulia. 2016. Russian verbal prefixation: A frame semantic analysis. (Doctoral dissertation, Heinrich-Heine-Universität Düsseldorf). [https://user.phil-fak.uni-duesseldorf.de/ zinova/Thesis.pdf](https://user.phil-fak.uni-duesseldorf.de/ zinova/Thesis.pdf)
 -  Næss, Åshild and Margetts, Anna and Treis, Yvonne (eds.) 2020. Demonstratives in discourse. (Topics at the Grammar-Discourse Interface.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4054814](https://doi.org/10.5281/zenodo.4054814)
+- Rishøi, Ingvild H. 2014. Noveller i samling 2007–2014. Oslo: Gyldendal Norsk Forlag.
+- Vidal, Alejandra. 2001. Pilagá grammar. (Doctoral dissertation, University of Oregon).
+- Vidal, Alejandra and Gutiérrez, Analía. 2010. Tiempo nominal en las lenguas chaqueñas. In Castel, Victor and Severino, Liliana (eds.), La renovación de la palabra en el bicentenario de la Argentina: Los colores de la mirada lingüística, 1347–1355. Mendoza: Universidad Nacional de Cuyo.
 -  Balogh, Kata and Latrouite, Anja and Van Valin, Robert D. (eds.) 2020. Nominal anchoring. (Topics at the Grammar-Discourse Interface.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4049471](https://doi.org/10.5281/zenodo.4049471)
--  Janic, Katarzyna and Puddu, Nicoletta and Haspelmath, Martin (eds.) Forthcoming. Reflexive constructions in the world's languages. (Research on Comparative Grammar.) Berlin: Language Science Press.
--  Group, Tra&Co (eds.) 2021. Translation, interpreting, cognition. (Translation and Multilingual Natural Language Processing.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4544686](https://doi.org/10.5281/zenodo.4544686)
-- Hakimov, Nikolay. 2021. Explaining {Russian} {German} code-mixing. (Contact and Multilingualism.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5589446](https://doi.org/10.5281/zenodo.5589446)
+-  Group, Tra Co (ed.) 2021. Translation, interpreting, cognition. (Translation and Multilingual Natural Language Processing.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4544686](https://doi.org/10.5281/zenodo.4544686)
+- Hakimov, Nikolay. 2021. Explaining Russian German code-mixing. (Contact and Multilingualism.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5589446](https://doi.org/10.5281/zenodo.5589446)
+- Bentahila, Abdelâli and Davies, Eyrlis E. 1983. The syntax of Arabic-French code-switching. Lingua 59. 301–330.
+- Szabó, Csilla Anna. 2010. Language shift und Code-mixing: Deutsch-ungarisch-rumänischer Sprachkontakt in einer dörflichen Gemeinde in Nordwestrumänien. (Variolingua. Nonstandard – Standard – Substandard.) Frankfurt am Main: Lang.
+- Vahtin, Nikolaj and Žironkina, Oksana and Liskovec, Irina and Romanova, Ekaterina. 2003. Novye jazyki novyh gosudarstv: Javlenija na styke blizkorodstvennyh jazykov na postsovetskom prostranstve [New languages of new states: Contact phenomena in genetically related languages in the post-Soviet space]. [https://web.archive.org/web/20130503063312/http://old.eu.spb.ru/ethno/projects/project3/ukraine/007/012.htm](https://web.archive.org/web/20130503063312/http://old.eu.spb.ru/ethno/projects/project3/ukraine/007/012.htm)
+- Hlavac, Jim. 2003. Second-generation speech: Lexicon, code-switching and morpho-syntax of Croatian-English bilinguals. Bern: Peter Lang.
+- Treffers-Daller, Jeanine. 1994. Mixing two languages: French-Dutch contact in a comparative perspective. (Topics in Sociolinguistics.) Berlin: Mouton de Gruyter.
+- Muhamedowa, Raihan. 2006. Untersuchung zum kasachisch-russischen Code-mixing (mit Ausblicken auf den uigurisch-russischen Sprachkontakt). (LINCOM Studies in Language Typology.) Munich: Lincom Europa.
+- Boumans, Louis. 1998. The Syntax of Codeswitching: Analysing Moroccan Arabic/Dutch Conversation. (Studies in Multilingualism.) Tilburg: Tilburg University Press.
+- Sankoff, David and Poplack, Shana and Vanniarajan, Swathi. 1990. The case of the nonce loan in Tamil. Language Variation and Change 2. 71–101.
+- Stenson, Nancy. 1990. Phrase Structure Congruence, Government, and Irish-English Code-Switching. In Hendrick, Randall (ed.), The Syntax of the modern Celtic languages, 167–197. San Diego: Academic Press.
+- Backus, Ad. 2003. Units in code switching: Evidence for multimorphemic elements in the lexicon. Linguistics 41. 83–132.
+- Backus, Ad. 1996. Two in one: Bilingual speech of Turkish immigrants in the Netherlands. (Studies in Multilingualism.) Tilburg, Netherlands: Tilburg University Press.
+- Deuchar, Margaret. 2005. Congruence and Welsh-English code-switching. Bilingualism: Language and Cognition 8. 255–269.
+- Zifonun, Gisela and Hoffmann, Ludger and Strecker, Bruno and Ballweg, Joachim and Brauße, Ursula and Breindl, Eva and Engel, Ulrich and Frosch, Helmut and Hoberg, Ursula and Vorderwülbecke, Klaus. 1997. Grammatik der deutschen Sprache. (Schriften des Instituts für Deutsche Sprache, 3.) Berlin: W. de Gruyter.
+- Eisenberg, Peter. 1999. Grundriss der deutschen Grammatik. (2: Der Satz.) Stuttgart: Metzler.
+- Dürscheid, Christa. 2002. „Polemik satt und Wahlkampf pur“ – Das postnominale Adjektiv im Deutschen. Zeitschrift für Sprachwissenschaft 21. 57–81.
+- Zemskaja, Elena A. 1979. Russkaja razgovornaja reč': Lingvističeskij analiz i problemy obučenija [Colloquial Russian speech: A linguistic analysis and teaching issues]. Moscow: Russkij jazyk.
+- Miller, Jim. E. and Weinert, Regina. 1998. Spontaneous spoken language: Syntax and discourse. Oxford: Oxford University Press.
+- Lapteva, Olga Alekseevna. 1976. Russkij razgovornyj sintaksis [Russian spoken syntax]. Moscow: Nauka.
+-  Švedova, Natalija Ju. (ed.) 2005 [1980]. Russkaja grammatika [Russian grammar]. (2: Sintaksis [Syntax].) Moscow: Institut russkogo jazyka im. V.V. Vinogradova.
+-  Švedova, Natalija Ju. (ed.) 2005 [1980]. Russkaja grammatika [Russian grammar]. (1: Fonetika, Fonologija, Udarenie, Intonacija, Slovoobrazovanie, Morfologija [Phonetics, Phonology, Stress, Intonation, Word-Formation, Morphology].) Moscow: Institut russkogo jazyka im. V.V. Vinogradova.
+- Halmari, Helena. 1997. Government and codeswitching: Explaining American Finnish. (Studies in Bilingualism.) Amsterdam: Benjamins.
+- Benson, Morton. 1960. American-Russian speech. American Speech 35. 163–174.
+- Naiditch, Larissa. 2008. Tendencii razvitija russkogo jazyka za rubežom: Russkij jazyk v Izraile [Development trends of the Russian language abroad: Russian in Israel]. Russian Linguistics 32. 43–57.
+- Voigt, Herman A. 1994. Code-wisseling, taalverschuiving en taalverandering in het Melaju Sini. (Master's thesis).
 -  Akinlabi, Akinbiyi and Bickmore, Lee and Cahill, Michael and Diercks, Michael and Downing, Laura J and Essegbey, James and Franich, Katie and McPherson, Laura (eds.) 2021. Celebrating 50 years of ACAL. (Contemporary African Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5578772](https://doi.org/10.5281/zenodo.5578772)
-- Jacques, Guillaume. 2021. A grammar of {Japhug}. (Comprehensive Grammar Library.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4548232](https://doi.org/10.5281/zenodo.4548232)
+- Sikuku, Justine and Diercks, Michael and Marlo, Michael R. 2018. Pragmatic Effects of Clitic Doubling: Two Kinds of Object Markers in Lubukusu. Linguistic Variation 18. 359–429.
+- Zeller, Jochen. 2015. Argument prominence and agreement: Explaining an unexpected object asymmetry in Zulu. Lingua 156. 17–39.
+- Bhatt, Rajesh. 1997. Obligation and possession. In Harley, Heidi B. (ed.), The Proceedings of the UPenn/MIT Workshop on Argument Structure and Aspect, 21-40. Cambridge, MA: MIT Working Papers in Linguistics.
+- Anagnostopoulou, Elena. 2006. Clitic Doubling. In Everaert, Martin and van Riemsdijk, Henk (eds.), The Blackwell Companion to Syntax, 519-581. Oxford: Blackwell.
+- Bošković, Željko. 2004. Clitic placement in South Slavic. Journal of Slavic Linguistics 12. 37–90.
+- Ormazabal, Javier and Romero, Juan. 2013. Differential object marking, case and agreement. Borealis. An International Journal of Hispanic Linguistics 2. 221–239.
+- Jacques, Guillaume. 2021. A grammar of Japhug. (Comprehensive Grammar Library.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4548232](https://doi.org/10.5281/zenodo.4548232)
 -  Bisiada, Mario (ed.) 2021. Empirical studies in translation and discourse. (Translation and Multilingual Natural Language Processing.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4450014](https://doi.org/10.5281/zenodo.4450014)
-- Grimm, Nadine. 2021. A grammar of {Gyeli}. (Comprehensive Grammar Library.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4737370](https://doi.org/10.5281/zenodo.4737370)
+- Grimm, Nadine. 2021. A grammar of Gyeli. (Comprehensive Grammar Library.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4737370](https://doi.org/10.5281/zenodo.4737370)
+- Braginsky, Pavel. 2008. The semantics of the prefix ZA- in Russian. (Doctoral dissertation, Ramat Gan: Bar-Ilan University).
 - Shim, Ji Young. 2021. OV and VO variation in code-switching. (Current Issues in Bilingualism.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4456792](https://doi.org/10.5281/zenodo.4456792)
+- Park, Jun-Eon. 1990. Korean-English intrasentential code-switching: Matrix language assignment and linguistic constraints. (Doctoral dissertation, University of Illinois at Urbana Champaign).
+- Nishimura, Miwa. 1995. Varietal conditioning in Japanese/English code-switching. Language Sciences 17. 123–145.
+- González-Vilbazo, Kay and López, Luis. 2012. Little v and parametric variation. Natural Language and Linguistic Theory 30. 33–77.
+- Nishimura, Miwa and Kim-Yoon, Keumsil. 1998. Head directionality and intrasentential code-switching: A study of Japanese Canadians and Korean Americans’ bilingual speech. Japanese/Korean linguistics 8. 121–130.
+- Choi, Jae Oh. 1991. Korean-English code switching: Switch-alpha and linguistic constraints. Linguistics 29. 877–902.
+- Lee, Mee Hwa. 1991. A parametric approach to code-mixing. (Doctoral dissertation, State University of New York).
+- Grimshaw, Jane and Mester, Armin. 1988. Light verbs and θ-marking. Linguistic Inquiry 19. 205–302.
+- den Dikken, Marcel. 2016. From GB to Minimalism. [http://www.eggschool.org/earlier-schools/egg-2016-tbilisi-georgia/classes-egg16/den-dikken-from-gb-to-minimalism/](http://www.eggschool.org/earlier-schools/egg-2016-tbilisi-georgia/classes-egg16/den-dikken-from-gb-to-minimalism/)
+- Haider, Hubert. 1992. Branching and discharge [Arbeitspapiere des Sonderforschungsbereiches 340]: University of Stuttgart. In  Coopmans, Pieter and Everaert, Martin and Grimshaw, Jane (eds.) 135–164. Amsterdam/Philadelphia: John Benjamins.
+- Barbiers, Sjef. 2000. The right periphery in SOV languages. In  Svenonius, Peter (ed.) 181–218. Amsterdam/Philadelphia: John Benjamins.
+- Kim, Dae-Bin. 1993. The specificity/non-specificity distinction and scrambling theory. Seoul: Taehaksa.
+- Ahn, Hee-Don and Cho, Sungeun. 2007. A syntactic account of the properties of bare nominal in discourse. In Proceedings of the 21st Pacific Asia Conference on Language, Information and Computation, 57–66.
 -  Trklja, Aleksandar and Grabowski, Łukasz (eds.) 2021. Formulaic language. (Phraseology and Multiword Expressions.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4727623](https://doi.org/10.5281/zenodo.4727623)
 -  Zimmer, Christian (ed.) 2021. German(ic) in language contact. (Language Variation.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.4954364](https://doi.org/10.5281/zenodo.4954364)
--  Sibanda, Galen and Ngonyani, Deo and Choti, Jonathan and Biersteker, Ann (eds.) Forthcoming. Forthcoming: {Descriptive} and theoretical approaches to {African} linguistics. (Contemporary African Linguistics.) Berlin: Language Science Press.
-- Maurer-Cecchini, Philippe. 2021. A grammar of {Tuatschin}. (Comprehensive Grammar Library.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5137647](https://doi.org/10.5281/zenodo.5137647)
+- Jacobs-Owen, Timothy. 2017. Multilingualism on Amrum language contact and variation 1839–1851. Kiel: University of Kiel.
+-  Sibanda, Galen and Ngonyani, Deo and Choti, Jonathan and Biersteker, Ann (eds.) Forthcoming. Forthcoming: Descriptive and theoretical approaches to African linguistics. (Contemporary African Linguistics.) Berlin: Language Science Press.
+- Ashton, Ethel O. 1944. Swahili grammar (including intonation). London: Longmans, Green and Co Ltd.
+- Salzmann, Martin. 2017. Prolepsis. In Everaert, Martin and van Riemsdijk, Henk (eds.), The Wiley Blackwell companion to syntax, 1–42.
+- van Koppen, Marjo and Seuren, Lucas and de Vries, Mark. 2016. The proleptic accusative as an exceptional Exceptional Case Marking construction.
+- Wasike, Aggrey. 2006. The left periphery, Wh-in-situ and A-Bar movement in Lubukusu and other Bantu languages. (Doctoral dissertation, Cornell University).
+- Diercks, Michael and Sikuku, Justine. 2015. Pragmatic effects of Clitic Doubling: Two kinds of object markers in Lubukusu.
+- Hiraiwa, Ken and Bodomo, Adams. 2008. Object-sharing as Symmetric Sharing: Predicate clefting and serial verbs in Dàgáárè. Natural Language & Linguistic Theory 26. 795–832. [DOI: 10.1007/s11049-008-9056-y](https://doi.org/10.1007/s11049-008-9056-y)
+- Maurer-Cecchini, Philippe. 2021. A grammar of Tuatschin. (Comprehensive Grammar Library.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5137647](https://doi.org/10.5281/zenodo.5137647)
 - Bahrt, Nicklas N. 2021. Voice syncretism. (Research on Comparative Grammar.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5948872](https://doi.org/10.5281/zenodo.5948872)
--  Dočekal, Mojmír and Wągiel, Marcin (eds.) 2021. Formal approaches to number in {Slavic} and beyond. (Open Slavic Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5082006](https://doi.org/10.5281/zenodo.5082006)
+-  Dočekal, Mojmír and Wągiel, Marcin (eds.) 2021. Formal approaches to number in Slavic and beyond. (Open Slavic Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5082006](https://doi.org/10.5281/zenodo.5082006)
+- Jackendoff, Ray. 2008. Construction after construction and its theoretical challenges. Language 84. 8–28. [DOI: 10.1353/lan.2008.0058](https://doi.org/10.1353/lan.2008.0058)
+- Dobaczewski, Adam. 2018. Powtórzenie jako zjawisko tekstowe i systemowe. Repetycje, reduplikacje i quasi-tautologie w języku polskim. Wydawnictwo Naukowe Uniwersytetu Mikołaja Kopernika.
+- Miechowicz-Mathiasen, Katarzyna. 2013. On Agreement with Numeral Phrase Subjects Including ≥ 5 in Old and Middle Polish. Scando-Slavica 51. 80–107. [DOI: 10.1080/00806765.2013.800727](https://doi.org/10.1080/00806765.2013.800727)
+- von Mengden, Ferdinand. 2010. Cardinal numerals: Old English from a cross-linguistic perspective. Berlin: de Gruyter. [DOI: 10.1515/9783110220353](https://doi.org/10.1515/9783110220353)
+- Schvarcz, Brigitta R. and Rothstein, Susan. 2017. Hungarian Classifier Constructions, Plurality and the Mass–Count Distinction. In van der Hulst, Harry and Lipták, Anikó (eds.), Approaches to Hungarian 15: Papers from the 2015 Leiden Conference, 157–182. Amsterdam: John Benjamins. [DOI: 10.1075/atoh.15.07sch](https://doi.org/10.1075/atoh.15.07sch)
+- Schvarcz, Brigitta R. 2018. A megszámlálható és megszámlálhatatlan főnevek közti kontraszt a magyar nyelvben [The mass-count contrast in Hungarian]. In Boglárka, Fazekas and Diána, Kaposi and Réka, P. Kocsis (eds.), Csomópontok: Újabb kérdések a Félúton műhelyéből [Nodes: More questions from the Félúton (Halfway) workshop], 147–167. Budapest: Kalota Művészeti Alapítvány.
 -  Diewald, Gabriele and Politt, Katja (eds.) 2022. Paradigms regained. (Empirically Oriented Theoretical Morphology and Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5506578](https://doi.org/10.5281/zenodo.5506578)
+- Lemke, Robin. 2021. Experimental investigations on the syntax and usage of fragments. (Open Germanic Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5596236](https://doi.org/10.5281/zenodo.5596236)
 -  Laszakovits, Sabine and Shen, Zheng (eds.) 2021. The size of things I. (Open Generative Syntax.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5140049](https://doi.org/10.5281/zenodo.5140049)
-- Namyalo, Saudah and Witzlack-Makarevich, Alena and Kiriggwajjo, Anatole and Atuhairwe, Amos and Molochieva, Zarina and Mukama, Ruth Gimbo and Zellers, Margaret. 2021. A dictionary and grammatical sketch of {Ruruuli} {Lunyala}. (African Language Grammars and Dictionaries.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5548947](https://doi.org/10.5281/zenodo.5548947)
--  Larsson, Ida and Petzell, Erik M. (eds.) 2021. {Morphosyntactic} change in {Late} {Modern} {Swedish}. (Open Germanic Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5482405](https://doi.org/10.5281/zenodo.5482405)
-- Kolaković, Zrinka and Jurkiewicz-Rohrbacher, Edyta and Hansen, Björn and Filipović Đurđević, Dušica and Fritz, Nataša. 2022. {Clitics} in the wild. (Open Slavic Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5792972](https://doi.org/10.5281/zenodo.5792972)
+- Willeke, Felix. 2006. Die morphologische Integration englischer Verben im Deutschen unter besonderer Berücksichtigung von Partikelverben. (MA thesis, Humboldt-Universität).
+- Wurmbrand, Susi. 2017. Verb clusters, verb raising and restructuring. In Everaert, Martin and van Riemsdijk, Henk (eds.), The Wiley Blackwell Companion to Syntax, 229–343. 2nd edn. Oxford: Blackwell.
+- Jacobsen, William. 1964. A grammar of the Washo Language. (Doctoral dissertation, UC Berkeley).
+- Jacobsen, William. 1979. Why does Washo lack a passive?. In Plank, Frans (ed.), Ergativity: Towards a theory of grammatical relations. London: Academic Press.
+- Karakoç, Birsel. 2001. Das finite Verbalsystem im Noghaischen. (Doctoral dissertation, Johannes Gutenberg University).
+- Kazakov, Valerij. 1983. Togyz kaptal: Povest'ler men xabarlar. Çerkessk: Stavropolʹ kniga baspası.
+- Karakoç, Birsel. 2007. Nogayca ve Türkiye Türkçesi'nde tümleç yan cümlelerinde kullanılan yüklemleştiricilerin bir karşılaştırması. In Károly, László (ed.), Turcology in Turkey: Selected Papers, 337–359. Szeged: SZTE Altajisztikai Tanszék & MTA-SZTE Turkológiai Kutatócsoport.
+-  Djanbidaeva, Djenetchan K. and Ogurlieva, E. S. (eds.) 1995. Nogay literaturası. Çerkessk: Karaşay-Şerkeş kitap baspası.
+- Kapaev, İsa. 1962. Eski üjdin soŋy. Çerkessk: Stavropolʹ kniga baspası.
+- Clark, Larry. 1998. Turkmen reference grammar. (Turcologica 34.) Wiesbaden: Harrasowitz Verlag.
+- Gribanova, Vera and Manetta, Emily. 2016. Ellipsis in wh-in-situ languages: Deriving apparent sluicing in Hindi-Urdu and Uzbek. Linguistic Inquiry 47. 631-668.
+- Bhattacharya, Tanmoy and Simpson, Andrew. 2012. Sluicing in Indo-Aryan: An investigation of Bangla and Hindi. In Simpson, Andrew and Merchant, Jason (eds.), Sluicing: Cross-linguistic perspectives, 183-218. Oxford: Oxford University Press.
+- Kush, Dave. 2016. Notes on gapping in Hindi-Urdu. Linguistic Analysis 40. 255-296.
+- Erschler, David. 2019. A case for the DP in ostensibly articleless languages: Morphological evidence. (Paper presented at the Workshop Linguistic Theory, Meet Languages of the Caucasus!, University of Crete, Rethymnon, Greece).
+- Polinsky, Maria and Potsdam, Eric. 2002. Backward control. Linguistic Inquiry 33. 245–282.
+- Davis, Henry and Forbes, Clarissa. 2015. Connect Four! The morphosyntax of argument marking in Tsimshianic. In Proceedings of the 50th International Conference on Salish and Neighbouring Languages, 155–185. University of British Columbia. UBCWPL.
+- Forbes, Clarissa. 2019. The structure of transitivity in Gitksan. In Proceedings of the 54th International Conference on Salish and Neighbouring Languages, 63–85.
+- Namyalo, Saudah and Witzlack-Makarevich, Alena and Kiriggwajjo, Anatole and Atuhairwe, Amos and Molochieva, Zarina and Mukama, Ruth Gimbo and Zellers, Margaret. 2021. A dictionary and grammatical sketch of Ruruuli Lunyala. (African Language Grammars and Dictionaries.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5548947](https://doi.org/10.5281/zenodo.5548947)
+-  Larsson, Ida and Petzell, Erik M. (eds.) 2021. Morphosyntactic change in Late Modern Swedish. (Open Germanic Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5482405](https://doi.org/10.5281/zenodo.5482405)
+- Lundquist, Björn. 2014. Double object constructions: Active verbs. Nordic Atlas of Language Structures (NALS) Journal 1. 136–145.
+- Holmberg, Anders. 1997. The true nature of Holmberg's generalization. North East Linguistics Society 27. 203–217.
+- Kolaković, Zrinka and Jurkiewicz-Rohrbacher, Edyta and Hansen, Björn and Filipović Đurđević, Dušica and Fritz, Nataša. 2022. Clitics in the wild. (Open Slavic Linguistics.) Berlin: Language Science Press. [DOI: 10.5281/zenodo.5792972](https://doi.org/10.5281/zenodo.5792972)
+- Zec, Draga and Inkelas, Sharon. 1990. Prosodically constrained syntax. In Zec, Draga and Inkelas, Sharon (eds.), The phonology-syntax connection, 365–378. Chicago, IL: University of Chicago Press.
 
 

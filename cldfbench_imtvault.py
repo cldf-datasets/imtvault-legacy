@@ -2,15 +2,11 @@ import re
 import math
 import pathlib
 import collections
-import urllib.request
 
 import attr
 from tqdm import tqdm
 from pyigt.igt import NON_OVERT_ELEMENT, LGRConformance
-from clldutils.jsonlib import load
 from cldfbench import Dataset as BaseDataset
-from bs4 import BeautifulSoup as bs
-from clldutils import jsonlib
 from clldutils.misc import lazyproperty
 from clldutils.path import walk
 from pybtex import database
@@ -334,7 +330,7 @@ class Dataset(BaseDataset):
         ))
         langs = set()
         lgs, contribs = collections.Counter(), collections.Counter()
-        for record, book in self.iter_tex_dirs():
+        for record, book in tqdm(self.iter_tex_dirs()):
             ml = gl_by_iso[record.metalanguage]
             if ml.id not in langs:
                 args.writer.objects['LanguageTable'].append(dict(
@@ -363,8 +359,8 @@ class Dataset(BaseDataset):
                         nsid = '{}_{}'.format(record.bibtex_key, sid)
                         args.writer.cldf.sources.add(delatex_source(nsid, book.bib[sid][1]))
                         nrefs.append((nsid, pages))
+                    nrefs.append((record.bibtex_key, 'via:{}'.format(fn)))
                     ex.Source = nrefs
-                    ex.Source.append((record.bibtex_key, 'via:{}'.format(fn)))
                 if not ex.Language_ID:
                     ex.Language_ID = 'undefined'
                 elif ex.Language_ID not in langs:

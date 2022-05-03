@@ -836,7 +836,7 @@ def cite(n, l2tobj):
         # e.g. \newcommand\putinquotes...
         return ''
     page = _get_optional_arg(n.nodeargd.argnlist[0], '', l2tobj)
-    key = l2tobj.nodelist_to_text([n.nodeargd.argnlist[0]]).strip()
+    key = l2tobj.nodelist_to_text([n.nodeargd.argnlist[1]]).strip()
     if key:
         return '<cit page="{}">{}</cit>'.format(page.replace('"', ''), key)
     return ''

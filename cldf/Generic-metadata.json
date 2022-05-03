@@ -16,7 +16,7 @@
             "rdf:type": "prov:Entity",
             "dc:title": "Repository",
             "rdf:about": "https://github.com/cldf-datasets/imtvault",
-            "dc:created": "v1.0-12-ga535be3"
+            "dc:created": "v1.0-13-g43e19c5"
         },
         {
             "rdf:type": "prov:Entity",
@@ -179,7 +179,7 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ExampleTable",
-            "dc:extent": 46383,
+            "dc:extent": 46385,
             "tableSchema": {
                 "columns": [
                     {
