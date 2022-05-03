@@ -35,15 +35,8 @@ def run(args):
     all = 0
     for record, book in ds.iter_tex_dirs():
         if not args.book_id or (args.book_id == str(record.id)):
-            exs = []
-            for ex, fn in book.iter_examples(record, gl_by_name):
-                exs.append((ex, fn))
-                continue
-                s = str(ex.IGT)
-                print(ds.raw_dir / 'raw_texfiles' / 'raw' / str(record.id) / fn)
-                print(s)
-                print('---')
-            #print(record.id, cnt, record.title if cnt == 0 else '')
+            exs = list(book.iter_examples(record, gl_by_name))
+
             if args.sample:
                 for ex, fn in (random.sample(exs, args.sample) if len(exs) > args.sample else exs):
                     s = str(ex.IGT)

@@ -6,8 +6,11 @@ from clldutils import lgr
 from pylatexenc import latexwalker, latex2text, macrospec
 from pyigt.igt import NON_OVERT_ELEMENT
 
+# Replace \<key> with <value> for the following macros:
 SIMPLE_MACROS = {
+    'ANA': 'ANA',
     'Tilde': '~',
+    'tld': '~',
     'oneS': '1S',
     'twoS': '2S',
     'oneP': '1P',
@@ -34,6 +37,8 @@ SIMPLE_MACROS = {
     'Tsg': '3SG',
     'IFV': 'IFV',
     'Second': '2',
+    'HOR': 'HOR',
+    'pp': 'PP',
     'Aand': '&',
     'IO': 'IO',
     'Io': 'IO',
@@ -65,7 +70,9 @@ SIMPLE_MACROS = {
     'NOUN': 'NOUN',
     'CONJ': 'CONJ',
     'glossF': 'F',
+    'glossNeg': 'NEG',
     'glsg': 'SG',
+    'sq': '~',
     'INSTR': 'INSTR',
     'POT': 'POT',
     'PLU': 'PLU',
@@ -84,6 +91,8 @@ SIMPLE_MACROS = {
     'textquotedbl': '"',
     'textsci': 'ɪ',
     'IDPH': 'IDPH',
+    'ID': 'ID',
+    'Priv': 'PRIV',  # privative case
     'MOD': 'MOD',
     'Aor': 'AOR',
     'glossINF': 'INF',
@@ -128,15 +137,18 @@ SIMPLE_MACROS = {
     'Gam': 'GAM',
     'Vc': 'VC',
     'Stnsg': '2|3NSG',
+    'Stdu': '2|3DU',
     'Only': 'ONLY',
     'Imn': 'IMN',
     'Rs': 'RS',
     'Recog': 'RECOG',
     'Iam': 'IAM',
+    'ds': 'ꜜ',
     'Prop': 'PROP',
     'Betaone': 'Β1',
     'Betatwo': 'Β2',
     'Appr': 'APPR',
+    'AP': 'AP',
     'Bet': 'Β',
     'Pot': 'POT',
     'Imm': 'IMM',
@@ -146,12 +158,14 @@ SIMPLE_MACROS = {
     'Med': 'MED',
     'Stat': 'STAT',
     'Zero': NON_OVERT_ELEMENT,
+    'Fdu': '1DU',
     'Lk': 'LK',
     'Alph': 'Α',
     'reln': 'RELN',
     'postp': 'POSTP',
     'dxm': 'DXM',
     'ideo': 'IDEO',
+    'IDEO': 'IDEO',
     'ident': 'IDENT',
     'psg': 'PSG',
     'mod': 'MOD',
@@ -193,6 +207,7 @@ SIMPLE_MACROS = {
     'asp': 'ASP',
     'ideoph': 'IDEOPH',
     'prosp': 'PROSP',
+    'PROSP': 'PROSP',
     'pstrem': 'PSTREM',
     'fem': 'F',
     'mas': 'M',
@@ -209,6 +224,7 @@ SIMPLE_MACROS = {
     'Hyp': 'HYP',
     'dsbj': 'DSBJ',
     'topic': 'TOP',
+    'ctopic': "CTOPIC",
     'dir': 'DIR',
     'cs': 'CS',
     'question': 'Q',
@@ -224,6 +240,7 @@ SIMPLE_MACROS = {
     'Aug': 'AUG',
     'Dj': 'DJ',
     'Om': 'OM',
+    "Adlzr": "ADLZR",  # adjectivaliser
     'glossQ': 'Q',
     'Depend': 'DEPEND',
     'Simp': 'SIMP',
@@ -334,6 +351,7 @@ SIMPLE_MACROS = {
     "syl": "σ",  #$\sigma$} %SYLL
     "mo": "μ",  #$\mu$} %MORA
     "rnk": "≫",  #$\gg$} %>>
+    "textcrh": "ħ",
     "rs": "\u030c",  #\v}
     'subj': "SUBJ",
     'PREP': 'PREP',
@@ -343,8 +361,11 @@ SIMPLE_MACROS = {
     'NUM': 'NUM',
     'NOUNPROPER': 'NOUNPROPER',
     'ESS': 'ESS',
+    'ESSIVE': 'ESSIVE',
+    'ADESS': 'ADESS',
     'Redup': 'REDUP',
     'Anim': 'ANIM',
+    'Temp': 'TEMP',
     'Snsg': '2NSG',
     'Pos': 'POS',  # positional verb stem
     'ᵓ': 'ᵓ',
@@ -383,6 +404,7 @@ SIMPLE_MACROS = {
     "Adj": "ADJ",  # {\gls{adj}}
     "Adv": "ADV",  # {\gls{adv}}
     "Agr": "AGR",  # {\gls{agr}}
+    'ALL': 'ALL',
     "All": "ALL",  # {\gls{all}}
     "Anom": "ADNOM",  # {\gls{adnom}}
     "Ant": "ANT",  # {\gls{ant}}
@@ -446,6 +468,7 @@ SIMPLE_MACROS = {
     "Impass": "IMPASS",  # {\gls{impass}}
     "Imp": "IMP",  # {\gls{imp}}
     "Inch": "INCH",  # {\gls{inch}}
+    'INCH': 'INCH',
     "Incl": "INCL",  # {\gls{incl}}
     "Incmpl": "INCMPL",  # {\gls{incmpl}}
     "Indef": "INDEF",  # {\gls{indef}}
@@ -453,6 +476,7 @@ SIMPLE_MACROS = {
     "Ind": "IND",  # {\gls{ind}}
     "Ine": "INE",  # {\gls{ine}}
     "Inf": "INF",  # {\gls{inf}}
+    'inf': 'INF',
     "Infr": "INFR",  # {\gls{infr}}
     "Ins": "INS",  # {\gls{ins}}
     "Intr": "INTR",  # {\gls{intr}}
@@ -499,6 +523,7 @@ SIMPLE_MACROS = {
     "Pst": "PST",  # {\gls{pst}}
     "Ptcl": "PTCL",  # {\gls{ptcl}}
     "Ptcp": "PTCP",  # {\gls{ptcp}}
+    "ptcp": "PTCP",
     "Purp": "PURP",  # {\gls{purp}}
     "Pv": "PV",  # {\gls{pv}}
     "Quot": "QUOT",  # {\gls{quot}}
@@ -572,6 +597,7 @@ SIMPLE_MACROS = {
     "dist": "DIST",  # {{\sc dist}}
     "distr": "DISTR",  # {{\sc distr}}
     "dscn": "DSCN",  # {{\sc dscn}}
+    "cn": "CN",
     "du": "DU",  # {{\sc du}}
     "dubt": "DUBT",  # {{\sc dubt}}
     "dur": "DUR",  # {{\sc dur}}
@@ -621,6 +647,7 @@ SIMPLE_MACROS = {
     "tmp": "TMP",  # {{\sc tmp}}
     "ventiv": "VEN",  # {{\sc ven}}
     "ELAT": "ELAT",
+    "E": "E",  # epenthetic morpheme
     "ATTRs": "ATTR",  # {{\Sc{attr}}}%shortcut for ATTR in small caps
     "PREDs": "PRED",  # {{\Sc{pred}}}%shortcut for PRED in small caps
     "SGs": "SG",  # {{\Sc{sg}}}%shortcut for SG in small caps
@@ -649,34 +676,55 @@ SIMPLE_MACROS = {
     "NEGs": "NEG",  # {{\Sc{neg}}}%shortcut for NEG in small caps
     "CONNEGs": "CONNEG",  # {{\Sc{conneg}}}%shortcut for CONNEG in small caps
     "BS": "<backslash>",
+    'PRG': 'PRG',
+    "pafr": "š",
+    "paaf": "č",  # voiceless post-alveolar affricate
+    "vuvfr": "ʁ",  # voiced uvular fricative
+    "uvfr": "χ",  # voiceless uvular fricative
+    "phfr": "ħ",  #	voiceless pharyngeal fricative
+    "eppl": "ʡ",  #	epiglottal plosive
+    "glpl": "ʔ",  #	glottal stop
+    "glst": "ʔ",  #	alias for glottal stop
+    "ej": "’",  # ejective
+    "lab": "ʷ",  # labialized
+    "pha": "ˤ",  # pharyngealized
+    "lmk": "ː",
+    "tet": "ṭ",
+    "dao": "ố",
+    "daa": "ấ",
+    "dae": "ế",
+    "daob": "ồ",
+    "daab": "ầ",
+    "daeb": "ề",
+    'ts': "ts",
 }
 
 logging.getLogger('pylatexenc.latexwalker').setLevel(logging.WARNING)
 
 #
-# Define macros, environments, specials for the *parser*
-#
-# FIMXE: parse citations!
-# \citealt[\page 108]{Borsley:05}
-# citep>--873>----`\{The children / *Shaking around in the box\} broke the glasses to bits.' \hfill \citep[20]{doron03}}>-("`{The children / *Shaking around in the box} broke the glasses to bits.' <cit.>", None)
-# citet>--97>-----\citet[\page 69]{BC2010a} found this example in the \emph{Deutsches Referenzkorpus} (DeReKo), hosted at Institut>-------('<cit.> found this example in the Deutsches Referenzkorpus (DeReKo), hosted at Institut', None)
-#citealp>82>-----`\ldots{} İdris saw that his daughter-in-law was not well \ldots{}' (\citealp[159]{Kapaev1962} cited in \citealp[33]{Karakoc2001})>-----("`… İdris saw that his daughter-in-law was not well …' ( cited in )", None)
-#citew>--17>-----224]{Neumann69a-u}. See also \citew[\page 162]{Benes71}.>-------('224]Neumann69a-u. See also [162]Benes71.', None)
+# Define macros for the *parser*
 #
 macros = [
     macrospec.MacroSpec("footnotetext", "{"),
     macrospec.MacroSpec("footnote", "{"),
     macrospec.MacroSpec("japhdoi", "{"),
     macrospec.MacroSpec("textup", "{"),
+    macrospec.MacroSpec("textupsc", "{"),
     macrospec.MacroSpec("tss", "{"),
     macrospec.MacroSpec("ili", "{"),
+    macrospec.MacroSpec("ilt", "{"),
+    macrospec.MacroSpec("is", "{"),
+    macrospec.MacroSpec("ix", "{"),
+    macrospec.MacroSpec("ux", "{"),
     macrospec.MacroSpec("llap", "{"),
     macrospec.MacroSpec("textsc", "{"),
     macrospec.MacroSpec("Sc", "{"),
     macrospec.MacroSpec("tsc", "{"),
     macrospec.MacroSpec("gsc", "{"),
     macrospec.MacroSpec("ig", "{"),
+    macrospec.MacroSpec("linieb", "{{"),
     macrospec.MacroSpec("ulp", "{{"),
+    macrospec.MacroSpec("ulg", "{{"),
     macrospec.MacroSpec("japhug", "{{"),
     macrospec.MacroSpec("gloss", "{"),
     macrospec.MacroSpec("REF", "{"),
@@ -686,6 +734,8 @@ macros = [
     macrospec.MacroSpec("cite", "[{"),
     macrospec.MacroSpec("citep", "[{"),
     macrospec.MacroSpec("citet", "[{"),
+    macrospec.MacroSpec("Citep", "[{"),
+    macrospec.MacroSpec("Citet", "[{"),
     macrospec.MacroSpec("citealp", "[{"),
     macrospec.MacroSpec("citew", "[{"),
     macrospec.MacroSpec("href", "{{")
@@ -707,7 +757,7 @@ lw_context_db = latexwalker.get_default_latex_context_db()
 lw_context_db.add_context_category('gll', prepend=True, macros=macros[:])
 
 #
-# Implement macros, environments, specials for the *conversion to text*
+# Implement macros for the *conversion to text*
 #
 
 def uppercase_arg(n, l2tobj):
@@ -729,6 +779,10 @@ def japhdoi(n, l2tobj):
 
 def firstarg(n, l2tobj):
     return l2tobj.nodelist_to_text([n.nodeargd.argnlist[0]])
+
+
+def secondarg(n, l2tobj):
+    return l2tobj.nodelist_to_text([n.nodeargd.argnlist[1]])
 
 
 def repl(abbr, *args):
@@ -774,7 +828,10 @@ macros = [
     latex2text.MacroTextSpec("japhdoi", simplify_repl=japhdoi),
     latex2text.MacroTextSpec("japhug", simplify_repl=japhug),
     latex2text.MacroTextSpec("textup", simplify_repl=firstarg),
+    latex2text.MacroTextSpec("textupsc", simplify_repl=uppercase_arg),
+    latex2text.MacroTextSpec("linieb", simplify_repl=secondarg),
     latex2text.MacroTextSpec("ulp", simplify_repl=firstarg),
+    latex2text.MacroTextSpec("ulg", simplify_repl=firstarg),
     latex2text.MacroTextSpec("textsc", simplify_repl=uppercase_arg),
     latex2text.MacroTextSpec("Sc", simplify_repl=uppercase_arg),
     latex2text.MacroTextSpec("tsc", simplify_repl=uppercase_arg),
@@ -784,6 +841,10 @@ macros = [
     latex2text.MacroTextSpec("mc", simplify_repl=uppercase_arg),
     latex2text.MacroTextSpec("gloss", simplify_repl=uppercase_arg),
     latex2text.MacroTextSpec("llap", simplify_repl=lambda *args: ''),
+    latex2text.MacroTextSpec("ilt", simplify_repl=lambda *args: ''),
+    latex2text.MacroTextSpec("is", simplify_repl=lambda *args: ''),
+    latex2text.MacroTextSpec("ix", simplify_repl=lambda *args: ''),
+    latex2text.MacroTextSpec("ux", simplify_repl=lambda *args: ''),
     #latex2text.MacroTextSpec("ili", simplify_repl=lambda *args: ''),
     latex2text.MacroTextSpec("ili", simplify_repl=firstarg),
     latex2text.MacroTextSpec("REF", simplify_repl=lambda *args: ''),
@@ -792,6 +853,8 @@ macros = [
     latex2text.MacroTextSpec("cite", simplify_repl=cite),
     latex2text.MacroTextSpec("citep", simplify_repl=cite),
     latex2text.MacroTextSpec("citet", simplify_repl=cite),
+    latex2text.MacroTextSpec("Citep", simplify_repl=cite),
+    latex2text.MacroTextSpec("Citet", simplify_repl=cite),
     latex2text.MacroTextSpec("citew", simplify_repl=cite),
     latex2text.MacroTextSpec("citealp", simplify_repl=cite),
     latex2text.MacroTextSpec("href", simplify_repl=href),
@@ -812,10 +875,6 @@ l2t_context_db = latex2text.get_default_latex_context_db()
 l2t_context_db.add_context_category('gll', prepend=True, macros=macros[:])
 
 
-#
-# Here is an example usage:
-#
-
 def custom_latex_to_text(input_latex):
     # the latex parser instance with custom latex_context
     lw_obj = latexwalker.LatexWalker(input_latex, latex_context=lw_context_db)
@@ -827,14 +886,18 @@ def custom_latex_to_text(input_latex):
     try:
         return l2t_obj.nodelist_to_text(nodelist)
     except IndexError:
-        print('+++', input_latex)
         return input_latex
 
 
 def to_text(latex):
+    # preprocessing:
     latex = latex.replace(r'{\sc ', r'\textsc{')
     latex = latex.replace(r'{\scshape ', r'\textsc{')
+
+    # custom latex-to-text conversion:
     text, comment, refs = custom_latex_to_text(latex), None, []
+
+    # postprocessing:
     text = text.replace('<backslash>', '\\')
     text = text.strip()
     # extract footnotes:
@@ -854,8 +917,4 @@ def to_text(latex):
     #
     # FIXME: handle *\textit commands
     #
-
-    #text = re.sub(r'\s+\[\s+', ' [', text)
-    #text = re.sub(r'\s+]\s+', '] ', text)
-
     return text, comment, refs

@@ -4,13 +4,21 @@ import collections
 
 import attr
 from pyigt.igt import NON_OVERT_ELEMENT
-
+from pyigt.lgrmorphemes import MORPHEME_SEPARATORS
 from .latex import to_text
+from TexSoup import TexSoup
+from TexSoup.data import TexCmd
 
 STARTINGQUOTE = "`‘"
 ENDINGQUOTE = "'’"
 EMPTY = NON_OVERT_ELEMENT
 ELLIPSIS = '…'
+CHAR_REPLS = {
+    r'\v{s}': 'š',
+    r"\'u": 'ú',
+    r'\v{h}': "ȟ",
+    r"\'a": "á",
+}
 
 
 def strip_tex_comment(s):
@@ -37,11 +45,6 @@ def clean_translation(trs):
 
 
 def parse_langinfo(l):
-    from TexSoup import TexSoup
-    from TexSoup.data import TexCmd
-
-    # FIXME: extract page numbers, too!
-
     def get_name(arg):
         if len(arg.contents) == 1 and isinstance(arg.contents[0], TexCmd) and not arg.contents[0].args:
             return '\\' + arg.contents[0].name
@@ -76,6 +79,8 @@ def parse_il(l):
 
 def iter_gll(s):
     """
+    Loop over the lines in a TeX file, detecting examples by matching start- and end-lines.
+
     FIXME: 123:
     \syacex{Noun}{Pronoun}{984}
     {ܗܲܝܡܵܢܘܼܬ݂ܹܗ}
@@ -144,7 +149,11 @@ def iter_gll(s):
 
 
 def recombine(l):
-    from pyigt.lgrmorphemes import MORPHEME_SEPARATORS
+    """
+    For better visual alignment, morphemes in examples are sometimes whitespace-separated - making
+    them appear as words. This function recombines morphemes into words according to leading and
+    trailing LGR morpheme separators.
+    """
     chunk = []
     for c in l:
         if not c:
@@ -159,16 +168,11 @@ def recombine(l):
         yield ''.join(chunk)
 
 
-CHAR_REPLS = {
-    r'\v{s}': 'š',
-    r"\'u": 'ú',
-    r'\v{h}': "ȟ",
-    r"\'a": "á",
-}
-
-
 def fixed_alignment(pt, gl):
-    from .latex import to_text
+    """
+    Given the aligned lines of an LGR IGT example, we try a couple of tricks to make sure both lines
+    have the same number of word chunks.
+    """
     comment = None
 
     # pre-process
@@ -305,19 +309,6 @@ def lines_and_comment(lines):
     return [r.replace('\n', ' ') for r in res], '; '.join(comment), linfo
 
 
-def get_title(s):
-    from TexSoup import TexSoup
-    for i, line in enumerate(s.split('\n')):
-        try:
-            ts = TexSoup(line, tolerance=1)
-            if ts.chapter:
-                return ' '.join(ts.chapter.text)
-        except:
-            pass
-        if i > 5:
-            return
-
-
 def make_example(record, book, linfo, gll, prevline, filelanguage, gl_by_name, unknown_lgs):
     unknown_lgs = collections.Counter() if unknown_lgs is None else unknown_lgs
     _, _, refs = to_text(prevline)
@@ -448,7 +439,6 @@ def make_example(record, book, linfo, gll, prevline, filelanguage, gl_by_name, u
 
 @attr.s
 class Example:
-    # FIXME: yield obj text, segmented text, gloss, translation, language info, comment, refs
     TexDir = attr.ib()
     Primary_Text = attr.ib()
     Analyzed_Word = attr.ib(validator=attr.validators.instance_of(list))
