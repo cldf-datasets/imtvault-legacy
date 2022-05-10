@@ -1,3 +1,6 @@
 [submodule "raw/raw_texfiles"]
 	path = raw/raw_texfiles
 	url = https://github.com/langsci/raw_texfiles.git
+[submodule "raw/glossa"]
+	path = raw/glossa
+	url = https://github.com/xrotwang/glossa_xml

@@ -16,13 +16,19 @@
             "rdf:type": "prov:Entity",
             "dc:title": "Repository",
             "rdf:about": "https://github.com/cldf-datasets/imtvault",
-            "dc:created": "v1.0-13-g43e19c5"
+            "dc:created": "v1.0-15-gd331058"
         },
         {
             "rdf:type": "prov:Entity",
             "dc:title": "Glottolog",
             "rdf:about": "https://github.com/glottolog/glottolog",
             "dc:created": "v4.5"
+        },
+        {
+            "rdf:type": "prov:Entity",
+            "dc:title": "Repository",
+            "rdf:about": "https://github.com/xrotwang/glossa_xml",
+            "dc:created": "aa0959f"
         },
         {
             "rdf:type": "prov:Entity",
@@ -49,7 +55,7 @@
     "tables": [
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ContributionTable",
-            "dc:extent": 121,
+            "dc:extent": 817,
             "tableSchema": {
                 "columns": [
                     {
@@ -99,7 +105,7 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#LanguageTable",
-            "dc:extent": 910,
+            "dc:extent": 1022,
             "tableSchema": {
                 "columns": [
                     {
@@ -179,7 +185,7 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ExampleTable",
-            "dc:extent": 46385,
+            "dc:extent": 66225,
             "tableSchema": {
                 "columns": [
                     {

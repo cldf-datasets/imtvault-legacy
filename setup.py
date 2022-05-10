@@ -17,9 +17,8 @@ setup(
     install_requires=[
         'pyigt>=1.3',
         'cldfbench',
-        'wptools',
         'cldfviz[cartopy]',
-        'pylatexenc',
+        'linglit',
     ],
     extras_require={
         'test': [
